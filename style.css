@@ -1,0 +1,97 @@
+body {
+	background-color: #46a700;
+	color: #ffffff;	
+	font-family: Helvetica;	
+	font-weight: lighter;
+	margin: 0;
+	-ms-touch-action: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+  	-webkit-tap-highlight-color: transparent;
+}
+
+.measurement {
+	padding: 10px;
+	font-size: 50px;	
+}
+
+.classification {
+	font-size: 20px;
+	position: relative; 
+	left: -20px;
+	color: #467400;	
+}
+
+span.location {
+	padding-left: 10px; 
+	font-size: 20px;	
+}
+
+td.location {
+	height: 80px;
+	text-align: center;	
+	vertical-align: center;
+}
+
+.origin {
+	font-size: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+.message {
+	padding-left: 10px;
+	font-size: 12px;
+	padding-right: 10px;		
+}
+
+.footer {
+	border-top: 1px solid #f0f0f0;
+	position: fixed; 
+	bottom: 0px; 
+	left: 0px; 
+	width: 100%; 
+	height: 70px; 
+	background-color: #ffffff; 
+	color: #000000;
+	padding-bottom: 25px;
+}
+
+table {
+	width: 100%;
+	border-collpase: collapse;
+	border-spacing: 0px;
+	margin: 0px;
+}
+
+td.previous {
+	width: 50px;
+	text-align: left;	
+}
+
+td.next {
+	width: 50px;
+	text-align: right;	
+}
+
+td.button {
+	text-align: center;
+	padding-top: 5px;	
+}
+
+td.label {
+	font-size: 10px;
+	text-align: center;
+}
+
+.loadingoverlay {
+	position: fixed; 
+	top: 0px; 
+	left: 0px; 
+	height: 100%; 
+	width: 100%;
+	z-index:1;
+	background-color: #ffffff; 
+	color: #d0d0d0; 
+	text-align: center; 
+	padding-top: 50%;		
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no" />
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	 	<link rel="stylesheet" href="style.css" type="text/css">
+		<title>UV tracker</title>
+		<!-- <script src="phonegap.js"></script> -->
+		<script src="messages.js"></script>
+		<script src="jquery-1.10.1.min.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body onload="init();">
+		<div class="measurement">
+			<span id="measurement"></span>&nbsp;
+			<span class="classification" id="classification"></span>
+		</div>
+		<div>
+			<table>
+				<tr>
+					<td class="previous">
+						<img id="previous" src="res/previous.png" />
+					</td>
+					<td class="location">
+						<span class="location" id="location"></span>
+					</td>
+					<td class="next">
+						<img id="next" src="res/next.png" />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="origin" id="origin"></div>
+		<div id="message" class="message"></div>
+		<div class="footer" id="footer">
+			<table>
+				<tr>
+					<td class="button">
+						<img src="res/info.png" />
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						<span id="info">lis&auml;tietoja</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="loadingoverlay" class="loadingoverlay">
+		    <img src="res/loading.gif" /><br />
+			<span id="loadingmessage"></span>
+		</div>
+	</body>
+</html>
