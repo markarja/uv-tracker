@@ -11,11 +11,11 @@ body {
 
 .measurement {
 	padding: 10px;
-	font-size: 50px;	
+	font-size: 45px;	
 }
 
 .classification {
-	font-size: 20px;
+	font-size: 15px;
 	position: relative; 
 	left: -20px;
 	color: #467400;	
@@ -34,6 +34,7 @@ td.location {
 
 .origin {
 	font-size: 10px;
+	padding-top: 10px;
 	padding-left: 10px;
 	padding-bottom: 10px;
 }
@@ -41,7 +42,8 @@ td.location {
 .message {
 	padding-left: 10px;
 	font-size: 12px;
-	padding-right: 10px;		
+	padding-right: 10px;
+	text-align: justify;		
 }
 
 .footer {
@@ -54,6 +56,7 @@ td.location {
 	background-color: #ffffff; 
 	color: #000000;
 	padding-bottom: 25px;
+	background-color: #000000;
 }
 
 table {
@@ -73,9 +76,19 @@ td.next {
 	text-align: right;	
 }
 
-td.button {
+td.scale {
 	text-align: center;
 	padding-top: 5px;	
+	background-color: #ffffff;
+}
+
+img.arrow {
+	position: relative; top: -10px;	
+}
+
+td.arrow {
+	padding-left: 3px;	
+	background-color: #000000;
 }
 
 td.label {
@@ -94,4 +107,18 @@ td.label {
 	color: #d0d0d0; 
 	text-align: center; 
 	padding-top: 50%;		
+}
+
+.info {
+	position: fixed; 
+	top: 0px; 
+	left: 0px; 
+	height: 100%; 
+	width: 100%;
+	z-index:1;
+	background-color: #ffffff; 
+	color: #000000; 
+	text-align: left;
+	padding: 20px;
+	visibility: hidden; 	
 }
