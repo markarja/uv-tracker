@@ -3,15 +3,15 @@ var background = {
 	"3" : "#fff900", 
 	"6" : "#e97b00", 
 	"8" : "#d81300", 
-	"11" : "#a6589d"
+	"11" : "#6b49c8"
 };
 
 var classification = {
-	"2" : "#467400", 
-	"3" : "#ff8500", 
-	"6" : "#e90000", 
-	"8" : "#fff900", 
-	"11" : "#c9b0da"
+	"2" : "#ffffff", 
+	"3" : "#000000", 
+	"6" : "#ffffff", 
+	"8" : "#ffffff", 
+	"11" : "#ffffff"
 };
 
 var observatories = null;
@@ -103,7 +103,8 @@ function previous(idx) {
 function displayObservation(idx) {
 	
 	var uvIndex = observatories["data"][idx].index;
-	uvIndex = Math.round((uvIndex * 1) + Math.random() * 12, 1);
+	//uvIndex = Math.round((((uvIndex * 1) + Math.random() * 12) + 0.3) * 10) / 10;
+	//uvIndex = 12.5;
 	document.getElementById("measurement").innerHTML = uvIndex;
 	document.getElementById("location").innerHTML = 
 		observatories["data"][idx].name;
@@ -113,7 +114,15 @@ function displayObservation(idx) {
 		observatories["data"][idx].observations + " " + 
 		getMessage("observations") + ".";
 
-	if(uvIndex <= 3.0) {
+	if(uvIndex == 0) {
+		document.getElementById("arrow").style.paddingLeft = "-22px";
+	} else if(uvIndex >= 11) {
+		document.getElementById("arrow").style.paddingLeft = ((28 * 11) - 22) + "px";
+	} else {
+		document.getElementById("arrow").style.paddingLeft = ((28 * uvIndex) - 22) + "px";
+	}
+	
+	if(uvIndex <= 2.9) {
 		document.body.style.background = background["2"];
 		document.body.style.color = "#ffffff";
 		document.getElementById("previous").src = "res/previous.png";
@@ -121,7 +130,7 @@ function displayObservation(idx) {
 		document.getElementById("classification").innerHTML = getMessage("2");
 		document.getElementById("classification").style.color = classification["2"];
 		document.getElementById("message").innerHTML = getMessage("2-message");
-	} else if(uvIndex <= 6.0) {
+	} else if(uvIndex <= 5.9) {
 		document.body.style.background = background["3"];
 		document.body.style.color = "#000000";
 		document.getElementById("previous").src = "res/_previous.png";
@@ -137,7 +146,7 @@ function displayObservation(idx) {
 		document.getElementById("classification").innerHTML = getMessage("6");
 		document.getElementById("classification").style.color = classification["6"];
 		document.getElementById("message").innerHTML = getMessage("6-message");
-	} else if(uvIndex <= 11.0) { 
+	} else if(uvIndex <= 10.9) { 
 		document.body.style.background = background["8"];
 		document.body.style.color = "#ffffff";
 		document.getElementById("previous").src = "res/previous.png";
