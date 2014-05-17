@@ -35,53 +35,66 @@ function init() {
 		async : false,
 		success : function(data) {
 			observatories = jQuery.parseJSON(data);
-		}
+		},
+		error: function (xhr, ajaxOptions, thrownError) {
+			document.getElementById("loadingimage").src = "res/noconnection.png";
+			document.getElementById("loadingmessage").innerHTML = getMessage("noconnection");
+	    }
 	});
 	
-	navigator.geolocation.getCurrentPosition(function(position) {
+	if(navigator.geolocation) {
 		
-		var LAT = position.coords.latitude;
-		var LNG = position.coords.longitude;
-		
-		var min = 999;
-		
-		for(var i = 0;i < observatories["data"].length;i++) {
-			var lat = observatories["data"][i].latitude;
-			var lng = observatories["data"][i].longitude;
-			var a = 0;
-			var b = 0;
-			var c = 0;
-			if(Math.abs(lat) >= 0 && Math.abs(LAT) >= 0) {
-				a = Math.abs(Math.abs(LAT) - Math.abs(lat));
-			} else {
-				a = Math.abs(lat) + Math.abs(LAT);
+			navigator.geolocation.getCurrentPosition(function(position) {
+			
+			var LAT = position.coords.latitude;
+			var LNG = position.coords.longitude;
+			
+			var min = 999;
+			
+			for(var i = 0;i < observatories["data"].length;i++) {
+				var lat = observatories["data"][i].latitude;
+				var lng = observatories["data"][i].longitude;
+				var a = 0;
+				var b = 0;
+				var c = 0;
+				if(Math.abs(lat) >= 0 && Math.abs(LAT) >= 0) {
+					a = Math.abs(Math.abs(LAT) - Math.abs(lat));
+				} else {
+					a = Math.abs(lat) + Math.abs(LAT);
+				}
+				
+				if(Math.abs(lng) >= 0 && Math.abs(LNG) >= 0) {
+					b = Math.abs(Math.abs(LNG) - Math.abs(lng));
+				} else {
+					b = Math.abs(lng) + Math.abs(LNG);
+				}
+				
+				if(a == 0) {
+					c = b;
+				} else if(b == 0) {
+					c = a;
+				} else {
+					c = a * a + b * b;
+					c = Math.sqrt(c);
+				}
+				
+				if(c < min) {
+					index = i;
+					min = c;
+				}
 			}
 			
-			if(Math.abs(lng) >= 0 && Math.abs(LNG) >= 0) {
-				b = Math.abs(Math.abs(LNG) - Math.abs(lng));
-			} else {
-				b = Math.abs(lng) + Math.abs(LNG);
-			}
-			
-			if(a == 0) {
-				c = b;
-			} else if(b == 0) {
-				c = a;
-			} else {
-				c = a * a + b * b;
-				c = Math.sqrt(c);
-			}
-			
-			if(c < min) {
-				index = i;
-				min = c;
-			}
-		}
+			displayObservation(index);
+			document.getElementById("loadingoverlay").style.visibility = "hidden";
 		
-		displayObservation(index);
+		});
+	
+	} else {
+		
+		displayObservation(0);
 		document.getElementById("loadingoverlay").style.visibility = "hidden";
 		
-	});
+	}
 }
 
 function next(idx) {
