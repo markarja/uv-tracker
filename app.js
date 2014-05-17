@@ -127,12 +127,14 @@ function displayObservation(idx) {
 		observatories["data"][idx].observations + " " + 
 		getMessage("observations") + ".";
 
+	var baseline = ((window.innerWidth - 320) / 2);
+	
 	if(uvIndex == 0) {
-		document.getElementById("arrow").style.paddingLeft = "-22px";
+		document.getElementById("arrow").style.paddingLeft = baseline + "px";
 	} else if(uvIndex >= 11) {
-		document.getElementById("arrow").style.paddingLeft = ((28 * 11) - 22) + "px";
+		document.getElementById("arrow").style.paddingLeft = (((28 * 11) - 22) + baseline) + "px";
 	} else {
-		document.getElementById("arrow").style.paddingLeft = ((28 * uvIndex) - 22) + "px";
+		document.getElementById("arrow").style.paddingLeft = (((28 * uvIndex) - 22) + baseline) + "px";
 	}
 	
 	if(uvIndex <= 2.9) {
