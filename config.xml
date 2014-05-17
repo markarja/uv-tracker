@@ -3,13 +3,13 @@
 
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.markuskarjalainen.diceroller"
+        id        = "com.markuskarjalainen.uvtracker"
         version   = "1.0.0">
         
-    <name>UV tracker</name>
+    <name>UV radiation now</name>
 
     <description>
-        UV tracker - A mobile app for tracking UV radiation in Finland..
+        UV radiation now - A mobile app for tracking UV radiation in Finland.
     </description>
 
     <author href="http://markuskarjalainen.com" email="info@markuskarjalainen.com">
