@@ -116,8 +116,6 @@ function previous(idx) {
 function displayObservation(idx) {
 	
 	var uvIndex = observatories["data"][idx].index;
-	uvIndex = Math.round((((uvIndex * 1) + Math.random() * 12) + 0.3) * 10) / 10;
-	//uvIndex = 12.5;
 	document.getElementById("measurement").innerHTML = uvIndex;
 	document.getElementById("location").innerHTML = 
 		observatories["data"][idx].name;
