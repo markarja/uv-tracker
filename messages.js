@@ -42,7 +42,7 @@ var messages = {
 	    {"key" : "loading", "value" : "haetaan havaintodataa"},	
    	    {"key" : "info", "value" : "lis&auml;tietoja"},
    	    {"key" : "averageof", "value" : "keskiarvo"},
-   	    {"key" : "observationtime", "value" : "Havaintotaika"},
+   	    {"key" : "observationtime", "value" : "Havaintoaika"},
    	    {"key" : "observations", "value" : "havainnosta"},
    	    {"key" : "origin", "value" : "Ilmatieteen laitos"},
    	    {"key" : "noconnection", "value" : "Havaintodatan hakeminen ei onnistunut. Tarkista, ett&auml; laitteessasi on internetyhteys ja k&auml;ynnist&auml; sovellus uudestaan."},
