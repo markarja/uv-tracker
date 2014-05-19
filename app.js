@@ -16,7 +16,7 @@ var classification = {
 
 var observatories = null;
 var index = -1;
-var start = new Date(new Date().getTime() - (3 * 60 * 60 * 1000));
+var start = new Date(new Date().getTime() - (1 * 60 * 60 * 1000));
 var end = new Date();
 
 function init() {
@@ -122,9 +122,7 @@ function displayObservation(idx) {
 		observatories["data"][idx].name;
 	document.getElementById("origin").innerHTML =
 		getDate(new Date()) + " " + getMessage("origin") + "<br />" + 
-		getTime(start) + " - " + getTime(end) + " " + getMessage("averageof") + " " + 
-		observatories["data"][idx].observations + " " + 
-		getMessage("observations") + ".";
+		getMessage("observationtime") + ": " + getTime(start) + " - " + getTime(end);
 
 	var baseline = ((window.innerWidth - 320) / 2);
 	
