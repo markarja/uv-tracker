@@ -31,7 +31,8 @@ function init() {
 	var endtime = getTimestamp(end);
 	
 	$.ajax({
-		url : "http://www.markuskarjalainen.com/rest/uv/?starttime=" + starttime + "&endtime=" + endtime,
+		url : "http://www.markuskarjalainen.com/rest/uv/",
+		data : { "apikey" : "dXYtdHJhY2tlci1pZA==", "starttime" : starttime, "endtime" : endtime},
 		async : false,
 		success : function(data) {
 			observatories = jQuery.parseJSON(data);
