@@ -1,4 +1,4 @@
-var language = "fi-fi";
+var language = "en-us";
 var messages = {
 	"en-us" : [
 	    {"key" : "loading", "value" : "retrieving observation data"},
@@ -81,7 +81,7 @@ var messages = {
 function getMessage(key) {
 	var message = "?" + key + "?";
 	if(messages[language] == undefined) {
-		language = "fi-fi";
+		language = "en-us";
     }
 	for(i = 0;i < messages[language].length;i++) {
 		if(messages[language][i].key == key) {
