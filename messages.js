@@ -26,7 +26,7 @@ var messages = {
    	    {"key" : "observationtime", "value" : "Observation time"},
    	    {"key" : "observations", "value" : "observations"},
    	    {"key" : "origin", "value" : "Finnish Meteorological Institute"},
-   	    {"key" : "noconnection", "value" : "Unable to fetch observation data. Check that your device is connected to the internet and restart this applicatiom."},
+   	    {"key" : "noconnection", "value" : "Unable to fetch observation data. Check that your device is connected to the internet and restart this application."},
    	    {"key" : "2", "value" : "Weak"},
    	    {"key" : "3", "value" : "Average"},
    	    {"key" : "6", "value" : "Strong"},
