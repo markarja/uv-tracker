@@ -25,7 +25,6 @@ function init() {
     window.navigator.browserLanguage;
 	language = language.toLowerCase();
 	localize(language);
-	window.addEventListener("resize", onOrientationChanged, false);
 	document.getElementById("loadingmessage").innerHTML = getMessage("loading");
 	var starttime = getTimestamp(start);
 	var endtime = getTimestamp(end);
