@@ -11,20 +11,21 @@ body {
 }
 
 .measurement {
-	padding: 10px;
-	font-size: 45px;	
+	text-align: center;
+}
+
+span.measurement {
+	font-size: 60px;	
 }
 
 .classification {
 	font-size: 15px;
-	position: relative; 
-	left: -20px;
 	color: #467400;	
 }
 
 span.location {
 	padding-left: 10px; 
-	font-size: 20px;	
+	font-size: 18px;	
 }
 
 td.location {
@@ -38,13 +39,15 @@ td.location {
 	padding-top: 10px;
 	padding-left: 10px;
 	padding-bottom: 10px;
+	text-align: center;
 }
 
 .message {
 	padding-left: 10px;
-	font-size: 11px;
+	font-size: 9px;
 	padding-right: 10px;
-	text-align: justify;		
+	padding-left: 10px;
+	text-align: center;		
 }
 
 .footer {
