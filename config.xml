@@ -4,12 +4,12 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.markuskarjalainen.uvradiationnow"
-        version   = "1.0.0">
+        version   = "1.0.1">
         
     <name>UV radiation now</name>
 
     <description>
-        UV radiation now - A mobile app for tracking UV radiation in Finland.
+        UV radiation now - A mobile app for tracking UV radiation in Finland and Australia.
     </description>
 
     <author href="http://markuskarjalainen.com" email="info@markuskarjalainen.com">
