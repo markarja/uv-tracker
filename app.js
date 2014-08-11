@@ -265,13 +265,15 @@ function getTime(d) {
 
 function onOrientationChanged() {
 	if(portrait()) {
-		document.getElementById("footer").style.visibility = "visible";
 		document.getElementById("country").style.visibility = "visible";
 		document.getElementById("country").style.display = "block";
+		document.getElementById("message").style.visibility = "visible";
+		document.getElementById("footer").style.visibility = "visible";
 	} else {
-		document.getElementById("footer").style.visibility = "hidden";
 		document.getElementById("country").style.visibility = "hidden";
 		document.getElementById("country").style.display = "none";
+		document.getElementById("message").style.visibility = "hidden";
+		document.getElementById("footer").style.visibility = "hidden";
 	}
 }
 
