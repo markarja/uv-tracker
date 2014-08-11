@@ -172,11 +172,17 @@ function displayObservation(idx) {
 	document.getElementById("measurement").innerHTML = uvIndex;
 	document.getElementById("location").innerHTML = 
 		observatories["data"][idx].name;
-	document.getElementById("origin").innerHTML =
-		getDate(new Date()) + " " + getMessage("origin") + "<br />" + 
-		getTime(start) + " - " + getTime(end) + " " + getMessage("averageof") + " " + 
-		observatories["data"][idx].observations + " " + 
-		getMessage("observations") + ".";
+	if(country == 2) {
+		document.getElementById("origin").innerHTML = 
+			observatories["data"][idx].observations + "<br />" +
+			getMessage("origin." + country); 
+	} else {
+		document.getElementById("origin").innerHTML =
+			getDate(new Date()) + " " + getMessage("origin." + country) + "<br />" + 
+			getTime(start) + " - " + getTime(end) + " " + getMessage("averageof") + " " + 
+			observatories["data"][idx].observations + " " + 
+			getMessage("observations") + ".";
+	}
 
 	var s = Math.floor(window.innerWidth) / 11;
 	
