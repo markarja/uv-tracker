@@ -9,9 +9,12 @@
 		<script src="phonegap.js"></script>
 		<script src="messages.js"></script>
 		<script src="jquery-2.1.1.min.js"></script>
+		<script src="jquery.ddslick.min.js"></script>
 		<script src="app.js"></script>
 	</head>
 	<body onload="init();">
+		<select id="country">
+		</select>
 		<div class="measurement">
 			<span id="measurement"></span>&nbsp;&nbsp;
 			<span class="classification" id="classification"></span>
@@ -36,15 +39,40 @@
 		<div class="footer" id="footer">
 			<table>
 				<tr>
-					<td class="scale">
-						<img src="res/scale.png" />
+					<td class="s-2">&nbsp;</td>
+					<td class="s-2">&nbsp;</td>
+					<td class="s-3">&nbsp;</td>
+					<td class="s-3">&nbsp;</td>
+					<td class="s-3">&nbsp;</td>
+					<td class="s-6">&nbsp;</td>
+					<td class="s-6">&nbsp;</td>
+					<td class="s-8">&nbsp;</td>
+					<td class="s-8">&nbsp;</td>
+					<td class="s-8">&nbsp;</td>
+					<td class="s-11">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="s-value">&nbsp;1&nbsp;</td>
+					<td class="s-value">&nbsp;2&nbsp;</td>
+					<td class="s-value">&nbsp;3&nbsp;</td>
+					<td class="s-value">&nbsp;4&nbsp;</td>
+					<td class="s-value">&nbsp;5&nbsp;</td>
+					<td class="s-value">&nbsp;6&nbsp;</td>
+					<td class="s-value">&nbsp;7&nbsp;</td>
+					<td class="s-value">&nbsp;8&nbsp;</td>
+					<td class="s-value">&nbsp;9&nbsp;</td>
+					<td class="s-value">10&nbsp;</td>
+					<td class="s-value">11+</td>
+				</tr>
+				<tr>
+					<td colspan="11" class="s-spacer">
 					</td>
 				</tr>
 				<tr>
-					<td id="arrow" class="arrow">
+					<td id="arrow" class="arrow" colspan="11">
 						<img class="arrow" src="res/arrow.png" />
 					</td>
-				<tr>
+				</tr>
 			</table>
 		</div>
 		<div id="loadingoverlay" class="loadingoverlay">
