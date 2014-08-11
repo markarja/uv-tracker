@@ -18,20 +18,66 @@ var observatories = null;
 var index = -1;
 var start = new Date(new Date().getTime() - (3 * 60 * 60 * 1000));
 var end = new Date();
+var country = 1;
+var countryCoordinates = 
+	{"data":[{"name":"Finland","latitude":"64.2885818","longitude":"25.9894028"},
+	         {"name":"Australia","latitude":"-25.5852413","longitude":"134.5041199"}]};
 
 function init() {
-	
 	language = window.navigator.language ||
     window.navigator.browserLanguage;
 	language = language.toLowerCase();
 	localize(language);
+	$("#country").ddslick({
+	    data: [
+	      {
+	        text: getMessage("finland"),
+	        value: 1,
+	        selected: true,
+	        description: getMessage("fmi"),
+	        imageSrc: "res/finland.png"
+	      },
+	      {
+		        text: getMessage("australia"),
+		        value: 2,
+		        selected: false,
+		        description: getMessage("arpansa"),
+		        imageSrc: "res/australia.png"
+		  }
+	    ],
+	    width: window.innerWidth,
+	    imagePosition: "left",
+	    selectText: "Select a country",
+	    onSelected: function (data) {
+	        country = data["selectedData"].value;
+	        resolveLocationAndFetchObservationData();
+	    }
+	});
+	
+	if(navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(function(position) {
+			var i = findIndexOfClosestCoordinate(position.coords.latitude, 
+					position.coords.longitude, countryCoordinates["data"]);
+			$("#country").ddslick("select", {index: i});
+		});
+	}
+	
+	window.addEventListener("resize", onOrientationChanged, false);
 	document.getElementById("loadingmessage").innerHTML = getMessage("loading");
+	resolveLocationAndFetchObservationData();
+	
+}
+
+function resolveLocationAndFetchObservationData() {
+	
+	document.getElementById("loadingoverlay").style.visibility = "visible";
+	
 	var starttime = getTimestamp(start);
 	var endtime = getTimestamp(end);
 	
 	$.ajax({
-		url : "http://www.markuskarjalainen.com/rest/uv/",
-		data : { "apikey" : "dXYtdHJhY2tlci1pZA==", "starttime" : starttime, "endtime" : endtime},
+		url : "http://www.markuskarjalainen.com/rest/test/",
+		data : { "apikey" : "dXYtdHJhY2tlci1pZA==", "starttime" : starttime, "endtime" : endtime, "country" : $("#country").data("ddslick").selectedIndex + 1},
 		async : false,
 		success : function(data) {
 			observatories = jQuery.parseJSON(data);
@@ -44,45 +90,9 @@ function init() {
 	
 	if(navigator.geolocation) {
 		
-			navigator.geolocation.getCurrentPosition(function(position) {
+		navigator.geolocation.getCurrentPosition(function(position) {
 			
-			var LAT = position.coords.latitude;
-			var LNG = position.coords.longitude;
-			
-			var min = 999;
-			
-			for(var i = 0;i < observatories["data"].length;i++) {
-				var lat = observatories["data"][i].latitude;
-				var lng = observatories["data"][i].longitude;
-				var a = 0;
-				var b = 0;
-				var c = 0;
-				if(Math.abs(lat) >= 0 && Math.abs(LAT) >= 0) {
-					a = Math.abs(Math.abs(LAT) - Math.abs(lat));
-				} else {
-					a = Math.abs(lat) + Math.abs(LAT);
-				}
-				
-				if(Math.abs(lng) >= 0 && Math.abs(LNG) >= 0) {
-					b = Math.abs(Math.abs(LNG) - Math.abs(lng));
-				} else {
-					b = Math.abs(lng) + Math.abs(LNG);
-				}
-				
-				if(a == 0) {
-					c = b;
-				} else if(b == 0) {
-					c = a;
-				} else {
-					c = a * a + b * b;
-					c = Math.sqrt(c);
-				}
-				
-				if(c < min) {
-					index = i;
-					min = c;
-				}
-			}
+			var index = findIndexOfClosestCoordinate(position.coords.latitude, position.coords.longitude, observatories["data"]);
 			
 			displayObservation(index);
 			document.getElementById("loadingoverlay").style.visibility = "hidden";
@@ -95,6 +105,49 @@ function init() {
 		document.getElementById("loadingoverlay").style.visibility = "hidden";
 		
 	}
+}
+
+function findIndexOfClosestCoordinate(lat, lng, data) {
+	
+	var LAT = lat;
+	var LNG = lng;
+	
+	var min = 999;
+	
+	for(var i = 0;i < data.length;i++) {
+		var lat = data[i].latitude;
+		var lng = data[i].longitude;
+		var a = 0;
+		var b = 0;
+		var c = 0;
+		if(Math.abs(lat) >= 0 && Math.abs(LAT) >= 0) {
+			a = Math.abs(Math.abs(LAT) - Math.abs(lat));
+		} else {
+			a = Math.abs(lat) + Math.abs(LAT);
+		}
+		
+		if(Math.abs(lng) >= 0 && Math.abs(LNG) >= 0) {
+			b = Math.abs(Math.abs(LNG) - Math.abs(lng));
+		} else {
+			b = Math.abs(lng) + Math.abs(LNG);
+		}
+		
+		if(a == 0) {
+			c = b;
+		} else if(b == 0) {
+			c = a;
+		} else {
+			c = a * a + b * b;
+			c = Math.sqrt(c);
+		}
+		
+		if(c < min) {
+			index = i;
+			min = c;
+		}
+	}
+	
+	return index;
 }
 
 function next(idx) {
@@ -125,14 +178,14 @@ function displayObservation(idx) {
 		observatories["data"][idx].observations + " " + 
 		getMessage("observations") + ".";
 
-	var baseline = ((window.innerWidth - 320) / 2);
+	var s = Math.floor(window.innerWidth) / 11;
 	
 	if(uvIndex == 0) {
-		document.getElementById("arrow").style.paddingLeft = baseline + "px";
+		document.getElementById("arrow").style.paddingLeft = "0px";
 	} else if(uvIndex >= 11) {
-		document.getElementById("arrow").style.paddingLeft = (((28 * 11) - 22) + baseline) + "px";
+		document.getElementById("arrow").style.paddingLeft = (s * 11 - s) + "px";
 	} else {
-		document.getElementById("arrow").style.paddingLeft = (((28 * uvIndex) - 22) + baseline) + "px";
+		document.getElementById("arrow").style.paddingLeft = (s * uvIndex - s) + "px";
 	}
 	
 	if(uvIndex <= 2.9) {
@@ -207,8 +260,12 @@ function getTime(d) {
 function onOrientationChanged() {
 	if(portrait()) {
 		document.getElementById("footer").style.visibility = "visible";
+		document.getElementById("country").style.visibility = "visible";
+		document.getElementById("country").style.display = "block";
 	} else {
 		document.getElementById("footer").style.visibility = "hidden";
+		document.getElementById("country").style.visibility = "hidden";
+		document.getElementById("country").style.display = "none";
 	}
 }
 
