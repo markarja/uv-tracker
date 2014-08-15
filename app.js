@@ -197,7 +197,7 @@ function displayObservation(idx) {
 		} else if(padding == 0) {
 			document.getElementById("arrow").style.paddingLeft = s + "px";
 		} else {
-			document.getElementById("arrow").style.paddingLeft = (padding) + "px";
+			document.getElementById("arrow").style.paddingLeft = padding + "px";
 		}
 	}
 	
