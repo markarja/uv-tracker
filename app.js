@@ -184,14 +184,21 @@ function displayObservation(idx) {
 			getMessage("observations") + ".";
 	}
 
-	var s = Math.floor(window.innerWidth) / 11;
+	var s = window.innerWidth / 11;
 	
 	if(uvIndex == 0) {
 		document.getElementById("arrow").style.paddingLeft = "0px";
 	} else if(uvIndex >= 11) {
 		document.getElementById("arrow").style.paddingLeft = (s * 11 - s) + "px";
 	} else {
-		document.getElementById("arrow").style.paddingLeft = (s * uvIndex - s) + "px";
+		var padding = s * uvIndex - s;
+		if(padding < 0) {
+			document.getElementById("arrow").style.paddingLeft = "0px";
+		} else if(padding == 0) {
+			document.getElementById("arrow").style.paddingLeft = s + "px";
+		} else {
+			document.getElementById("arrow").style.paddingLeft = (padding) + "px";
+		}
 	}
 	
 	if(uvIndex <= 2.9) {
