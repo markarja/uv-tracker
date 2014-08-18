@@ -22,7 +22,8 @@ var messages = {
    	    {"key" : "finland", "value" : "Finland"},
    	    {"key" : "australia", "value" : "Australia"},
    	    {"key" : "fmi", "value" : "Measurements by the Finnish Meteorological Institute"},
-   	    {"key" : "arpansa", "value" : "Measurements by the Australian Radiation Protection and Nuclear Safety Agency"}
+   	    {"key" : "arpansa", "value" : "Measurements by the Australian Radiation Protection and Nuclear Safety Agency"},
+   	    {"key" : "distance", "value" : "km from your current location"}
 	],	
 	"en-gb" : [
 	    {"key" : "loading", "value" : "retrieving observation data"},
@@ -46,7 +47,8 @@ var messages = {
    	    {"key" : "finland", "value" : "Finland"},
 	    {"key" : "australia", "value" : "Australia"},
    	    {"key" : "fmi", "value" : "Measurements by the Finnish Meteorological Institute"},
-   	    {"key" : "arpansa", "value" : "Measurements by the Australian Radiation Protection and Nuclear Safety Agency"}	    
+   	    {"key" : "arpansa", "value" : "Measurements by the Australian Radiation Protection and Nuclear Safety Agency"},
+   	    {"key" : "distance", "value" : "km from you current location"}	    
 	],
 	"fi-fi" : [
 	    {"key" : "loading", "value" : "haetaan havaintodataa"},	
@@ -70,7 +72,8 @@ var messages = {
    	    {"key" : "finland", "value" : "Suomi"},
 	    {"key" : "australia", "value" : "Australia"},
    	    {"key" : "fmi", "value" : "Ilmatieteen laitoksen mittausdata"},
-   	    {"key" : "arpansa", "value" : "Australian Radiation Protection and Nuclear Safety Agency:n mittausdata"}	    
+   	    {"key" : "arpansa", "value" : "Australian Radiation Protection and Nuclear Safety Agency:n mittausdata"},
+   	    {"key" : "distance", "value" : "km nykyisest&auml; sijainnistasi"}	    
 	],
 	"sv-se" : [
 	    {"key" : "loading", "value" : "h&auml;mtar observationsdata"},       
@@ -94,7 +97,8 @@ var messages = {
    	    {"key" : "finland", "value" : "Finland"},
 	    {"key" : "australia", "value" : "Australien"},
    	    {"key" : "fmi", "value" : "M&auml;tningar fr&aring;n Meteorologiska Institutet"},
-   	    {"key" : "arpansa", "value" : "M&auml;tningar fr&aring;n Australian Radiation Protection and Nuclear Safety Agency"}
+   	    {"key" : "arpansa", "value" : "M&auml;tningar fr&aring;n Australian Radiation Protection and Nuclear Safety Agency"},
+   	    {"key" : "distance", "value" : "km fr&aring;n ditt nuvarande l&auml;ge"}
   	]
 };
 
