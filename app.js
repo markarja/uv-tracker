@@ -22,6 +22,8 @@ var country = 1;
 var countryCoordinates = 
 	{"data":[{"name":"Finland","latitude":"64.2885818","longitude":"25.9894028"},
 	         {"name":"Australia","latitude":"-25.5852413","longitude":"134.5041199"}]};
+var userLat = 0;
+var userLng = 0;
 
 function init() {
 	language = window.navigator.language ||
@@ -93,15 +95,18 @@ function resolveLocationAndFetchObservationData() {
 		navigator.geolocation.getCurrentPosition(function(position) {
 			
 			var index = findIndexOfClosestCoordinate(position.coords.latitude, position.coords.longitude, observatories["data"]);
-			
-			displayObservation(index);
+			userLat = position.coords.latitude;
+			userLng = position.coords.longitude;
+			displayObservation(index, getDistance(userLat, userLng,
+							    observatories["data"][index].latitude,
+							    observatories["data"][index].longitude));
 			document.getElementById("loadingoverlay").style.visibility = "hidden";
 		
 		});
 	
 	} else {
 		
-		displayObservation(0);
+		displayObservation(0, "N/A");
 		document.getElementById("loadingoverlay").style.visibility = "hidden";
 		
 	}
@@ -166,7 +171,7 @@ function previous(idx) {
 	return idx;
 }
 
-function displayObservation(idx) {
+function displayObservation(idx, distance) {
 	
 	var uvIndex = observatories["data"][idx].index;
 	document.getElementById("measurement").innerHTML = uvIndex;
@@ -183,6 +188,8 @@ function displayObservation(idx) {
 			observatories["data"][idx].observations + " " + 
 			getMessage("observations") + ".";
 	}
+	
+	document.getElementById("distance").innerHTML = Math.round(distance) + " " + getMessage("distance");
 
 	var s = window.innerWidth / 11;
 	
@@ -244,11 +251,15 @@ function displayObservation(idx) {
 	}
 	
 	document.getElementById("previous").onclick = function () {
-		displayObservation(previous(idx));
+		displayObservation(previous(idx), getDistance(userLat, userLng,
+			    observatories["data"][previous(idx)].latitude,
+			    observatories["data"][previous(idx)].longitude));
 	};
 	
 	document.getElementById("next").onclick = function () {
-		displayObservation(next(idx));
+		displayObservation(next(idx), getDistance(userLat, userLng,
+			    observatories["data"][next(idx)].latitude,
+			    observatories["data"][next(idx)].longitude));
 	};
 }
 
@@ -290,4 +301,21 @@ function portrait() {
 	} else {
 		return false;
 	}
+}
+
+function getDistance(lat1,lng1,lat2,lng2) {
+    var R = 6371; 
+    var dLat = deg2rad(lat2-lat1);
+    var dLng = deg2rad(lng2-lng1); 
+    var a = 
+      Math.sin(dLat/2) * Math.sin(dLat/2) +
+      Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+      Math.sin(dLng/2) * Math.sin(dLng/2); 
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+    var d = R * c; // Distance in km
+    return d;
+}
+
+function deg2rad(deg) {
+    return deg * (Math.PI/180);
 }
