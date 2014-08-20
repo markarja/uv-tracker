@@ -68,6 +68,7 @@ function init() {
 	document.getElementById("loadingmessage").innerHTML = getMessage("loading");
 	resolveLocationAndFetchObservationData();
 	
+	setInterval(resolveLocationAndFetchObservationData, 5000);
 }
 
 function resolveLocationAndFetchObservationData() {
@@ -79,7 +80,7 @@ function resolveLocationAndFetchObservationData() {
 	
 	$.ajax({
 		url : "http://www.markuskarjalainen.com/rest/test/",
-		data : { "apikey" : "dXYtdHJhY2tlci1pZA==", "starttime" : starttime, "endtime" : endtime, "country" : $("#country").data("ddslick").selectedIndex + 1},
+		data : {"apikey" : "dXYtdHJhY2tlci1pZA==", "starttime" : starttime, "endtime" : endtime, "country" : $("#country").data("ddslick").selectedIndex + 1},
 		async : false,
 		success : function(data) {
 			observatories = jQuery.parseJSON(data);
