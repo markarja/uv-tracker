@@ -69,7 +69,7 @@ function init() {
 	resolveLocationAndFetchObservationData();
 	$("#helpmessage").html(getMessage("tapheretorefresh"));
 	$("#help").css("visibility", "visible");
-	$("#help").fadeOut(5000);
+	$("#help").fadeOut(8000);
 }
 
 function resolveLocationAndFetchObservationData() {
