@@ -66,13 +66,11 @@ function init() {
 	
 	window.addEventListener("resize", onOrientationChanged, false);
 	document.getElementById("loadingmessage").innerHTML = getMessage("loading");
-	resolveLocationAndFetchObservationData();
+	resolveLocationAndFetchObservationData(true);
 	$("#helpmessage").html(getMessage("tapheretorefresh"));
-	$("#help").css("visibility", "visible");
-	$("#help").fadeOut(8000);
 }
 
-function resolveLocationAndFetchObservationData() {
+function resolveLocationAndFetchObservationData(appinit) {
 	
 	document.getElementById("loadingoverlay").style.visibility = "visible";
 	
@@ -103,6 +101,10 @@ function resolveLocationAndFetchObservationData() {
 							    observatories["data"][index].latitude,
 							    observatories["data"][index].longitude));
 			document.getElementById("loadingoverlay").style.visibility = "hidden";
+			if(appinit) {
+				$("#help").css("visibility", "visible");
+				$("#help").fadeOut(5000);
+			}
 		
 		});
 	
@@ -110,8 +112,13 @@ function resolveLocationAndFetchObservationData() {
 		
 		displayObservation(0, "N/A");
 		document.getElementById("loadingoverlay").style.visibility = "hidden";
+		if(appinit) {
+			$("#help").css("visibility", "visible");
+			$("#help").fadeOut(5000);
+		}
 		
 	}
+	
 }
 
 function findIndexOfClosestCoordinate(lat, lng, data) {
