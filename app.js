@@ -68,8 +68,8 @@ function init() {
 	document.getElementById("loadingmessage").innerHTML = getMessage("loading");
 	resolveLocationAndFetchObservationData();
 	$("#helpmessage").html(getMessage("tapheretorefresh"));
-	$("#help").show();
-	$("#help").fadeOut(4000);
+	$("#help").css("visibility", "visible");
+	$("#help").fadeOut(5000);
 }
 
 function resolveLocationAndFetchObservationData() {

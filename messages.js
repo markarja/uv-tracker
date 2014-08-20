@@ -76,7 +76,7 @@ var messages = {
    	    {"key" : "fmi", "value" : "Ilmatieteen laitoksen mittausdata"},
    	    {"key" : "arpansa", "value" : "Australian Radiation Protection and Nuclear Safety Agency:n mittausdata"},
    	    {"key" : "distance", "value" : "km nykyisest&auml; sijainnistasi"},
-   	    {"key" : "tapheretorefresh", "value" : "p&auml;ivit&auml; koskettamalla t&auml;stp&auml;"}
+   	    {"key" : "tapheretorefresh", "value" : "p&auml;ivit&auml; koskettamalla t&auml;st&auml;"}
 	],
 	"sv-se" : [
 	    {"key" : "loading", "value" : "h&auml;mtar observationsdata"},       
