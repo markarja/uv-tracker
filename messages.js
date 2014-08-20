@@ -23,7 +23,8 @@ var messages = {
    	    {"key" : "australia", "value" : "Australia"},
    	    {"key" : "fmi", "value" : "Measurements by the Finnish Meteorological Institute"},
    	    {"key" : "arpansa", "value" : "Measurements by the Australian Radiation Protection and Nuclear Safety Agency"},
-   	    {"key" : "distance", "value" : "km from your current location"}
+   	    {"key" : "distance", "value" : "km from your current location"},
+   	    {"key" : "tapheretorefresh", "value" : "tap here to refresh"}
 	],	
 	"en-gb" : [
 	    {"key" : "loading", "value" : "retrieving observation data"},
@@ -48,7 +49,8 @@ var messages = {
 	    {"key" : "australia", "value" : "Australia"},
    	    {"key" : "fmi", "value" : "Measurements by the Finnish Meteorological Institute"},
    	    {"key" : "arpansa", "value" : "Measurements by the Australian Radiation Protection and Nuclear Safety Agency"},
-   	    {"key" : "distance", "value" : "km from you current location"}	    
+   	    {"key" : "distance", "value" : "km from you current location"},
+   	    {"key" : "tapheretorefresh", "value" : "tap here to refresh"}
 	],
 	"fi-fi" : [
 	    {"key" : "loading", "value" : "haetaan havaintodataa"},	
@@ -73,7 +75,8 @@ var messages = {
 	    {"key" : "australia", "value" : "Australia"},
    	    {"key" : "fmi", "value" : "Ilmatieteen laitoksen mittausdata"},
    	    {"key" : "arpansa", "value" : "Australian Radiation Protection and Nuclear Safety Agency:n mittausdata"},
-   	    {"key" : "distance", "value" : "km nykyisest&auml; sijainnistasi"}	    
+   	    {"key" : "distance", "value" : "km nykyisest&auml; sijainnistasi"},
+   	    {"key" : "tapheretorefresh", "value" : "p&auml;ivit&auml; koskettamalla t&auml;stp&auml;"}
 	],
 	"sv-se" : [
 	    {"key" : "loading", "value" : "h&auml;mtar observationsdata"},       
@@ -98,7 +101,8 @@ var messages = {
 	    {"key" : "australia", "value" : "Australien"},
    	    {"key" : "fmi", "value" : "M&auml;tningar fr&aring;n Meteorologiska Institutet"},
    	    {"key" : "arpansa", "value" : "M&auml;tningar fr&aring;n Australian Radiation Protection and Nuclear Safety Agency"},
-   	    {"key" : "distance", "value" : "km fr&aring;n ditt nuvarande l&auml;ge"}
+   	    {"key" : "distance", "value" : "km fr&aring;n ditt nuvarande l&auml;ge"},
+   	    {"key" : "tapheretorefresh", "value" : "uppdatera genoma att peka h&auml;r"}
   	]
 };
 

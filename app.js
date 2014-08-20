@@ -67,8 +67,9 @@ function init() {
 	window.addEventListener("resize", onOrientationChanged, false);
 	document.getElementById("loadingmessage").innerHTML = getMessage("loading");
 	resolveLocationAndFetchObservationData();
-	
-	setInterval(resolveLocationAndFetchObservationData, 5000);
+	$("#helpmessage").html(getMessage("tapheretorefresh"));
+	$("#help").show();
+	$("#help").fadeOut(4000);
 }
 
 function resolveLocationAndFetchObservationData() {
