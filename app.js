@@ -126,38 +126,16 @@ function findIndexOfClosestCoordinate(lat, lng, data) {
 	var LAT = lat;
 	var LNG = lng;
 	
-	var min = 999;
+	var min = 9999999;
 	
 	for(var i = 0;i < data.length;i++) {
 		var lat = data[i].latitude;
 		var lng = data[i].longitude;
-		var a = 0;
-		var b = 0;
-		var c = 0;
-		if(Math.abs(lat) >= 0 && Math.abs(LAT) >= 0) {
-			a = Math.abs(Math.abs(LAT) - Math.abs(lat));
-		} else {
-			a = Math.abs(lat) + Math.abs(LAT);
-		}
+		var distance = getDistance(LAT, LNG, lat, lng);
 		
-		if(Math.abs(lng) >= 0 && Math.abs(LNG) >= 0) {
-			b = Math.abs(Math.abs(LNG) - Math.abs(lng));
-		} else {
-			b = Math.abs(lng) + Math.abs(LNG);
-		}
-		
-		if(a == 0) {
-			c = b;
-		} else if(b == 0) {
-			c = a;
-		} else {
-			c = a * a + b * b;
-			c = Math.sqrt(c);
-		}
-		
-		if(c < min) {
+		if(distance < min) {
+			min = distance;
 			index = i;
-			min = c;
 		}
 	}
 	
@@ -321,7 +299,7 @@ function getDistance(lat1,lng1,lat2,lng2) {
       Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
       Math.sin(dLng/2) * Math.sin(dLng/2); 
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-    var d = R * c; // Distance in km
+    var d = R * c;
     return d;
 }
 
