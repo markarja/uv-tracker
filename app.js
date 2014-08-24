@@ -103,7 +103,7 @@ function resolveLocationAndFetchObservationData(appinit) {
 			document.getElementById("loadingoverlay").style.visibility = "hidden";
 			if(appinit) {
 				$("#help").css("visibility", "visible");
-				$("#help").fadeOut(5000);
+				$("#help").fadeOut(3000);
 			}
 		
 		});
