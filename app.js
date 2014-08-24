@@ -78,7 +78,7 @@ function resolveLocationAndFetchObservationData(appinit) {
 	var endtime = getTimestamp(end);
 	
 	$.ajax({
-		url : "http://www.markuskarjalainen.com/rest/test/",
+		url : "http://www.markuskarjalainen.com/rest/uv/",
 		data : {"apikey" : "dXYtdHJhY2tlci1pZA==", "starttime" : starttime, "endtime" : endtime, "country" : $("#country").data("ddslick").selectedIndex + 1},
 		async : false,
 		success : function(data) {
