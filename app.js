@@ -74,6 +74,9 @@ function resolveLocationAndFetchObservationData(appinit) {
 	
 	document.getElementById("loadingoverlay").style.visibility = "visible";
 	
+	start = new Date(new Date().getTime() - (3 * 60 * 60 * 1000));
+	end = new Date();
+	
 	var starttime = getTimestamp(start);
 	var endtime = getTimestamp(end);
 	
