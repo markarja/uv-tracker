@@ -64,7 +64,6 @@ function init() {
 		});
 	}
 	
-	window.addEventListener("resize", onOrientationChanged, false);
 	document.getElementById("loadingmessage").innerHTML = getMessage("loading");
 	resolveLocationAndFetchObservationData(true);
 	$("#helpmessage").html(getMessage("tapheretorefresh"));
