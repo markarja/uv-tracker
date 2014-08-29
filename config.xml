@@ -75,6 +75,14 @@
     <gap:splash src="splashscreen.jpg" gap:platform="android" gap:density="mdpi" />
     <gap:splash src="splashscreen.jpg" gap:platform="android" gap:density="hdpi" />
     <gap:splash src="splashscreen.jpg" gap:platform="android" gap:density="xhdpi" />
+    
+    <gap:config-file platform="ios" parent="CFBundleVersion">
+		<string>2.0.0</string>
+	</gap:config-file>
+    
+    <gap:config-file platform="ios" parent="CFBundleShortVersionString">
+		<string>2</string>
+	</gap:config-file>
 
     <!--
         Define access to external domains.
