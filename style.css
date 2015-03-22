@@ -90,7 +90,8 @@ body {
 .label {
 	text-align: center; 
 	font-size: 12px;
-	padding-bottom: 5px;	
+	padding-bottom: 5px;
+	width: 50%;	
 }
 
 i.large {
