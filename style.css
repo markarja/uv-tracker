@@ -1,161 +1,100 @@
 body {
-	background-color: #46a700;
-	color: #ffffff;	
-	font-family: Helvetica;	
+	margin: 0px;
+	font-family: Helvetica;
 	font-weight: lighter;
-	margin: 0;
-	-ms-touch-action: none;
-  	-ms-user-select: none;	
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-  	-webkit-tap-highlight-color: transparent;
 }
 
-.measurement {
-	text-align: center;
+.gauge {
+ 	width: 320px; height:260px;
+ 	margin: 0px;
+	position: fixed;
+	top: -40px;
 }
 
-span.measurement {
-	font-size: 60px;	
-}
-
-.classification {
-	font-size: 15px;
-	color: #467400;	
-}
-
-span.location {
-	padding-left: 10px; 
-	font-size: 18px;	
-}
-
-td.location {
-	height: 100px;
-	text-align: center;	
-	vertical-align: center;
-}
-
-.origin {
+.header {
+	text-align: center; 
 	font-size: 10px;
-	padding-top: 10px;
-	padding-left: 10px;
-	padding-bottom: 10px;
-	text-align: center;
+	position: fixed;
+	z-index: 2;
+	width:100%;	
+	padding-top: 5px;		
+}
+
+.source {
+	padding-top: 0px;
+	top: 20px;	
+}
+
+.grey {
+	font-size: 8px; 
+	color: rgb(100,100,100);	
+}
+
+.valuecontainer {
+	z-index:2;
+	color: rgb(0,0,0); 
+	text-align: center; 
+	width: 100%;
+	position: fixed; 
+	top: 190px;	
+}
+
+.valuename {
+	color: #46a700;
+}
+
+.messagecontainer {
+	z-index:1;
+	color: rgb(0,0,0); 
+	text-align: center; 
+	position: fixed; 
+	top: 220px;	
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .message {
-	padding-left: 12px;
-	font-size: 9px;
-	padding-right: 10px;
-	padding-left: 10px;
-	text-align: center;		
+	width: 290px;
 }
 
-.footer {
-	border-top: 1px solid #cccccc;
+.exposureinfo {
+	font-size: 12px;	
+}
+
+.protectioninfo {
+	font-size: 10px; 
+	border: 1px solid rgb(240,240,240); 
+	background-color: rgb(240,240,240); 
+	border-radius: 10px; 
+	padding: 5px;	
+}
+
+.buttons {
 	position: fixed; 
-	bottom: 0px; 
-	left: 0px; 
-	width: 100%; 
-	height: 70px; 
-	background-color: #000000; 
-	color: #000000;
-	padding-bottom: 20px;
+	bottom: 0px;
+	/*22px;*/ width: 100%;
+		z-index: 2;	
 }
 
-table {
+.buttoncontainer {
 	width: 100%;
-	border-collpase: collapse;
-	border-spacing: 0px;
-	margin: 0px;
-}
+	border-collapse: collapse;	
+}	
 
-td.previous {
-	width: 50px;
-	text-align: left;	
-}
-
-td.next {
-	width: 50px;
-	text-align: right;	
-}
-
-td.scale {
+.button {
+	color:rgb(0,0,0); 
 	text-align: center;
-	padding-top: 5px;	
-	background-color: #ffffff;
+	font-size: 35px;	
 }
 
-img.arrow {
-	position: relative; top: -10px;	
-}
-
-td.arrow {
-	padding-top: 0px;
-	padding-left: 3px;	
-	background-color: #000000;
-}
-
-td.label {
-	font-size: 10px;
-	text-align: center;
-}
-
-.loadingoverlay {
-	position: fixed; 
-	top: 0px; 
-	left: 0px; 
-	height: 100%; 
-	width: 100%;
-	z-index:1;
-	background-color: #ffffff; 
-	color: #d0d0d0; 
+.label {
 	text-align: center; 
-	padding-top: 50%;		
+	font-size: 12px;
+	padding-bottom: 5px;	
 }
 
-.info {
-	position: fixed; 
-	top: 0px; 
-	left: 0px; 
-	height: 100%; 
-	width: 100%;
-	z-index:1;
-	background-color: #ffffff; 
-	color: #000000; 
-	text-align: left;
-	padding: 20px;
-	visibility: hidden; 	
-}
-
-.s-2 { background-color: #46a700; border: 2px solid #ffffff; border-top: 3px solid #ffffff; height: 30px; }
-.s-3 { background-color: #fff900; border: 2px solid #ffffff; border-top: 3px solid #ffffff; height: 30px; } 
-.s-6 { background-color: #e97b00; border: 2px solid #ffffff; border-top: 3px solid #ffffff; height: 30px; } 
-.s-8 { background-color: #d81300; border: 2px solid #ffffff; border-top: 3px solid #ffffff; height: 30px; }
-.s-11 { background-color: #6b49c8; border: 2px solid #ffffff; border-top: 3px solid #ffffff; height: 30px; }
-
-.s-value {
-	text-align: center;
-	font-size: 14px;
-	font-family: courier new;
-	background-color: #ffffff;
-}
-
-.s-spacer {
-	height:10px;
-	background-color: #ffffff;	
-}
-
-.dd-select {
-	color: #0e0e0e;	
-	background-color: #ffffff !important;
-}
-
-.dd-selected-description {
-	font-size: 10px;
-}
-
-span.distance {
-	font-size: 10px;	
+i.large {
+	font-size: 16px;	
 }
 
 .help {
@@ -166,13 +105,13 @@ span.distance {
 	padding-top: 45px; 
 	padding-bottom: 45px; 
 	color: rgb(255,255,255); 
-	top: 140px;	
-	visibility: hidden;
+	top: 120px;	
+	visibility: hidden;	
 }
 
 .helpmessage {
 	border: 1px solid rgb(200,200,200);
-	border-radius: 10px;
+	border-radius: 100px;
 	padding: 30px;
 	background-color: rgb(255,255,255); 
 	color: rgb(100,100,100);	
