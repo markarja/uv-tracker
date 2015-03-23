@@ -31,9 +31,11 @@ var messages = {
    	    {"key" : "arpansa", "value" : "Measurements by the Australian Radiation Protection and Nuclear Safety Agency"},
    	    {"key" : "distance", "value" : "km from your current location"},
    	    {"key" : "tapheretorefresh", "value" : "tap here to refresh"},
-   	    {"key" : "header", "value" : "UV radiation in:"},
+   	    {"key" : "header", "value" : "UV radiation in"},
    	    {"key" : "share", "value" : "Share"},
-   	 	{"key" : "rate", "value" : "Rate"}
+   	 	{"key" : "rate", "value" : "Rate"},
+   	 	{"key" : "alert", "value" : "Alert from UV radiation now"},
+   	 	{"key" : "sharemessage", "value" : "Find out the UV radiation in your area with the UV radiation now app available in the App Store, Google Play and Windows Phone store."}
 	],	
 	"fi-fi" : [
 	    {"key" : "loading", "value" : "haetaan havaintodataa"},	
@@ -66,9 +68,11 @@ var messages = {
    	    {"key" : "arpansa", "value" : "Australian Radiation Protection and Nuclear Safety Agency:n mittausdata"},
    	    {"key" : "distance", "value" : "km nykyisest&auml; sijainnistasi"},
    	    {"key" : "tapheretorefresh", "value" : "p&auml;ivit&auml; t&auml;pp&auml;&auml;ll&auml; t&auml;st&auml;"},
-   	    {"key" : "header", "value" : "UV-s&auml;teily alueella:"},
+   	    {"key" : "header", "value" : "UV-s&auml;teily alueella"},
    	    {"key" : "share", "value" : "Jaa"},
-   	 	{"key" : "rate", "value" : "Arvostele"}   	    
+   	 	{"key" : "rate", "value" : "Arvostele"},
+   	 	{"key" : "alert", "value" : "UV-s&auml;teily varoitus"},
+   	 	{"key" : "sharemessage", "value" : "Tarkista UV-s&auml;teily alueellasi UV-s&auml;teily nyt sovelluksella jonka voi ladata App Storesta, Google Playsta tai Windows Phone storesta."}   	 	
 	],
 	"sv-se" : [
 	    {"key" : "loading", "value" : "h&auml;mtar observationsdata"},       
@@ -101,9 +105,11 @@ var messages = {
    	    {"key" : "arpansa", "value" : "M&auml;tningar fr&aring;n Australian Radiation Protection and Nuclear Safety Agency"},
    	    {"key" : "distance", "value" : "km fr&aring;n ditt nuvarande l&auml;ge"},
    	    {"key" : "tapheretorefresh", "value" : "uppdatera genoma att peka h&auml;r"},
-   	    {"key" : "header", "value" : "UV-str&aring;lningen i omr&aring;det:"},
+   	    {"key" : "header", "value" : "UV-str&aring;lningen i omr&aring;det"},
    	    {"key" : "share", "value" : "Dela"},
-   	 	{"key" : "rate", "value" : "Bed&ouml;m"}   	    
+   	 	{"key" : "rate", "value" : "Bed&ouml;m"},
+   	 	{"key" : "alert", "value" : "UV-str&aring;lnings varning"},
+   	 	{"key" : "sharemessage", "value" : "Kolla UV-str&aring;lningen i ditt omr&aring;de med UV-str&aring;lning nu appen som du kan ladda fr&aring;n App Store, Google Play eller Windows Phone store."}    	 	
   	]
 };
 

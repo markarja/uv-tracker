@@ -91,9 +91,11 @@ function refresh(init) {
 
 function rate() {
 	AppRate.preferences.storeAppURL.android = "market://details?id=com.markuskarjalainen.uvtracker";
+	AppRate.preferences.storeAppURL.ios = '882320475';
+	AppRate.preferences.storeAppURL.windows8 = 'ms-windows-store:Review?name=<the Package Family Name of the application>';	
 	AppRate.promptForRating(true);
 }
 
 function share() {
-	navigator.share("The UV radiation in " + locality + " is " + index + " = " + indexName + "!", "Alert from UV radiation now", "plain/text");
+	navigator.share(getMessage("header") + " " + locality + ": " + index + " = " + indexName + "! " + getMessage("sharemessage"), getMessage("alert"), "plain/text");
 }
