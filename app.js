@@ -1,5 +1,6 @@
 var gauge = null;
 var q = "0,0";
+var index = 0;
 function init() {
 	language = window.navigator.language ||
     window.navigator.browserLanguage;
@@ -32,7 +33,7 @@ function refresh(init) {
 				async : false,
 				success : function(data) {
 					var response = jQuery.parseJSON(data);
-					var index = response["data"][0].index;
+					index = response["data"][0].index;
 					$("#source").html(response["data"][0].source);
 				    gauge.refresh(parseFloat(index) + 0.5, true);
 				    setTimeout(function () {
@@ -82,5 +83,11 @@ function refresh(init) {
 
 function rate() {
 	AppRate.preferences.storeAppURL.android = "market://details?id=com.markuskarjalainen.uvtracker";
+	AppRate.preferences.storeAppURL.ios = '882320475';
+	AppRate.preferences.storeAppURL.windows8 = 'ms-windows-store:Review?name=<the Package Family Name of the application>';
 	AppRate.promptForRating(true);
+}
+
+function share() {
+	navigator.share("The UV raditaion in X is " + index + ".", "Alert from UV radiation now", "plain/text");
 }
