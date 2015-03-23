@@ -1,7 +1,7 @@
 var gauge = null;
 var q = "0,0";
 var index = 0;
-var valueName = "";
+var indexName = "";
 var locality = "";
 function init() {
 	language = window.navigator.language ||
@@ -48,19 +48,19 @@ function refresh(init) {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("2-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("2-message"));
 				    	$("#valuename").html(getMessage("2"));
-				    	valueName = getMessage("2");
+				    	indexName = getMessage("2");
 				    	$("#valuename").css("color", "#46a700");
 					} else if(index >= 3 && index < 6) {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("3-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("3-message"));
 				    	$("#valuename").html(getMessage("3"));
-				    	valueName = getMessage("3");
+				    	indexName = getMessage("3");
 				    	$("#valuename").css("color", "#fff900");
 					} else if(index >= 6 && index < 8) {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("6-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("6-message"));
 				    	$("#valuename").html(getMessage("6"));
-				    	valueName = getMessage("6");
+				    	indexName = getMessage("6");
 				    	$("#valuename").css("color", "#e97b00");
 					} else if(index >= 8 && index < 11) {	
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("8-exposureinfo"));
@@ -71,7 +71,7 @@ function refresh(init) {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("11-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("11-message"));
 				    	$("#valuename").html(getMessage("11"));
-				    	valueName = getMessage("11");
+				    	indexName = getMessage("11");
 				    	$("#valuename").css("color", "#6b49c8");
 					}
 				    
@@ -91,11 +91,9 @@ function refresh(init) {
 
 function rate() {
 	AppRate.preferences.storeAppURL.android = "market://details?id=com.markuskarjalainen.uvtracker";
-	AppRate.preferences.storeAppURL.ios = '882320475';
-	AppRate.preferences.storeAppURL.windows8 = 'ms-windows-store:Review?name=<the Package Family Name of the application>';
 	AppRate.promptForRating(true);
 }
 
 function share() {
-	navigator.share("The UV radiation in " + locality + " is " + index + " = " + valueName + "!", "Alert from UV radiation now", "plain/text");
+	navigator.share("The UV radiation in " + locality + " is " + index + " = " + indexName + "!", "Alert from UV radiation now", "plain/text");
 }
