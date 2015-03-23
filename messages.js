@@ -31,7 +31,7 @@ var messages = {
    	    {"key" : "arpansa", "value" : "Measurements by the Australian Radiation Protection and Nuclear Safety Agency"},
    	    {"key" : "distance", "value" : "km from your current location"},
    	    {"key" : "tapheretorefresh", "value" : "tap here to refresh"},
-   	    {"key" : "header", "value" : "UV radiation in your area "},
+   	    {"key" : "header", "value" : "UV radiation in:"},
    	    {"key" : "share", "value" : "Share"},
    	 	{"key" : "rate", "value" : "Rate"}
 	],	
@@ -66,7 +66,7 @@ var messages = {
    	    {"key" : "arpansa", "value" : "Australian Radiation Protection and Nuclear Safety Agency:n mittausdata"},
    	    {"key" : "distance", "value" : "km nykyisest&auml; sijainnistasi"},
    	    {"key" : "tapheretorefresh", "value" : "p&auml;ivit&auml; t&auml;pp&auml;&auml;ll&auml; t&auml;st&auml;"},
-   	    {"key" : "header", "value" : "UV-s&auml;teily alueellasi "},
+   	    {"key" : "header", "value" : "UV-s&auml;teily alueella:"},
    	    {"key" : "share", "value" : "Jaa"},
    	 	{"key" : "rate", "value" : "Arvostele"}   	    
 	],
@@ -101,7 +101,7 @@ var messages = {
    	    {"key" : "arpansa", "value" : "M&auml;tningar fr&aring;n Australian Radiation Protection and Nuclear Safety Agency"},
    	    {"key" : "distance", "value" : "km fr&aring;n ditt nuvarande l&auml;ge"},
    	    {"key" : "tapheretorefresh", "value" : "uppdatera genoma att peka h&auml;r"},
-   	    {"key" : "header", "value" : "UV-str&aring;lningen i ditt omr&aring;de"},
+   	    {"key" : "header", "value" : "UV-str&aring;lningen i omr&aring;det:"},
    	    {"key" : "share", "value" : "Dela"},
    	 	{"key" : "rate", "value" : "Bed&ouml;m"}   	    
   	]
