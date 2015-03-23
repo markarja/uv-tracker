@@ -79,3 +79,8 @@ function refresh(init) {
     	});
     }
 }
+
+function rate() {
+	AppRate.preferences.storeAppURL.android = "market://details?id=com.markuskarjalainen.uvtracker";
+	AppRate.promptForRating();
+}
