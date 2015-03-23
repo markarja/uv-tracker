@@ -10,6 +10,10 @@ function init() {
 		id: "gauge"
     });
     
+    if(window.innerWidth > $("#gauge").css("width").replace("px", "")) {
+        $("#gauge").css("left", (window.innerWidth / 2) - $("#gauge").css("width").replace("px", "") / 2 + "px");
+    }
+    
     refresh(true);
     
 }

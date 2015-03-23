@@ -2,18 +2,26 @@ body {
 	margin: 0px;
 	font-family: Helvetica;
 	font-weight: lighter;
+	-ms-touch-action: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+  	-webkit-tap-highlight-color: transparent;
+  	text-align: center;	
 }
 
 .gauge {
- 	width: 320px; height:260px;
- 	margin: 0px;
+ 	margin: 0 auto;
 	position: fixed;
 	top: -40px;
 }
 
+.gauge-dimensions {
+	width: 320px; 
+ 	height: 260px;
+}
+
 .header {
 	text-align: center; 
-	font-size: 10px;
+	font-size: 14px;
 	position: fixed;
 	z-index: 2;
 	width:100%;	
@@ -22,7 +30,8 @@ body {
 
 .source {
 	padding-top: 0px;
-	top: 20px;	
+	font-size: 12px;
+	top: 22px;	
 }
 
 .grey {
@@ -49,12 +58,13 @@ body {
 	text-align: center; 
 	position: fixed; 
 	top: 220px;	
-	padding-left: 15px;
-	padding-right: 15px;
+	width: 100%;
 }
 
 .message {
 	width: 290px;
+	text-align: center;
+	margin: 0 auto;
 }
 
 .exposureinfo {
