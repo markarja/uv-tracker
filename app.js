@@ -89,5 +89,5 @@ function rate() {
 }
 
 function share() {
-	navigator.share("The UV raditaion in X is " + index + ".", "Alert from UV radiation now", "plain/text");
+	navigator.share("The UV radiation in X is " + index + ".", "Alert from UV radiation now", "plain/text");
 }
