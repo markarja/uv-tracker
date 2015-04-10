@@ -79,12 +79,7 @@ function refresh(init) {
 				    
 				},
 				error: function (xhr, ajaxOptions, thrownError) {
-					navigator.notification.alert(
-						    getMessage("noconnection"),
-						    function() { },
-						    getMessage("noconnection-title"),
-						    'OK'
-					);
+					connectionErrorHandler(thrownError);
 			    }
 			});
     		if(init) {
@@ -92,8 +87,19 @@ function refresh(init) {
     			$("#help").css("visibility", "visible");
     			$("#help").fadeOut(3000);
     		}
-    	});
+    	}, connectionErrorHandler);
+    } else {
+    	connectionErrorHandler(null);
     }
+}
+
+function connectionErrorHandler(error) {
+	navigator.notification.alert(
+		    getMessage("noconnection"),
+		    function() { },
+		    getMessage("noconnection-title"),
+		    'OK'
+	);
 }
 
 function rate() {
