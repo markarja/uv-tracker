@@ -8,7 +8,8 @@ var messages = {
    	    {"key" : "observations", "value" : "observations"},
    	    {"key" : "origin.1", "value" : "Finnish Meteorological Institute"},
    	    {"key" : "origin.2", "value" : "Australian Radiation Protection and Nuclear Safety Agency"},
-   	    {"key" : "noconnection", "value" : "Unable to fetch observation data. Check that your device is connected to the internet and restart this application."},
+   	    {"key" : "noconnection-title", "value" : "Cannot fetch observation data"},
+   	    {"key" : "noconnection", "value" : "Check that the location services are enabled, that your device is connected to the internet and restart this application."},
    	    {"key" : "2", "value" : "weak"},
    	    {"key" : "3", "value" : "average"},
    	    {"key" : "6", "value" : "strong"},
@@ -44,8 +45,9 @@ var messages = {
    	    {"key" : "observationtime", "value" : "Havaintoaika"},
    	    {"key" : "observations", "value" : "havainnosta"},
    	    {"key" : "origin.1", "value" : "Ilmatieteen laitos"},
-   	    {"key" : "origin.2", "value" : "Australian Radiation Protection and Nuclear Safety Agency"},   	    
-   	    {"key" : "noconnection", "value" : "Havaintodatan hakeminen ei onnistunut. Tarkista, ett&auml; laitteessasi on internetyhteys ja k&auml;ynnist&auml; sovellus uudestaan."},
+   	    {"key" : "origin.2", "value" : "Australian Radiation Protection and Nuclear Safety Agency"}, 
+   	    {"key" : "noconnection-title", "value" : "Havaintodatan hakeminen ei onnistunut"},
+   	    {"key" : "noconnection", "value" : "Tarkista, ett&auml; laitteessasi on sijaintipalvelut ja internetyhteys p&auml;&auml;ll&auml;  ja k&auml;ynnist&auml; sovellus uudestaan."},
    	    {"key" : "2", "value" : "heikko"},
    	    {"key" : "3", "value" : "kohtalainen"},
    	    {"key" : "6", "value" : "voimakas"},
@@ -81,8 +83,9 @@ var messages = {
    	    {"key" : "observations", "value" : "observationer"},
    	    {"key" : "observationtime", "value" : "Observationstid"},
    	    {"key" : "origin.1", "value" : "Meteorologiska Institutet"},
-   	    {"key" : "origin.2", "value" : "Australian Radiation Protection and Nuclear Safety Agency"},   	    
-   	    {"key" : "noconnection", "value" : "Kan ej h&auml;mta observationsdata. Kolla att mobilenheten &auml;r uppkopplad till internet och starta om applikationen."},
+   	    {"key" : "origin.2", "value" : "Australian Radiation Protection and Nuclear Safety Agency"},   
+   	    {"key" : "noconnection-title", "value" : "Kan ej h&auml;mta observationsdata"},   	    
+   	    {"key" : "noconnection", "value" : "Kolla att platstj&auml;sterna Šr aktiverade, att mobilenheten &auml;r uppkopplad till internet och starta om applikationen."},
    	    {"key" : "2", "value" : "minimal"},
    	    {"key" : "3", "value" : "l&aring;g"},
    	    {"key" : "6", "value" : "h&ouml;g"},
@@ -128,12 +131,14 @@ function getMessage(key) {
 }
 
 function localize(language) {
-	if(messages[language] != undefined) {
-		for(i = 0;i < messages[language].length;i++) {
-			var element = document.getElementById(messages[language][i].key);
-			if(element != null && element != undefined) {
-				element.innerHTML = messages[language][i].value;
-			}
+	if(messages[language] == undefined) {
+		language = "en-us";
+	}
+
+	for(i = 0;i < messages[language].length;i++) {
+		var element = document.getElementById(messages[language][i].key);
+		if(element != null && element != undefined) {
+			element.innerHTML = messages[language][i].value;
 		}
 	}
 }

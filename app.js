@@ -3,10 +3,12 @@ var q = "0,0";
 var index = 0;
 var indexName = "";
 var locality = "";
+
 function init() {
-	language = window.navigator.language ||
-    window.navigator.browserLanguage;
+
+	language = window.navigator.language || window.navigator.browserLanguage;
 	language = language.toLowerCase();
+	
 	localize(language);
 	
     gauge = new GaugeSVG({
@@ -77,7 +79,12 @@ function refresh(init) {
 				    
 				},
 				error: function (xhr, ajaxOptions, thrownError) {
-					alert(thrownError);
+					navigator.notification.alert(
+						    getMessage("noconnection"),
+						    function() { },
+						    getMessage("noconnection-title"),
+						    'OK'
+					);
 			    }
 			});
     		if(init) {

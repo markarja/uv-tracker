@@ -1,7 +1,6 @@
 body {
 	margin: 0px;
-	font-family: Helvetica;
-	font-weight: lighter;
+	font-family: 'Raleway', sans-serif;
 	-ms-touch-action: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
   	-webkit-tap-highlight-color: transparent;
@@ -72,7 +71,7 @@ body {
 }
 
 .protectioninfo {
-	font-size: 10px; 
+	font-size: 12px; 
 	border: 1px solid rgb(240,240,240); 
 	background-color: rgb(240,240,240); 
 	border-radius: 10px; 
@@ -81,9 +80,16 @@ body {
 
 .buttons {
 	position: fixed; 
-	bottom: 0px;
-	/*22px;*/ width: 100%;
-		z-index: 2;	
+	bottom: 8px;
+ 	width: 100%;
+	z-index: 2;	
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	 /* IE10+ CSS styles */
+	.buttons {
+		bottom: 25px;	
+	}
 }
 
 .buttoncontainer {
