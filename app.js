@@ -20,25 +20,14 @@ function init() {
     }
     
 	document.addEventListener("deviceready", onDeviceReady, false);
-    
+	
 }
 
 function onDeviceReady() {
     refresh(true);
 }
 
-function alertDismissed() {
-    // do something
-}
-
 function refresh(init) {
-
-	navigator.notification.alert(
-	    'You are the winner!',  // message
-	    alertDismissed,         // callback
-	    'Game Over',            // title
-	    'Done'                  // buttonName
-	);
 	
 	gauge.refresh(0.0);
 	$("#exposureinfo").html("");
@@ -107,13 +96,6 @@ function refresh(init) {
     } else {
     	connectionErrorHandler(null);
     }
-	
-	navigator.notification.alert(
-		    getMessage("noconnection"),
-		    function() { },
-		    getMessage("noconnection-title"),
-		    'OK'
-	);
 	
 }
 
