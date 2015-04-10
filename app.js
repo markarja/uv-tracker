@@ -19,8 +19,12 @@ function init() {
         $("#gauge").css("left", (window.innerWidth / 2) - $("#gauge").css("width").replace("px", "") / 2 + "px");
     }
     
-    refresh(true);
+	document.addEventListener("deviceready", onDeviceReady, false);
     
+}
+
+function onDeviceReady() {
+    refresh(true);
 }
 
 function alertDismissed() {
