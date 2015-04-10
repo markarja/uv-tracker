@@ -91,6 +91,14 @@ function refresh(init) {
     } else {
     	connectionErrorHandler(null);
     }
+	
+	navigator.notification.alert(
+		    getMessage("noconnection"),
+		    function() { },
+		    getMessage("noconnection-title"),
+		    'OK'
+	);
+	
 }
 
 function connectionErrorHandler(error) {
