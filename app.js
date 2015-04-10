@@ -23,7 +23,19 @@ function init() {
     
 }
 
+function alertDismissed() {
+    // do something
+}
+
 function refresh(init) {
+
+	navigator.notification.alert(
+	    'You are the winner!',  // message
+	    alertDismissed,         // callback
+	    'Game Over',            // title
+	    'Done'                  // buttonName
+	);
+	
 	gauge.refresh(0.0);
 	$("#exposureinfo").html("");
 	$("#protectioninfo").html("");
