@@ -52,7 +52,7 @@ var messages = {
    	    {"key" : "3", "value" : "kohtalainen"},
    	    {"key" : "6", "value" : "voimakas"},
    	    {"key" : "8", "value" : "hyvin voimakas"},
-   	    {"key" : "11", "value" : "&auml&auml;rimm&auml;isen voimakas"},
+   	    {"key" : "11", "value" : "&auml;&auml;rimm&auml;isen voimakas"},
    	    {"key" : "exposureinfo", "value" : "Suositeltu aika auringossa:"},
    	    {"key" : "2-exposureinfo", "value" : "<b>koko p&auml;iv&auml;.</b>"},
    	    {"key" : "3-exposureinfo", "value" : "<b>1 - 2 tuntia.</b>"},
@@ -110,8 +110,8 @@ var messages = {
    	    {"key" : "tapheretorefresh", "value" : "uppdatera genoma att peka h&auml;r"},
    	    {"key" : "header", "value" : "UV-str&aring;lningen i omr&aring;det"},
    	    {"key" : "share", "value" : "Dela"},
-   	 	{"key" : "rate", "value" : "Bed&ouml;m"},
-   	 	{"key" : "alert", "value" : "UV-str&aring;lnings varning"},
+   	 	{"key" : "rate", "value" : "Betygs&auml;tt"},
+   	 	{"key" : "alert", "value" : "UV varning"},
    	 	{"key" : "sharemessage", "value" : "Kolla UV-str&aring;lningen i ditt omr&aring;de med UV-str&aring;lning nu appen som du kan ladda fr&aring;n App Store, Google Play eller Windows Phone store."}    	 	
   	]
 };
