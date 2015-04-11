@@ -20,7 +20,7 @@ function init() {
 	document.addEventListener("deviceready", onDeviceReady, false);
 	window.addEventListener("resize", onOrientationChanged, false);
 	
-	onDeviceReady();
+	onOrientationChanged();
 	
 }
 
@@ -31,12 +31,16 @@ function reposition() {
 function onOrientationChanged() {
 	if(portrait()) {
 		reposition();
+		$("#protectioninfocontainer").show();
 		$("#protectioninfo").show();
 		$("#buttons").show();
 	} else {
 		reposition();
-		$("#protectioninfo").hide();
-		$("#buttons").hide();
+		if(window.innerHeight <= 480) {
+			$("#protectioninfocontainer").hide();
+			$("#protectioninfo").hide();
+			$("#buttons").hide();
+		}
 	}
 }
 
