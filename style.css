@@ -187,4 +187,15 @@ i.large {
 		top: 180px;	
 		visibility: hidden;	
 	}
+	
+	.spinner {
+		z-index: 2;
+		top: 198px;
+		position: fixed; 
+		display: none;
+		width: 100%;
+		text-align: center;
+		font-size: 60px;	
+		color: rgb(230,230,230);
+	}
 }
