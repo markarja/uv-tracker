@@ -87,13 +87,6 @@ body {
 	z-index: 2;	
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-	 /* IE10+ CSS styles */
-	.buttons {
-		bottom: 25px;	
-	}
-}
-
 .buttoncontainer {
 	width: 100%;
 	border-collapse: collapse;	
@@ -134,4 +127,41 @@ i.large {
 	padding: 30px;
 	background-color: rgb(255,255,255); 
 	color: rgb(100,100,100);	
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	 /* IE10+ CSS styles */
+	.buttons {
+		bottom: 25px;	
+	}
+}
+
+@media (min-width: 600px) {
+	.gauge-dimensions {
+		width: 420px;
+		height: 340px;		
+	}
+	.valuecontainer {
+		z-index:2;
+		color: rgb(0,0,0); 
+		text-align: center; 
+		width: 100%;
+		position: fixed; 
+		top: 260px;
+	}
+	
+	.messagecontainer {
+		z-index:1;
+		color: rgb(0,0,0); 
+		text-align: center; 
+		position: fixed; 
+		top: 290px;	
+		width: 100%;
+	}	
+	
+	.message {
+		width: 390px;
+		text-align: center;
+		margin: 0 auto;
+	}
 }
