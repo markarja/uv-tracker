@@ -43,7 +43,11 @@ function refresh(init) {
 				success : function(data) {
 					var response = jQuery.parseJSON(data);
 					index = response["data"][0].index;
-					$("#header").html(getMessage("header") + " " + response["data"][0].location);
+					if(response["data"][0].location == '') {
+						$("#header").html(getMessage("header-nolocation"));
+					} else {
+						$("#header").html(getMessage("header") + " " + response["data"][0].location);
+					}
 					locality = response["data"][0].location;
 					$("#source").html(response["data"][0].source);
 				    gauge.refresh(parseFloat(index) + 0.5, true);
