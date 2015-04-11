@@ -14,13 +14,38 @@ function init() {
     gauge = new GaugeSVG({
 		id: "gauge"
     });
-    
-    if(window.innerWidth > $("#gauge").css("width").replace("px", "")) {
-        $("#gauge").css("left", (window.innerWidth / 2) - $("#gauge").css("width").replace("px", "") / 2 + "px");
-    }
+
+    reposition();
     
 	document.addEventListener("deviceready", onDeviceReady, false);
+	window.addEventListener("resize", onOrientationChanged, false);
 	
+	onDeviceReady();
+	
+}
+
+function reposition() {
+    $("#gauge").css("left", (window.innerWidth / 2) - $("#gauge").css("width").replace("px", "") / 2 + "px");
+}
+
+function onOrientationChanged() {
+	if(portrait()) {
+		reposition();
+		$("#protectioninfo").show();
+		$("#buttons").show();
+	} else {
+		reposition();
+		$("#protectioninfo").hide();
+		$("#buttons").hide();
+	}
+}
+
+function portrait() {
+	if(window.innerHeight > window.innerWidth) {
+		return true;
+	} else {
+		return false;
+	}
 }
 
 function onDeviceReady() {
