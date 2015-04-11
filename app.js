@@ -149,5 +149,12 @@ function rate() {
 }
 
 function share() {
-	navigator.share(getMessage("header") + " " + locality + ": " + index + " = " + indexName + "! " + getMessage("sharemessage"), getMessage("alert"), "plain/text");
+	var platform = device.platform;
+	var message = getMessage("header") + " " + locality + ": " + index + " = " + indexName + "! " + getMessage("sharemessage");
+	var title = getMessage("alert");
+	if(platform == "WinCE") {
+		window.plugins.socialsharing.share(message, title, null, null);
+	} else {
+		window.plugins.socialsharing.share(message, title);
+	}
 }

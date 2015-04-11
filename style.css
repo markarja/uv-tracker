@@ -164,4 +164,16 @@ i.large {
 		text-align: center;
 		margin: 0 auto;
 	}
+	
+	.help {
+		position: fixed; 
+		z-index: 2;
+		width: 100%; 
+		text-align: center; 
+		padding-top: 45px; 
+		padding-bottom: 45px; 
+		color: rgb(255,255,255); 
+		top: 180px;	
+		visibility: hidden;	
+	}
 }
