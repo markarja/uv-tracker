@@ -129,6 +129,17 @@ i.large {
 	color: rgb(100,100,100);	
 }
 
+.spinner {
+	z-index: 2;
+	top: 138px;
+	position: fixed; 
+	display: none;
+	width: 100%;
+	text-align: center;
+	font-size: 60px;	
+	color: rgb(230,230,230);
+}
+
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	 /* IE10+ CSS styles */
 	.buttons {

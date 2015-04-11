@@ -57,10 +57,10 @@ function onDeviceReady() {
 }
 
 function refresh(init) {
-	
+	$("#spinner").show();
 	gauge.refresh(0.0);
 	$("#exposureinfo").html("");
-	$("#protectioninfo").html("");
+	$("#protectioninfo").html(getMessage("loading") + "...");
 	$("#valuename").html("");
 	if(navigator.geolocation) {
     	navigator.geolocation.getCurrentPosition(function(position) {
@@ -120,6 +120,7 @@ function refresh(init) {
 					connectionErrorHandler(thrownError);
 			    }
 			});
+    		$("#spinner").hide();
     		if(init) {
         		$("#helpmessage").html(getMessage("tapheretorefresh"));
     			$("#help").css("visibility", "visible");
@@ -133,6 +134,7 @@ function refresh(init) {
 }
 
 function connectionErrorHandler(error) {
+	$("#spinner").hide();
 	navigator.notification.alert(
 		    getMessage("noconnection"),
 		    function() { },
