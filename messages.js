@@ -75,8 +75,8 @@ var messages = {
    	    {"key" : "header-nolocation", "value" : "UV-s&auml;teily alueellasi"},
    	    {"key" : "share", "value" : "Jaa"},
    	 	{"key" : "rate", "value" : "Arvostele"},
-   	 	{"key" : "alert", "value" : "UV-s&auml;teily varoitus"},
-   	 	{"key" : "sharemessage", "value" : "Tarkista UV-s&auml;teily alueellasi UV-s&auml;teily nyt sovelluksella jonka voi ladata App Storesta, Google Playsta tai Windows Phone storesta."}   	 	
+   	 	{"key" : "alert", "value" : "UV-säteily varoitus"},
+   	 	{"key" : "sharemessage", "value" : "Tarkista UV-säteily alueellasi UV-säteily nyt sovelluksella jonka voi ladata App Storesta, Google Playsta tai Windows Phone storesta."}   	 	
 	],
 	"sv-se" : [
 	    {"key" : "loading", "value" : "h&auml;mtar observationsdata"},       
@@ -115,7 +115,7 @@ var messages = {
    	    {"key" : "share", "value" : "Dela"},
    	 	{"key" : "rate", "value" : "Betygs&auml;tt"},
    	 	{"key" : "alert", "value" : "UV varning"},
-   	 	{"key" : "sharemessage", "value" : "Kolla UV-str&aring;lningen i ditt omr&aring;de med UV-str&aring;lning nu appen som du kan ladda fr&aring;n App Store, Google Play eller Windows Phone store."}    	 	
+   	 	{"key" : "sharemessage", "value" : "Kolla UV-strålningen i ditt område med UV-strålning nu appen som du kan ladda från App Store, Google Play eller Windows Phone store."}    	 	
   	]
 };
 
