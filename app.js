@@ -144,7 +144,7 @@ function connectionErrorHandler(error) {
 function rate() {
 	AppRate.preferences.storeAppURL.android = "market://details?id=com.markuskarjalainen.uvtracker";
 	AppRate.preferences.storeAppURL.ios = '882320475';
-	AppRate.preferences.storeAppURL.windows8 = 'ms-windows-store:Review?name=<the Package Family Name of the application>';	
+	AppRate.preferences.storeAppURL.windows8 = 'ms-windows-store:Review?name=8837MarkusKarjalainen.UVradiationnow';	
 	AppRate.promptForRating(true);
 }
 
