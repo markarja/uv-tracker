@@ -71,7 +71,7 @@ body {
 }
 
 .protectioninfo {
-	font-size: 12px; 
+	font-size: 11px; 
 	border: 1px solid rgb(240,240,240); 
 	background-color: rgb(240,240,240); 
 	border-radius: 10px; 
@@ -82,7 +82,7 @@ body {
 
 .buttons {
 	position: fixed; 
-	bottom: 8px;
+	bottom: 2px;
  	width: 100%;
 	z-index: 2;	
 }
@@ -226,5 +226,13 @@ i.large {
 		font-size: 15px;
 		padding-bottom: 5px;
 		width: 50%;	
+	}
+	
+	.protectioninfo {
+		font-size: 14px; 	
+	}
+	
+	.exposureinfo {
+		font-size: 14px;	
 	}
 }
