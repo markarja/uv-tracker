@@ -146,8 +146,8 @@ function connectionErrorHandler(error) {
 function rate() {
 	if(language == 'fi-fi') {
 		var customLocale = {};
-		customLocale.title = "Arvostele %@";
-		customLocale.message = "Tyykkätkö %@ sovelluksesta? Haluatko kirjoittaa sille arvostelun? Arvostelun kirjoittamiseen ei mene montaa minuuttia. Kiitos tuestasi!";
+		customLocale.title = "Arvostele sovellus";
+		customLocale.message = "Tyykkätkö tästä sovelluksesta? Haluatko kirjoittaa sille arvostelun? Arvostelun kirjoittamiseen ei mene montaa minuuttia. Kiitos tuestasi!";
 		customLocale.cancelButtonLabel = "Ei kiitos";
 		customLocale.laterButtonLabel = "Muistuta minua myöhemmin";
 		customLocale.rateButtonLabel = "Arvostele nyt";
