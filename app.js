@@ -144,6 +144,16 @@ function connectionErrorHandler(error) {
 }
 
 function rate() {
+	if(language == 'fi-fi') {
+		var customLocale = {};
+		customLocale.title = "Arvostele %@";
+		customLocale.message = "Tyykkätkö %@ sovelluksesta? Haluatko kirjoittaa sille arvostelun? Arvostelun kirjoittamiseen ei mene montaa minuuttia. Kiitos tuestasi!";
+		customLocale.cancelButtonLabel = "Ei kiitos";
+		customLocale.laterButtonLabel = "Muistuta minua myöhemmin";
+		customLocale.rateButtonLabel = "Arvostele nyt";
+		AppRate.preferences.customLocale = customLocale;
+	}
+	
 	AppRate.preferences.storeAppURL.android = "market://details?id=com.markuskarjalainen.uvtracker";
 	AppRate.preferences.storeAppURL.ios = '882320475';
 	AppRate.preferences.storeAppURL.windows8 = 'ms-windows-store:Review?name=8837MarkusKarjalainen.UVradiationnow';	
