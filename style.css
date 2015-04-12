@@ -93,14 +93,22 @@ body {
 }	
 
 .button {
-	color:rgb(0,0,0); 
+	color:rgb(120,120,120); 
 	text-align: center;
-	font-size: 35px;	
+	font-size: 25px;	
+}
+
+.button-border {
+	border: 1px solid rgb(230,230,230); 
+	border-radius: 30px;
+	width: 25px; 
+	padding: 10px;
+	background-color: #ffffff;
 }
 
 .label {
 	text-align: center; 
-	font-size: 12px;
+	font-size: 10px;
 	padding-bottom: 5px;
 	width: 50%;	
 }
@@ -131,13 +139,13 @@ i.large {
 
 .spinner {
 	z-index: 2;
-	top: 138px;
+	top: 145px;
 	position: fixed; 
 	display: none;
 	width: 100%;
 	text-align: center;
-	font-size: 60px;	
-	color: rgb(230,230,230);
+	font-size: 70px;	
+	color: #fff293;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -190,12 +198,33 @@ i.large {
 	
 	.spinner {
 		z-index: 2;
-		top: 198px;
+		top: 200px;
 		position: fixed; 
 		display: none;
 		width: 100%;
 		text-align: center;
-		font-size: 60px;	
-		color: rgb(230,230,230);
+		font-size: 90px;	
+		color: #fff293;
+	}
+	
+	.button {
+		color:rgb(120,120,120); 
+		text-align: center;
+		font-size: 40px;	
+	}
+	
+	.button-border {
+		border: 1px solid rgb(230,230,230); 
+		border-radius: 40px;
+		width: 40px; 
+		padding: 20px;
+		background-color: #ffffff;
+	}
+	
+	.label {
+		text-align: center; 
+		font-size: 15px;
+		padding-bottom: 5px;
+		width: 50%;	
 	}
 }
