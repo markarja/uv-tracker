@@ -21,7 +21,7 @@ function init() {
 	window.addEventListener("resize", onOrientationChanged, false);
 	
 	onOrientationChanged();
-	
+
 }
 
 function reposition() {
@@ -64,10 +64,18 @@ function refresh(init) {
 	$("#valuename").html("");
 	if(navigator.geolocation) {
     	navigator.geolocation.getCurrentPosition(function(position) {
+    		
     		q = position.coords.latitude + "," + position.coords.longitude;
+    		
+    		start = new Date(new Date().getTime() - (3 * 60 * 60 * 1000));
+    		end = new Date();
+    		
+    		var starttime = getTimestamp(start);
+    		var endtime = getTimestamp(end);
+    		
     		$.ajax({
 				url : "http://www.markuskarjalainen.com/rest/test/",
-				data : {"apikey" : "dXYtdHJhY2tlci1pZA==", "q" : q},
+				data : {"apikey" : "dXYtdHJhY2tlci1pZA==", "q" : q, "starttime" : starttime, "endtime" : endtime, "language" : language},
 				async : false,
 				success : function(data) {
 					var response = jQuery.parseJSON(data);
@@ -131,6 +139,14 @@ function refresh(init) {
     	connectionErrorHandler(null);
     }
 	
+}
+
+function getTimestamp(d) {
+    return d.getFullYear() + "-" +
+           ((d.getMonth() + 1 < 10) ? "0" + (d.getMonth() + 1) : (d.getMonth() + 1)) + "-" +
+   		   ((d.getDate() < 10) ? "0" + d.getDate() : d.getDate()) +
+           "T" +
+           ((d.getHours() < 10) ? "0" + d.getHours() : d.getHours()) + ":00:00Z";
 }
 
 function connectionErrorHandler(error) {
