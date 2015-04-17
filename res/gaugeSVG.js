@@ -143,16 +143,16 @@ GaugeSVG = function(params)
 		offsetY: 0,
 		
 		// The lower action limit. Must be negative to be suppressed.
-		lowerActionLimit: 2, //(params.lowerActionLimit != undefined) ? params.lowerActionLimit : (precalculatedMax - precalculatedMin) * 0.15 + precalculatedMin,
+		lowerActionLimit: 2.5, //(params.lowerActionLimit != undefined) ? params.lowerActionLimit : (precalculatedMax - precalculatedMin) * 0.15 + precalculatedMin,
 		
 		// The lower warning limit. Must be negative to be suppressed.
-		lowerWarningLimit: 5, //(params.lowerWarningLimit != undefined) ? params.lowerWarningLimit : (precalculatedMax - precalculatedMin) * 0.30 + precalculatedMin,
+		lowerWarningLimit: 5.5, //(params.lowerWarningLimit != undefined) ? params.lowerWarningLimit : (precalculatedMax - precalculatedMin) * 0.30 + precalculatedMin,
 
 		// The upper warning limit. Must be negative to be suppressed.
-		upperWarningLimit: 7, //(params.upperWarningLimit != undefined) ? params.upperWarningLimit : (precalculatedMax - precalculatedMin) * 0.70 + precalculatedMin,
+		upperWarningLimit: 7.5, //(params.upperWarningLimit != undefined) ? params.upperWarningLimit : (precalculatedMax - precalculatedMin) * 0.70 + precalculatedMin,
 		
 		// The upper action limit. Must be negative to be suppressed.
-		upperActionLimit: 10, //(params.upperActionLimit != undefined) ? params.upperActionLimit : (precalculatedMax - precalculatedMin) * 0.85 + precalculatedMin,
+		upperActionLimit: 10.5, //(params.upperActionLimit != undefined) ? params.upperActionLimit : (precalculatedMax - precalculatedMin) * 0.85 + precalculatedMin,
 		
 		// The gauge needle color. Default is "#444444".
 		needleColor: (params.needleColor != undefined) ? params.needleColor : "#444444",
