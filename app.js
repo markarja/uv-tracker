@@ -103,7 +103,7 @@ function refresh(init) {
 				    	$("#protectioninfo").html(getMessage("3-message"));
 				    	$("#valuename").html(getMessage("3"));
 				    	indexName = getMessage("3");
-				    	$("#valuename").css("color", "#fff900");
+				    	$("#valuename").css("color", "#ffd800");
 					} else if(index >= 6 && index < 8) {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("6-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("6-message"));

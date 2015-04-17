@@ -506,7 +506,7 @@ if (this.config.showGaugeShadow == true)
 	    } else if(this.config.value < 3) {
 			valueColor = "#46a700";
 		} else if(this.config.value >= 3 && this.config.value < 6) {
-			valueColor = "#fff900";
+			valueColor = "#ffd800";
 		} else if(this.config.value >= 6 && this.config.value < 8) {
 			valueColor = "#e97b00";
 		} else if(this.config.value >= 8 && this.config.value < 11) {	
