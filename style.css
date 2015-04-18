@@ -151,7 +151,7 @@ i.large {
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	 /* IE10+ CSS styles */
 	.buttons {
-		bottom: 25px;	
+		bottom: 20px;	
 	}
 }
 
