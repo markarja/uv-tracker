@@ -4,6 +4,7 @@ body {
 	-ms-touch-action: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
   	-webkit-tap-highlight-color: transparent;
+  	-ms-user-select: none;  	
   	text-align: center;	
 }
 
@@ -146,6 +147,32 @@ i.large {
 	text-align: center;
 	font-size: 70px;	
 	color: #fff293;
+}
+
+div.sharedialog {
+	background-color: #ffffff;
+	position: fixed; 
+	top: 0px; 
+	left: 0px; 
+	z-index: 2; 
+	border: 1px solid #000000;
+	width: 300px; 
+	height: 100%; 
+	width: 100%;
+	display: none;	
+}
+
+table.sharedialog {
+	width: 100%;
+	border-spacing: 5px;	
+}
+
+.right {
+	text-align: right;	
+}
+
+.left {
+	text-align: left;	
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

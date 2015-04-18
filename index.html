@@ -39,12 +39,12 @@
 	<div id="buttons" class="buttons">
 		<table class="buttoncontainer">
 			<tr>
-				<td class="button"><img src="res/share.png" onclick="share();" class="button-border" /></td>
+				<td class="button"><img src="res/share.png" onclick="$('#sharedialog').show();" class="button-border" /></td>
 				<td class="button"><img src="res/rate.png" onclick="rate();" class="button-border"></td>
 			</tr>
 			<tr>
-				<td class="label" id="share">Rate</td>
-				<td class="label" id="rate">Share</td>
+				<td class="label" id="share">Share</td>
+				<td class="label" id="rate">Rate</td>
 			</tr>
 		</table>
 	</div>   
@@ -53,6 +53,33 @@
 	</div>
 	<div id="spinner" class="spinner">
 		<img src="res/sun.png" class="fa-spin" />
+	</div>
+	<div id="sharedialog" class="sharedialog">
+		<p id="sharedialogtitle">Share</p>
+		<table class="sharedialog">
+			<tr>
+				<td class="button right"><img src="res/facebook.png" class="button-border" onclick="share('facebook');" /></td><td class="left" id="facebook" onclick="share('facebook');">Facebook</td>
+			</tr>
+			<tr>
+				<td class="button right"><img src="res/googleplus.png" class="button-border" onclick="share('google+');" /></td><td class="left" id="googleplus" onclick="share('facebook');">Google+</td>
+			</tr>
+			<tr>
+				<td class="button right"><img src="res/twitter.png" class="button-border" onclick="share('twitter');" /></td><td class="left" id="twitter" onclick="share('twitter');">Twitter</td>
+			</tr>
+			<tr>
+				<td class="button right"><img src="res/linkedin.png" class="button-border" onclick="share('linkedin');" /></td><td class="left" id="linkedin" onclick="share('linkedin');">LinkedIn</td>
+			</tr>
+			<tr>
+				<td class="button right"><img src="res/sms.png" class="button-border" onclick="share('sms');" /></td><td class="left" id="sms" onclick="share('sms');">SMS</td>
+			</tr>
+			<tr>
+				<td class="button right"><img src="res/mail.png" class="button-border" onclick="share('mail');" /></td><td class="left" id="mail" onclick="share('mail');">Mail</td>
+			</tr>
+		</table>
+		<br />
+		<button onclick="$('#sharedialog').hide();" id="cancel">
+			Cancel
+		</button>
 	</div>
   </body>
 </html>

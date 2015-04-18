@@ -160,29 +160,25 @@ function connectionErrorHandler(error) {
 }
 
 function rate() {
-	if(language == 'fi-fi') {
-		var customLocale = {};
-		customLocale.title = "Arvostele sovellus";
-		customLocale.message = "Tyykkätkö tästä sovelluksesta? Haluatko kirjoittaa sille arvostelun? Arvostelun kirjoittamiseen ei mene montaa minuuttia. Kiitos tuestasi!";
-		customLocale.cancelButtonLabel = "Ei kiitos";
-		customLocale.laterButtonLabel = "Muistuta minua myöhemmin";
-		customLocale.rateButtonLabel = "Arvostele nyt";
-		AppRate.preferences.customLocale = customLocale;
-	}
-	
-	AppRate.preferences.storeAppURL.android = "market://details?id=com.markuskarjalainen.uvtracker";
-	AppRate.preferences.storeAppURL.ios = '882320475';
-	AppRate.preferences.storeAppURL.windows8 = 'ms-windows-store:Review?name=8837MarkusKarjalainen.UVradiationnow';	
-	AppRate.promptForRating(true);
+	window.location = "http://www.windowsphone.com/" + language + "/store/app/uv-radiation-now/55caa454-3666-42a2-855f-8f777df59f71";
 }
 
-function share() {
-	var platform = device.platform;
-	var message = getMessage("header") + " " + locality + ": " + index + " = " + indexName + "! " + getMessage("sharemessage");
-	var title = getMessage("alert");
-	if(platform == "WinCE") {
-		window.plugins.socialsharing.share(message, title, null, null);
+function share(type) {
+	var message = encodeURIComponent(getMessage("header") + " " + locality + ": " + index + " = " + indexName + "! " + getMessage("sharemessage"));
+	var title = encodeURIComponent(getMessage("alert"));
+	
+	if(type == 'linkedin') {
+		window.location = "https://www.linkedin.com/shareArticle?mini=true&url=http://www.windowsphone.com/" + language + "/store/app/uv-radiation-now/55caa454-3666-42a2-855f-8f777df59f71&title=" + title + "&summary=" + message;
+	} else if(type == 'facebook') {
+		window.location = "https://www.facebook.com/sharer/sharer.php?u=http://www.windowsphone.com/" + language + "/store/app/uv-radiation-now/55caa454-3666-42a2-855f-8f777df59f71";
+	} else if(type == 'twitter') {
+		window.location = "http://twitter.com/share?text=" + message;
+	} else if(type == 'sms') {
+		window.location = "sms://?body=" + message;
+	} else if(type == 'google+') {
+		window.location = "https://plus.google.com/share?url=http://www.windowsphone.com/" + language + "/store/app/uv-radiation-now/55caa454-3666-42a2-855f-8f777df59f71"; 
 	} else {
-		window.plugins.socialsharing.share(message, title);
+		window.location = "mailto:?subject=" + title + "&body=" + message;
 	}
+	
 }
