@@ -112,6 +112,8 @@
 		<string>3.0.0</string>
 	</gap:config-file>
 
+    <feature name="http://api.phonegap.com/1.0/geolocation" />
+
     <!--
         Define access to external domains.
 
