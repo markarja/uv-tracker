@@ -134,7 +134,7 @@ function refresh(init) {
     			$("#help").css("visibility", "visible");
     			$("#help").fadeOut(3000);
     		}
-    	}, connectionErrorHandler);
+    	}, connectionErrorHandler, { enableHighAccuracy: true });
     } else {
     	connectionErrorHandler(null);
     }
