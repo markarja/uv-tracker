@@ -114,7 +114,17 @@
 	</gap:config-file>
 
     <feature name="http://api.phonegap.com/1.0/geolocation" />
-
+    
+    <gap:config-file platform="android" parent="/manifest">
+		<supports-screens 
+			android:largeScreens="true" 
+			android:normalScreens="true" 
+			android:smallScreens="true" 
+			android:xlargeScreens="true" 
+			android:resizeable="true" 
+			android:anyDensity="true" />
+	</gap:config-file>
+    
     <!--
         Define access to external domains.
 
