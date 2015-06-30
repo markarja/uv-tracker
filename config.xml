@@ -124,6 +124,8 @@
 			android:xlargeScreens="true" 
 			android:resizeable="true" 
 			android:anyDensity="true" />
+		<uses-sdk android:minSdkVersion="7"
+          	      android:targetSdkVersion="14" />			
 	</gap:config-file>
     
     <!--
