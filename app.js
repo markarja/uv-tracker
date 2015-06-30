@@ -4,10 +4,21 @@ var index = 0;
 var indexName = "";
 var locality = "";
 
+if (!String.prototype.startsWith) {
+  String.prototype.startsWith = function(searchString, position) {
+    position = position || 0;
+    return this.indexOf(searchString, position) === position;
+  };
+}
+
 function init() {
 
 	language = window.navigator.language || window.navigator.browserLanguage;
 	language = language.toLowerCase();
+	
+	if(language.startsWith("es")) {
+		language = "es-es";
+	}
 	
 	localize(language);
 	
