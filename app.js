@@ -117,9 +117,9 @@ function refresh(init) {
 					    	window.localStorage.setItem("lng", position.coords.longitude);
 					    	var precentage = Math.abs(Math.round((result / previous) * 100));
 					    	if(result < 0) {					    		
-					    		change = '<i class="fa fa-caret-down"></i> ' + precentage + ' %';
+					    		change = '&nbsp;<i class="fa fa-caret-down"></i> ' + precentage + ' %';
 					    	} else if(result > 0) {
-					    		change = '<i class="fa fa-caret-up"></i> ' + precentage + ' %';
+					    		change = '&nbsp;<i class="fa fa-caret-up"></i> ' + precentage + ' %';
 					    	}
 				        } else {
 				        	window.localStorage.setItem("index", index);
@@ -135,30 +135,30 @@ function refresh(init) {
 				    if(index < 3) {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("2-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("2-message"));
-				    	$("#valuename").html(getMessage("2") + "&nbsp;" + change);
+				    	$("#valuename").html(getMessage("2") + change);
 				    	indexName = getMessage("2");
 				    	$("#valuename").css("color", "#46a700");
 					} else if(index >= 3 && index < 6) {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("3-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("3-message"));
-				    	$("#valuename").html(getMessage("3") + "&nbsp;" + change);
+				    	$("#valuename").html(getMessage("3") + change);
 				    	indexName = getMessage("3");
 				    	$("#valuename").css("color", "#ffd800");
 					} else if(index >= 6 && index < 8) {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("6-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("6-message"));
-				    	$("#valuename").html(getMessage("6") + "&nbsp;" + change);
+				    	$("#valuename").html(getMessage("6") + change);
 				    	indexName = getMessage("6");
 				    	$("#valuename").css("color", "#e97b00");
 					} else if(index >= 8 && index < 11) {	
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("8-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("8-message"));
-				    	$("#valuename").html(getMessage("8") + "&nbsp;" + change);
+				    	$("#valuename").html(getMessage("8") + change);
 				    	$("#valuename").css("color", "#d81300");
 					} else {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("11-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("11-message"));
-				    	$("#valuename").html(getMessage("11") + "&nbsp;" + change);
+				    	$("#valuename").html(getMessage("11") + change);
 				    	indexName = getMessage("11");
 				    	$("#valuename").css("color", "#6b49c8");
 					}
