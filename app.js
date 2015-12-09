@@ -103,33 +103,62 @@ function refresh(init) {
 				        gauge.refresh(index, true);
 				    }, 1700);
 				    
+				    var change = "";
+				    
+				    if(window.localStorage.getItem("index") != null) {
+				    	var previous = parseFloat(window.localStorage.getItem("index"));
+				    	var lat = window.localStorage.getItem("lat");
+				        var lng = window.localStorage.getItem("lng");
+				        var distance = getDistance(lat, lng, position.coords.latitude, position.coords.longitude);
+				        if(distance < 10) {
+				        	var result = parseFloat(index) - previous;
+				        	window.localStorage.setItem("index", index);
+					    	window.localStorage.setItem("lat", position.coords.latitude);
+					    	window.localStorage.setItem("lng", position.coords.longitude);
+					    	var precentage = Math.abs(Math.round((result / previous) * 100));
+					    	if(result < 0) {					    		
+					    		change = '<i class="fa fa-caret-down"></i> ' + precentage + ' %';
+					    	} else if(result > 0) {
+					    		change = '<i class="fa fa-caret-up"></i> ' + precentage + ' %';
+					    	}
+				        } else {
+				        	window.localStorage.setItem("index", index);
+					    	window.localStorage.setItem("lat", position.coords.latitude);
+					    	window.localStorage.setItem("lng", position.coords.longitude);
+				        }
+				    } else {
+				    	window.localStorage.setItem("index", index);
+				    	window.localStorage.setItem("lat", position.coords.latitude);
+				    	window.localStorage.setItem("lng", position.coords.longitude);
+				    }
+				    
 				    if(index < 3) {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("2-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("2-message"));
-				    	$("#valuename").html(getMessage("2"));
+				    	$("#valuename").html(getMessage("2") + "&nbsp;" + change);
 				    	indexName = getMessage("2");
 				    	$("#valuename").css("color", "#46a700");
 					} else if(index >= 3 && index < 6) {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("3-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("3-message"));
-				    	$("#valuename").html(getMessage("3"));
+				    	$("#valuename").html(getMessage("3") + "&nbsp;" + change);
 				    	indexName = getMessage("3");
 				    	$("#valuename").css("color", "#ffd800");
 					} else if(index >= 6 && index < 8) {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("6-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("6-message"));
-				    	$("#valuename").html(getMessage("6"));
+				    	$("#valuename").html(getMessage("6") + "&nbsp;" + change);
 				    	indexName = getMessage("6");
 				    	$("#valuename").css("color", "#e97b00");
 					} else if(index >= 8 && index < 11) {	
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("8-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("8-message"));
-				    	$("#valuename").html(getMessage("8"));
+				    	$("#valuename").html(getMessage("8") + "&nbsp;" + change);
 				    	$("#valuename").css("color", "#d81300");
 					} else {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("11-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("11-message"));
-				    	$("#valuename").html(getMessage("11"));
+				    	$("#valuename").html(getMessage("11") + "&nbsp;" + change);
 				    	indexName = getMessage("11");
 				    	$("#valuename").css("color", "#6b49c8");
 					}
@@ -196,4 +225,21 @@ function share() {
 	} else {
 		window.plugins.socialsharing.share(message, title);
 	}
+}
+
+function getDistance(lat1,lng1,lat2,lng2) {
+    var R = 6371; 
+    var dLat = deg2rad(lat2-lat1);
+    var dLng = deg2rad(lng2-lng1); 
+    var a = 
+      Math.sin(dLat/2) * Math.sin(dLat/2) +
+      Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+      Math.sin(dLng/2) * Math.sin(dLng/2); 
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+    var d = R * c;
+    return d;
+}
+
+function deg2rad(deg) {
+    return deg * (Math.PI/180);
 }
