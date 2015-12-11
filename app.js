@@ -115,7 +115,10 @@ function refresh(init) {
 				        	window.localStorage.setItem("index", index);
 					    	window.localStorage.setItem("lat", position.coords.latitude);
 					    	window.localStorage.setItem("lng", position.coords.longitude);
-					    	var precentage = Math.abs(Math.round((result / previous) * 100));
+					    	var precentage = 100;
+					    	if(previous > 0) {
+					    		precentage = Math.abs(Math.round((result / previous) * 100));
+					    	}
 					    	if(result < 0) {					    		
 					    		change = '&nbsp;<i class="fa fa-caret-down"></i> ' + precentage + ' %';
 					    	} else if(result > 0) {
