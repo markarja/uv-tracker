@@ -155,7 +155,46 @@ var messages = {
    	 	{"key" : "rate", "value" : "Calificar"},
    	 	{"key" : "alert", "value" : "Alerta de la radiación UV ahora"},
    	 	{"key" : "sharemessage", "value" : "Find out the UV radiation in your area with the UV radiation now app available in the App Store, Google Play and Windows Phone store."}  	    
-  	]
+  	],
+  	"de-de" : [
+ 	    {"key" : "loading", "value" : "Abrufen von Beobachtungsdaten"},
+ 	    {"key" : "info", "value" : "mehr Informationen"},
+	    {"key" : "averageof", "value" : "Durchschnitt von"},
+	    {"key" : "observationtime", "value" : "Beobachtungszeit"},
+	    {"key" : "observations", "value" : "Beobachtungen"},
+	    {"key" : "origin.1", "value" : "Finnish Meteorological Institute"},
+	    {"key" : "origin.2", "value" : "Australian Radiation Protection and Nuclear Safety Agency"},
+	    {"key" : "noconnection-title", "value" : "Können Beobachtungsdaten nicht abgerufen"},
+	    {"key" : "noconnection", "value" : "Überprüfen Sie, dass die Ortungsdienste aktiviert sind, dass Ihr Gerät mit dem Internet verbunden und diese Anwendung neu starten."},
+	    {"key" : "2", "value" : "schwach"},
+	    {"key" : "3", "value" : "durchschnittlich"},
+	    {"key" : "6", "value" : "stark"},
+	    {"key" : "8", "value" : "sehr stark"},
+	    {"key" : "11", "value" : "extrem stark"},
+	    {"key" : "exposureinfo", "value" : "Sonnenexposition Empfehlung:"},
+	    {"key" : "2-exposureinfo", "value" : "<b>ganzer Tag.</b>"},
+	    {"key" : "3-exposureinfo", "value" : "<b>1 - 2 Stunden.</b>"},
+	    {"key" : "6-exposureinfo", "value" : "<b>30 - 60 Minuten.</b>"},
+	    {"key" : "8-exposureinfo", "value" : "<b>15 - 30 Minuten.</b>"},
+	    {"key" : "11-exposureinfo", "value" : "<b>5 - 15 Minuten.</b>"},   	    
+	    {"key" : "2-message", "value" : "Keine Notwendigkeit zum Schutz."},
+	    {"key" : "3-message", "value" : "Das Bedürfnis nach Schutz beginnt. Ein Hut und Hemd ist ein guter Schutz vor UV-Strahlung. Ohne direkte Sonneneinstrahlung, indem sie in den Schatten kann UV-Strahlung um die Hälfte zu reduzieren. Obwohl bleiben im Schatten schützt, sollte man berücksichtigen, dass UV-Strahlung reflektiert von Schnee, Wasser und Sand. Der beste Weg, um die Augen vor UV-Strahlung zu schützen, ist durch das Tragen eines Schattierung Hut oder Sonnenbrille. Eine gute Sonnenbrille auch zum Schutz vor Strahlung, die von den Seiten."},
+	    {"key" : "6-message", "value" : "Ein Hut und Hemd ist ein guter Schutz vor UV-Strahlung. Ohne direkte Sonneneinstrahlung, indem sie in den Schatten kann UV-Strahlung um die Hälfte zu reduzieren. Obwohl bleiben im Schatten schützt, sollte man berücksichtigen, dass UV-Strahlung reflektiert von Schnee, Wasser und Sand. Der beste Weg, um die Augen vor UV-Strahlung zu schützen, ist durch das Tragen eines Schattierung Hut oder Sonnenbrille. Eine gute Sonnenbrille auch zum Schutz vor Strahlung, die von den Seiten."},
+	    {"key" : "8-message", "value" : "Vermeiden Sie die Zeit in direktem Sonnenlicht. Ein Hut und Hemd ist ein guter Schutz vor UV-Strahlung. Ohne direkte Sonneneinstrahlung, indem sie in den Schatten kann UV-Strahlung um die Hälfte zu reduzieren. Obwohl bleiben im Schatten schützt, sollte man berücksichtigen, dass UV-Strahlung reflektiert von Schnee, Wasser und Sand. Der beste Weg, um die Augen vor UV-Strahlung zu schützen, ist durch das Tragen eines Schattierung Hut oder Sonnenbrille. Eine gute Sonnenbrille auch zum Schutz vor Strahlung, die von den Seiten."},
+	    {"key" : "11-message", "value" : "Vermeiden Sie nach draußen gehen. Ein Hut und Hemd ist ein guter Schutz vor UV-Strahlung. Ohne direkte Sonneneinstrahlung, indem sie in den Schatten kann UV-Strahlung um die Hälfte zu reduzieren. Obwohl bleiben im Schatten schützt, sollte man berücksichtigen, dass UV-Strahlung reflektiert von Schnee, Wasser und Sand. Der beste Weg, um die Augen vor UV-Strahlung zu schützen, ist durch das Tragen eines Schattierung Hut oder Sonnenbrille. Eine gute Sonnenbrille auch zum Schutz vor Strahlung, die von den Seiten."},
+	    {"key" : "finland", "value" : "Finland"},
+	    {"key" : "australia", "value" : "Australia"},
+	    {"key" : "fmi", "value" : "Measurements by the Finnish Meteorological Institute"},
+	    {"key" : "arpansa", "value" : "Measurements by the Australian Radiation Protection and Nuclear Safety Agency"},
+	    {"key" : "distance", "value" : "km from your current location"},
+	    {"key" : "tapheretorefresh", "value" : "Tippen Sie hier, um zu aktualisieren"},
+	    {"key" : "header", "value" : "UV-Strahlung im"},
+	    {"key" : "header-nolocation", "value" : "UV-Strahlung in Ihrer Nähe"},
+	    {"key" : "share", "value" : "Teile"},
+	 	{"key" : "rate", "value" : "Bewertungen"},
+	 	{"key" : "alert", "value" : "Benachrichtigung vor UV-Strahlung jetzt"},
+	 	{"key" : "sharemessage", "value" : "Find out the UV radiation in your area with the UV radiation now app available in the App Store, Google Play and Windows Phone store."}
+ 	]  	
 };
 
 function getMessage(key) {

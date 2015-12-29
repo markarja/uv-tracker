@@ -18,6 +18,8 @@ function init() {
 	
 	if(language.startsWith("es")) {
 		language = "es-es";
+	} else if(language.startsWith("de")) {
+		language = "de-de";
 	}
 	
 	localize(language);
