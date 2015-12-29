@@ -44,7 +44,7 @@
 	<gap:plugin name="org.apache.cordova.device" version="0.3.0" />
 	<gap:plugin name="org.apache.cordova.geolocation" version="0.3.12" />
 	<gap:plugin name="org.apache.cordova.globalization" version="0.3.4" />
-	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
+	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.6.0" />
 	<gap:plugin name="org.apache.cordova.dialogs" version="0.3.0" />
 	<gap:plugin name="org.pushandplay.cordova.apprate" version="1.1.7" />
 	<gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.8" />
