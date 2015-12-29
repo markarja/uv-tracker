@@ -41,13 +41,13 @@
     <preference name="DisallowOverscroll" 		  value="true" />
 
 	<!-- Plugins -->
-	<gap:plugin name="org.apache.cordova.device" version="0.2.12" source="npm" />
-	<gap:plugin name="org.apache.cordova.geolocation" version="0.3.10" source="npm" />
-	<gap:plugin name="org.apache.cordova.globalization" version="0.3.1" source="npm" />
-	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" source="npm" />
-	<gap:plugin name="org.apache.cordova.dialogs" version="0.2.10" source="npm" />
-	<gap:plugin name="org.pushandplay.cordova.apprate" version="1.1.7" source="npm" />
-	<gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.8" source="npm" />
+	<gap:plugin name="org.apache.cordova.device" source="npm" />
+	<gap:plugin name="org.apache.cordova.geolocation" source="npm" />
+	<gap:plugin name="org.apache.cordova.globalization" source="npm" />
+	<gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
+	<gap:plugin name="org.apache.cordova.dialogs" source="npm" />
+	<gap:plugin name="org.pushandplay.cordova.apprate" source="npm" />
+	<gap:plugin name="nl.x-services.plugins.socialsharing" source="npm" />
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
