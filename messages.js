@@ -191,7 +191,7 @@ var messages = {
 	    {"key" : "header", "value" : "UV-Strahlung im"},
 	    {"key" : "header-nolocation", "value" : "UV-Strahlung in Ihrer Nähe"},
 	    {"key" : "share", "value" : "Teile"},
-	 	{"key" : "rate", "value" : "Bewertungen"},
+	 	{"key" : "rate", "value" : "Bewerten"},
 	 	{"key" : "alert", "value" : "Benachrichtigung vor UV-Strahlung jetzt"},
 	 	{"key" : "sharemessage", "value" : "Find out the UV radiation in your area with the UV radiation now app available in the App Store, Google Play and Windows Phone store."}
  	]  	
