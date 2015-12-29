@@ -187,7 +187,7 @@ var messages = {
 	    {"key" : "fmi", "value" : "Measurements by the Finnish Meteorological Institute"},
 	    {"key" : "arpansa", "value" : "Measurements by the Australian Radiation Protection and Nuclear Safety Agency"},
 	    {"key" : "distance", "value" : "km from your current location"},
-	    {"key" : "tapheretorefresh", "value" : "Tippen Sie hier, um zu aktualisieren"},
+	    {"key" : "tapheretorefresh", "value" : "berühren zu refresh"},
 	    {"key" : "header", "value" : "UV-Strahlung im"},
 	    {"key" : "header-nolocation", "value" : "UV-Strahlung in Ihrer Nähe"},
 	    {"key" : "share", "value" : "Teile"},
