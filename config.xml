@@ -41,13 +41,13 @@
     <preference name="DisallowOverscroll" 		  value="true" />
 
 	<!-- Plugins -->
-	<plugin name="nl.x-services.plugins.socialsharing" source="pgb" spec="4.3.8" />
-	<plugin name="org.apache.cordova.device" source="pgb" spec="0.3.0" />
-	<plugin name="org.apache.cordova.dialogs" source="pgb" spec="0.3.0" />
-	<plugin name="org.apache.cordova.geolocation" source="pgb" spec="0.3.12" />
-	<plugin name="org.apache.cordova.globalization" source="pgb" spec="0.3.4" />
-	<plugin name="org.apache.cordova.inappbrowser" source="pgb" spec="0.6.0" />
-	<plugin name="org.pushandplay.cordova.apprate" source="pgb" spec="1.1.7" />
+	<plugin name="nl.x-services.plugins.socialsharing" source="pgb" />
+	<plugin name="org.apache.cordova.device" source="pgb" />
+	<plugin name="org.apache.cordova.dialogs" source="pgb" />
+	<plugin name="org.apache.cordova.geolocation" source="pgb" />
+	<plugin name="org.apache.cordova.globalization" source="pgb" />
+	<plugin name="org.apache.cordova.inappbrowser" source="pgb" />
+	<plugin name="org.pushandplay.cordova.apprate" source="pgb" />
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
