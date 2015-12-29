@@ -193,7 +193,7 @@ var messages = {
 	    {"key" : "share", "value" : "Teile"},
 	 	{"key" : "rate", "value" : "Bewerten"},
 	 	{"key" : "alert", "value" : "Benachrichtigung vor UV-Strahlung jetzt"},
-	 	{"key" : "sharemessage", "value" : "Find out the UV radiation in your area with the UV radiation now app available in the App Store, Google Play and Windows Phone store."}
+	 	{"key" : "sharemessage", "value" : "Finden Sie heraus, die UV-Strahlung in Ihrer Nähe mit der UV-Strahlung jetzt App in den App Store, Google Play und Windows Phone Store."}
  	]  	
 };
 
