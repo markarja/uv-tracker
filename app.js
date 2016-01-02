@@ -11,6 +11,18 @@ if (!String.prototype.startsWith) {
   };
 }
 
+Date.prototype.today = function () { 
+    return ((this.getDate() < 10) ? "0": "") + this.getDate() + "." + 
+           (((this.getMonth() + 1) < 10) ? "0" : "") + 
+           (this.getMonth() + 1) + "." + this.getFullYear();
+};
+
+Date.prototype.timeNow = function () {
+     return ((this.getHours() < 10) ? "0" : "") + this.getHours() + ":"+ 
+            ((this.getMinutes() < 10) ? "0" : "") + this.getMinutes() + ":" + 
+            ((this.getSeconds() < 10) ? "0" : "") + this.getSeconds();
+};
+
 function init() {
 
 	language = window.navigator.language || window.navigator.browserLanguage;
@@ -34,6 +46,9 @@ function init() {
 	window.addEventListener("resize", onOrientationChanged, false);
 	
 	onOrientationChanged();
+	
+	$("#swiper-container").css("height", window.innerHeight);
+	$("#swiper-container").css("width", window.innerWidth);
 
 }
 
@@ -106,18 +121,37 @@ function refresh(init) {
 				    }, 1700);
 				    
 				    var change = "";
+				    var precentage = 100;
+				    var previous = 0;
+				    var result = 0;
 				    
 				    if(window.localStorage.getItem("index") != null) {
-				    	var previous = parseFloat(window.localStorage.getItem("index"));
+				    	previous = parseFloat(window.localStorage.getItem("index"));
 				    	var lat = window.localStorage.getItem("lat");
 				        var lng = window.localStorage.getItem("lng");
 				        var distance = getDistance(lat, lng, position.coords.latitude, position.coords.longitude);
 				        if(distance < 10) {
-				        	var result = parseFloat(index) - previous;
+				        	result = parseFloat(index) - previous;
+						    document.getElementById("previousindex").innerHTML = window.localStorage.getItem("index");
+						    if(window.localStorage.getItem("index") < 3) {
+						    	document.getElementById("previousindex").className = "index1-3";
+						    } else if(window.localStorage.getItem("index") >= 3 && window.localStorage.getItem("index") < 6) {
+						    	document.getElementById("previousindex").className = "index3-6";
+						    } else if(window.localStorage.getItem("index") >= 6 && window.localStorage.getItem("index") < 8) {
+						    	document.getElementById("previousindex").className = "index6-8";
+						    } else if(window.localStorage.getItem("index") >= 8 && window.localStorage.getItem("index") < 11) {
+						    	document.getElementById("previousindex").className = "index8-11";
+						    } else {
+						    	document.getElementById("previousindex").className = "index11";
+						    }
+						    document.getElementById("previouslocationvalue").innerHTML = window.localStorage.getItem("location");
+						    document.getElementById("previoustime").innerHTML = window.localStorage.getItem("time");
 				        	window.localStorage.setItem("index", index);
 					    	window.localStorage.setItem("lat", position.coords.latitude);
 					    	window.localStorage.setItem("lng", position.coords.longitude);
-					    	var precentage = 100;
+					    	window.localStorage.setItem("location", (locality != "") ? locality : "N/A");
+					    	window.localStorage.setItem("time", end.today() + " " + end.timeNow());
+					    	precentage = 100;
 					    	if(previous > 0) {
 					    		precentage = Math.abs(Math.round((result / previous) * 100));
 					    	}
@@ -130,12 +164,75 @@ function refresh(init) {
 				        	window.localStorage.setItem("index", index);
 					    	window.localStorage.setItem("lat", position.coords.latitude);
 					    	window.localStorage.setItem("lng", position.coords.longitude);
+					    	window.localStorage.setItem("location", (locality != "") ? locality : "N/A");
+					    	window.localStorage.setItem("time", end.today() + " " + end.timeNow());
 				        }
 				    } else {
 				    	window.localStorage.setItem("index", index);
 				    	window.localStorage.setItem("lat", position.coords.latitude);
 				    	window.localStorage.setItem("lng", position.coords.longitude);
+				    	window.localStorage.setItem("location", (locality != "") ? locality : "N/A");
+				    	window.localStorage.setItem("time", end.today() + " " + end.timeNow());
 				    }
+				    
+				    if(window.localStorage.getItem("h.index") != null) {
+				    	var highest = parseFloat(window.localStorage.getItem("h.index"));
+				    	if(parseFloat(index) > highest) {
+				    		window.localStorage.setItem("h.index", index);
+					    	window.localStorage.setItem("h.lat", position.coords.latitude);
+					    	window.localStorage.setItem("h.lng", position.coords.longitude);
+					    	window.localStorage.setItem("h.location", (locality != "") ? locality : "N/A");
+					    	window.localStorage.setItem("h.time", end.today() + " " + end.timeNow());
+				    	}
+				    } else {
+				    	window.localStorage.setItem("h.index", index);
+				    	window.localStorage.setItem("h.lat", position.coords.latitude);
+				    	window.localStorage.setItem("h.lng", position.coords.longitude);
+				    	window.localStorage.setItem("h.location", (locality != "") ? locality : "N/A");
+				    	window.localStorage.setItem("h.time", end.today() + " " + end.timeNow());
+				    }	
+
+				    document.getElementById("currentindex").innerHTML = index;
+				    
+				    if(locality != "") {
+				    	document.getElementById("currentlocationvalue").innerHTML = locality;
+				    } else {
+				    	document.getElementById("currentlocationvalue").innerHTML = "N/A";
+				    }
+				    document.getElementById("currenttime").innerHTML = end.today() + " " + end.timeNow();
+				    
+				    var globalChange = 0;
+				    result = parseFloat(index) - previous;
+				    precentage = 100;
+			    	if(previous > 0) {
+			    		precentage = Math.abs(Math.round((result / previous) * 100));
+			    	}
+			    	if(result < 0) {					    		
+			    		globalChange = '&nbsp;<i class="fa fa-caret-down"></i> ' + precentage + ' %';
+			    	} else if(result > 0) {
+			    		globalChange = '&nbsp;<i class="fa fa-caret-up"></i> ' + precentage + ' %';
+			    	}
+				    
+			    	if(globalChange != "") {
+				    	document.getElementById("changevalue").innerHTML = globalChange;
+				    } else {
+				    	document.getElementById("changevalue").innerHTML = "0 %";
+				    }
+				    
+				    document.getElementById("highestindex").innerHTML = window.localStorage.getItem("h.index");
+				    if(window.localStorage.getItem("h.index") < 3) {
+				    	document.getElementById("highestindex").className = "index1-3";
+				    } else if(window.localStorage.getItem("h.index") >= 3 && window.localStorage.getItem("h.index") < 6) {
+				    	document.getElementById("highestindex").className = "index3-6";
+				    } else if(window.localStorage.getItem("h.index") >= 6 && window.localStorage.getItem("h.index") < 8) {
+				    	document.getElementById("highestindex").className = "index6-8";
+				    } else if(window.localStorage.getItem("h.index") >= 8 && window.localStorage.getItem("h.index") < 11) {
+				    	document.getElementById("highestindex").className = "index8-11";
+				    } else {
+				    	document.getElementById("highestindex").className = "index11";
+				    }
+				    document.getElementById("highestlocationvalue").innerHTML = window.localStorage.getItem("h.location");
+				    document.getElementById("highesttime").innerHTML = window.localStorage.getItem("h.time");
 				    
 				    if(index < 3) {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("2-exposureinfo"));
@@ -143,29 +240,34 @@ function refresh(init) {
 				    	$("#valuename").html(getMessage("2") + change);
 				    	indexName = getMessage("2");
 				    	$("#valuename").css("color", "#46a700");
+				    	document.getElementById("currentindex").className = "index1-3";
 					} else if(index >= 3 && index < 6) {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("3-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("3-message"));
 				    	$("#valuename").html(getMessage("3") + change);
 				    	indexName = getMessage("3");
 				    	$("#valuename").css("color", "#ffd800");
+				    	document.getElementById("currentindex").className = "index3-6";
 					} else if(index >= 6 && index < 8) {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("6-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("6-message"));
 				    	$("#valuename").html(getMessage("6") + change);
 				    	indexName = getMessage("6");
 				    	$("#valuename").css("color", "#e97b00");
+				    	document.getElementById("currentindex").className = "index6-8";
 					} else if(index >= 8 && index < 11) {	
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("8-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("8-message"));
 				    	$("#valuename").html(getMessage("8") + change);
 				    	$("#valuename").css("color", "#d81300");
+				    	document.getElementById("currentindex").className = "index8-11";
 					} else {
 				    	$("#exposureinfo").html(getMessage("exposureinfo") + " " +  getMessage("11-exposureinfo"));
 				    	$("#protectioninfo").html(getMessage("11-message"));
 				    	$("#valuename").html(getMessage("11") + change);
 				    	indexName = getMessage("11");
 				    	$("#valuename").css("color", "#6b49c8");
+				    	document.getElementById("currentindex").className = "index11";
 					}
 				    
 				},

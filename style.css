@@ -24,13 +24,13 @@ body {
 	position: fixed;
 	z-index: 2;
 	width:100%;	
-	padding-top: 18px;		
+	padding-top: 20px;		
 }
 
 .source {
 	padding-top: 0px;
 	font-size: 12px;
-	top: 30px;	
+	top: 32px;	
 }
 
 .grey {
@@ -236,4 +236,72 @@ i.large {
 	.exposureinfo {
 		font-size: 14px;	
 	}
+}
+
+.swiper-container {
+    width: 100%;
+    height: 400px;
+}
+
+.data {
+	width: 100%;
+	border-spacing: 5px;
+}
+
+.data-label {
+	font-size: 15px; 
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: right;
+	color: rgb(100,100,100);
+}
+
+.value {
+	text-align: left;	
+	font-size: 15px;
+}
+
+.swiper-slide {
+	background-color: #ffffff;	
+}
+
+.data-header {
+	font-size: 14px;
+	padding-top: 5px;
+}
+
+.data-sub-header {
+	background-color: rgb(240,240,240);	
+	padding: 5px;
+	border-radius: 10px;
+}
+
+.swiper-pagination-bullet {
+	opacity: 1 !important;
+	background: rgb(230,230,230) !important;
+}
+
+.swiper-pagination-bullet-active {
+   background: rgb(120,120,120) !important;
+}
+
+.index1-3 {
+	color: #46a700;
+}
+
+.index3-6 {
+	color: #ffd800;
+}
+
+.index6-8 {
+	color: #e97b00;
+}
+
+.index8-11 {
+   color: #d81300;	
+}
+
+.index11 {
+   color: #6b49c8;	
 }
