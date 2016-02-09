@@ -46,7 +46,7 @@
 	<plugin name="cordova-plugin-dialogs" spec="0.2.10" source="npm" />
 	<plugin name="cordova-plugin-geolocation" spec="1.0.1" source="pgb" />
 	<plugin name="cordova-plugin-globalization" spec="0.3.1" source="npm" />
-	<plugin name="cordova-plugin-inappbrowser" spec="0.5.2" source="npm" />	
+	<plugin name="cordova-plugin-inappbrowser" source="npm" />	
 	<plugin name="org.pushandplay.cordova.apprate" spec="1.1.5" source="pgb" />
 	<plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" />
 
