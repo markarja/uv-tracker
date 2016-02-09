@@ -47,7 +47,7 @@
 	<plugin name="org.apache.cordova.geolocation" source="npm" />
 	<plugin name="org.apache.cordova.globalization" source="npm" />
 	<plugin name="org.apache.cordova.inappbrowser" source="npm" />	
-	<plugin name="org.pushandplay.cordova.apprate" source="npm" />
+	<!-- <plugin name="org.pushandplay.cordova.apprate" source="npm" /> -->
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
