@@ -42,11 +42,11 @@
 
 	<!-- Plugins -->
 	<plugin name="nl.x-services.plugins.socialsharing" source="npm" />
-	<plugin name="org.apache.cordova.device" spec="0.2.8" source="npm" />
-	<plugin name="org.apache.cordova.dialogs" source="npm" />
-	<plugin name="org.apache.cordova.geolocation" spec="0.2.6" source="npm" />
-	<plugin name="org.apache.cordova.globalization" spec="0.2.6" source="npm" />
-	<!-- <plugin name="org.apache.cordova.inappbrowser" source="npm" /> -->	
+	<plugin name="cordova-plugin-device" spec="0.2.8" source="npm" />
+	<plugin name="cordova-plugin-dialogs" source="npm" />
+	<plugin name="cordova-plugin-geolocation" spec="0.2.6" source="npm" />
+	<plugin name="cordova-plugin-globalization" spec="0.2.6" source="npm" />
+	<plugin name="cordova-plugin-inappbrowser" source="npm" />	
 	<plugin name="org.pushandplay.cordova.apprate" spec="1.0.1" source="pgb" />
 
     <!-- Define app icon for each platform. -->
