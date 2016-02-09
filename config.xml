@@ -45,7 +45,7 @@
 	<plugin name="cordova-plugin-device" spec="0.2.8" source="npm" />
 	<plugin name="cordova-plugin-geolocation" spec="1.0.1" source="pgb" />
 	<plugin name="org.apache.cordova.globalization" version="0.3.1" source="pgb" />
-	<plugin name="org.apache.cordova.inappbrowser" version="0.5.2" source="pgb" />
+	<plugin name="org.apache.cordova.inappbrowser" source="pgb" />
 	<plugin name="org.apache.cordova.dialogs" version="0.2.10" source="pgb" />
 	<plugin name="org.pushandplay.cordova.apprate" version="1.1.5" source="pgb" />	
 	<plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" />
