@@ -311,9 +311,12 @@ function rate() {
 	var devicePlatform = device.platform;
 	
 	if (devicePlatform == "iOS") {
-		cordova.InAppBrowser.open("itms-apps://itunes.apple.com/app/uv-radiation-now/id882320475?mt=8", "_blank", "location=no");
+		
+		cordova.InAppBrowser.open("itms-apps://itunes.apple.com/app/uv-radiation-now/id882320475?mt=8", "_system");
+		
     } else if (devicePlatform == "Android") {
-    	cordova.InAppBrowser.open("https://play.google.com/store/apps/details?id=com.markuskarjalainen.uvtracker", "_blank", "location=no");
+    	
+    	cordova.InAppBrowser.open("market://details?id=com.markuskarjalainen.uvtracker", "_system");
     }
 	
 }
