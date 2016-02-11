@@ -307,26 +307,33 @@ function connectionErrorHandler(error) {
 }
 
 function rate() {
+	try {
+		
+		var cfg = {
+	        usesUntilPrompt: 1,
+	        displayAppName: "UV radiation now",
+	        appStoreAppURL: {
+	            ios: "itms-apps://itunes.apple.com/app/uv-radiation-now/id882320475?mt=8",
+	            android: "market://details?id=com.markuskarjalainen.uvtracker"
+	        }
+	    };
 	
-	var cfg = {
-        usesUntilPrompt: 1,
-        displayAppName: "UV radiation now",
-        appStoreAppURL: {
-            ios: "itms-apps://itunes.apple.com/app/uv-radiation-now/id882320475?mt=8",
-            android: "market://details?id=com.markuskarjalainen.uvtracker"
-        }
-    };
-
-	if(language == 'fi-fi') {
-		var customLocale = {};
-		customLocale.title = "Arvostele sovellus";
-		customLocale.message = "Tyykkäätkö tästä sovelluksesta? Haluatko kirjoittaa sille arvostelun? Arvostelun kirjoittamiseen ei mene montaa minuuttia. Kiitos tuestasi!";
-		customLocale.buttonLabels = ["Ei kiitos", "Muistuta minua myöhemmin", "Arvostele nyt"];
-		cfg.customLocale = customLocale;
-	}	
+		if(language == 'fi-fi') {
+			var customLocale = {};
+			customLocale.title = "Arvostele sovellus";
+			customLocale.message = "Tyykkäätkö tästä sovelluksesta? Haluatko kirjoittaa sille arvostelun? Arvostelun kirjoittamiseen ei mene montaa minuuttia. Kiitos tuestasi!";
+			customLocale.buttonLabels = ["Ei kiitos", "Muistuta minua myöhemmin", "Arvostele nyt"];
+			cfg.customLocale = customLocale;
+		}	
+		
+		navigator.apprate.setup(cfg);
+		navigator.apprate.promptForRating();
 	
-	navigator.apprate.setup(cfg);
-	navigator.apprate.promptForRating();
+	} catch (ex) {
+		
+		alert(ex.message);
+		
+	}
 	
 }
 
