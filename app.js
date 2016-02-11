@@ -97,11 +97,6 @@ function refresh(init) {
 
     		var altitude = position.coords.altitude;
     		
-    		alert('position.coords.altitude = ' + altitude);
-    		alert('position.coords.altitudeAccuracy = ' + position.coords.altitudeAccuracy);
-    		
-    		altitude = 1500;
-    		
     		if(position.coords.altitudeAccuracy == null || 
     		   position.coords.altitudeAccuracy < 1000) {
 	    		if(altitude > 1000) {
@@ -112,8 +107,6 @@ function refresh(init) {
     		} else {
     			altitude = 1;
     		}
-    		
-    		alert('altitude = ' + altitude);
     		
     		start = new Date(new Date().getTime() - (3 * 60 * 60 * 1000));
     		end = new Date();
