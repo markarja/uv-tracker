@@ -94,6 +94,21 @@ function refresh(init) {
     	navigator.geolocation.getCurrentPosition(function(position) {
     		
     		q = position.coords.latitude + "," + position.coords.longitude;
+
+    		var altitude = position.coords.altitude;
+    		
+    		alert('position.coords.altitude = ' + altitude);
+    		alert('position.coords.altitudeAccuracy = ' + position.coords.altitudeAccuracy);
+    		
+    		if(position.coords.altitudeAccuracy < 1000) {
+	    		if(altitude > 1000) {
+	    			altitude = (altitude / (1000 * 10));
+	    		}
+    		} else {
+    			altitude = 1;
+    		}
+    		
+    		alert('altitude = ' + altitude);
     		
     		start = new Date(new Date().getTime() - (3 * 60 * 60 * 1000));
     		end = new Date();
@@ -115,9 +130,9 @@ function refresh(init) {
 					}
 					locality = response["data"][0].location;
 					$("#source").html(response["data"][0].source);
-				    gauge.refresh(parseFloat(index) + 0.5, true);
+				    gauge.refresh(parseFloat(index) * altitude + 0.5, true);
 				    setTimeout(function () {
-				        gauge.refresh(index, true);
+				        gauge.refresh(parseFloat(index) * altitude, true);
 				    }, 1700);
 				    
 				    var change = "";
