@@ -100,10 +100,12 @@ function refresh(init) {
     		alert('position.coords.altitude = ' + altitude);
     		alert('position.coords.altitudeAccuracy = ' + position.coords.altitudeAccuracy);
     		
+    		altitude = 1500;
+    		
     		if(position.coords.altitudeAccuracy == null || 
     		   position.coords.altitudeAccuracy < 1000) {
 	    		if(altitude > 1000) {
-	    			altitude = (altitude / (1000 * 10));
+	    			altitude = 1 + (altitude / (1000 * 10));
 	    		} else {
 	    			altitude = 1;
 	    		}
