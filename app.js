@@ -325,8 +325,10 @@ function rate() {
 		cfg.customLocale = customLocale;
 	}	
 	
+	alert(navigator.apprate);
+	
 	navigator.apprate.setup(cfg);
-	navigator.apprate.promptForRating();
+	navigator.apprate.promptForRating(true);
 }
 
 function share() {
