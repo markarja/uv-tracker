@@ -307,33 +307,14 @@ function connectionErrorHandler(error) {
 }
 
 function rate() {
-	try {
-		
-		var cfg = {
-	        usesUntilPrompt: 1,
-	        displayAppName: "UV radiation now",
-	        appStoreAppURL: {
-	            ios: "itms-apps://itunes.apple.com/app/uv-radiation-now/id882320475?mt=8",
-	            android: "market://details?id=com.markuskarjalainen.uvtracker"
-	        }
-	    };
 	
-		if(language == 'fi-fi') {
-			var customLocale = {};
-			customLocale.title = "Arvostele sovellus";
-			customLocale.message = "Tyykkäätkö tästä sovelluksesta? Haluatko kirjoittaa sille arvostelun? Arvostelun kirjoittamiseen ei mene montaa minuuttia. Kiitos tuestasi!";
-			customLocale.buttonLabels = ["Ei kiitos", "Muistuta minua myöhemmin", "Arvostele nyt"];
-			cfg.customLocale = customLocale;
-		}	
-		
-		navigator.apprate.setup(cfg);
-		navigator.apprate.promptForRating();
+	var devicePlatform = device.platform;
 	
-	} catch (ex) {
-		
-		alert(ex.message);
-		
-	}
+	if (devicePlatform == "iOS") {
+        window.open("itms-apps://itunes.apple.com/app/uv-radiation-now/id882320475?mt=8");
+    } else if (devicePlatform == "Android") {
+    	window.open("market://details?id=com.markuskarjalainen.uvtracker");
+    }
 	
 }
 
