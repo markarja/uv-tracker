@@ -337,6 +337,9 @@ function rate() {
 function share() {
 	var platform = device.platform;
 	var message = getMessage("header") + " " + locality + ": " + index + " = " + indexName + "! " + getMessage("sharemessage");
+	if(locality == "") {
+		message = getMessage("uvindexinmyarea") + ": " + index + " = " + indexName + "! " + getMessage("sharemessage");
+	}
 	var title = getMessage("alert");
 	if(platform == "WinCE") {
 		window.plugins.socialsharing.share(message, title, null, null);

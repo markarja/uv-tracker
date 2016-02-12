@@ -51,7 +51,8 @@ var messages = {
    	    {"key" : "previousobservationtime", "value" : "Observation time"},
    	 	{"key" : "highestuvindex", "value" : "UV index"},
    	 	{"key" : "highestlocation", "value" : "Location"},
-   	    {"key" : "highestobservationtime", "value" : "Observation time"}
+   	    {"key" : "highestobservationtime", "value" : "Observation time"},
+   	    {"key" : "uvindexinmyarea", "value" : "UV index in my area"}
 	],	
 	"fi-fi" : [
 	    {"key" : "loading", "value" : "haetaan havaintodataa"},	
@@ -104,7 +105,8 @@ var messages = {
 	    {"key" : "previousobservationtime", "value" : "Havaintoaika"},
 	 	{"key" : "highestuvindex", "value" : "UV-indeksi"},
 	 	{"key" : "highestlocation", "value" : "Sijainti"},
-	    {"key" : "highestobservationtime", "value" : "Havaintoaika"}
+	    {"key" : "highestobservationtime", "value" : "Havaintoaika"},
+   	    {"key" : "uvindexinmyarea", "value" : "UV-indeksi alueellani"}
 	],
 	"sv-se" : [
 	    {"key" : "loading", "value" : "hämtar observationsdata"},       
@@ -157,7 +159,8 @@ var messages = {
 	    {"key" : "previousobservationtime", "value" : "Observationstid"},
 	 	{"key" : "highestuvindex", "value" : "UV-index"},
 	 	{"key" : "highestlocation", "value" : "Läge"},
-	    {"key" : "highestobservationtime", "value" : "Observationstid"}   	 	
+	    {"key" : "highestobservationtime", "value" : "Observationstid"},
+   	    {"key" : "uvindexinmyarea", "value" : "UV-indexet i mitt område"}
   	], 
   	"es-es" : [
  	    {"key" : "loading", "value" : "obtener datos de observación"},
@@ -210,7 +213,8 @@ var messages = {
    	    {"key" : "previousobservationtime", "value" : "Tiempo de observación"},
    	 	{"key" : "highestuvindex", "value" : "Índice UV"},
    	 	{"key" : "highestlocation", "value" : "Localización"},
-   	    {"key" : "highestobservationtime", "value" : "Tiempo de observación"}
+   	    {"key" : "highestobservationtime", "value" : "Tiempo de observación"},
+	    {"key" : "uvindexinmyarea", "value" : "Índice UV en mi área"}
   	],
   	"de-de" : [
  	    {"key" : "loading", "value" : "Abrufen von Beobachtungsdaten"},
@@ -263,7 +267,8 @@ var messages = {
    	    {"key" : "previousobservationtime", "value" : "Beobachtungszeit"},
    	 	{"key" : "highestuvindex", "value" : "UV-Index"},
    	 	{"key" : "highestlocation", "value" : "Stelle"},
-   	    {"key" : "highestobservationtime", "value" : "Beobachtungszeit"}
+   	    {"key" : "highestobservationtime", "value" : "Beobachtungszeit"},
+	    {"key" : "uvindexinmyarea", "value" : "UV-Index in meinem Bereich"}
  	]  	
 };
 
