@@ -97,7 +97,7 @@ function refresh(init) {
     		
     		q = position.coords.latitude + "," + position.coords.longitude;
     		
-    		var altitude = position.coords.altitude + 1020;
+    		var altitude = Math.round(position.coords.altitude + 1020);
     		
     		if(position.coords.altitudeAccuracy == null || 
     		   position.coords.altitudeAccuracy < 1000) {
