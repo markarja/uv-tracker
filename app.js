@@ -98,12 +98,13 @@ function refresh(init) {
     		q = position.coords.latitude + "," + position.coords.longitude;
     		
     		var altitude = Math.round(position.coords.altitude + 1020);
+    		var displayAltitude = altitude;
     		
     		if(position.coords.altitudeAccuracy == null || 
     		   position.coords.altitudeAccuracy < 1000) {
 	    		if(altitude > 1000) {
 	    			altitude = 1 + (altitude / (1000 * 10));
-	    			document.getElementById("altitude").innerHTML = "altitude " + position.coords.altitude + " m impact +" + Math.round((altitude - 1) * 100) + " %";
+	    			document.getElementById("altitude").innerHTML = "altitude " + displayAltitude + " m impact +" + Math.round((altitude - 1) * 100) + " %";
 	    			document.getElementById("messagecontainer").style.top = "245px";
 	    			document.getElementById("altitude").style.visibility = "visible";
 	    		} else {
