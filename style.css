@@ -33,6 +33,13 @@ body {
 	top: 32px;	
 }
 
+.altitude {
+	font-size: 12px;
+	position: fixed; 
+	top: 210px;	
+	visibility: hidden;
+}
+
 .grey {
 	font-size: 8px; 
 	color: rgb(100,100,100);	

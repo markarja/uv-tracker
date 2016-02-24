@@ -87,6 +87,8 @@ function onDeviceReady() {
 function refresh(init) {
 	$("#spinner").show();
 	gauge.refresh(0.0);
+	document.getElementById("altitude").style.visibility = "hidden";
+	document.getElementById("messagecontainer").style.top = "225px";
 	$("#exposureinfo").html("");
 	$("#protectioninfo").html(getMessage("loading") + "...");
 	$("#valuename").html("");
@@ -94,17 +96,24 @@ function refresh(init) {
     	navigator.geolocation.getCurrentPosition(function(position) {
     		
     		q = position.coords.latitude + "," + position.coords.longitude;
-
-    		var altitude = position.coords.altitude;
+    		
+    		var altitude = position.coords.altitude + 1020;
     		
     		if(position.coords.altitudeAccuracy == null || 
     		   position.coords.altitudeAccuracy < 1000) {
 	    		if(altitude > 1000) {
 	    			altitude = 1 + (altitude / (1000 * 10));
+	    			document.getElementById("altitude").innerHTML = "altitude " + position.coords.altitude + " m impact +" + Math.round((altitude - 1) * 100) + " %";
+	    			document.getElementById("messagecontainer").style.top = "245px";
+	    			document.getElementById("altitude").style.visibility = "visible";
 	    		} else {
+	    			document.getElementById("altitude").style.visibility = "hidden";
+	    			document.getElementById("messagecontainer").style.top = "225px";
 	    			altitude = 1;
 	    		}
     		} else {
+    			document.getElementById("altitude").style.visibility = "hidden";
+    			document.getElementById("messagecontainer").style.top = "225px";
     			altitude = 1;
     		}
     		
@@ -115,7 +124,7 @@ function refresh(init) {
     		var endtime = getTimestamp(end);
     		
     		$.ajax({
-				url : "http://www.markuskarjalainen.com/rest/uv/",
+				url : "http://www.markuskarjalainen.com/rest/test/",
 				data : {"apikey" : "dXYtdHJhY2tlci1pZA==", "q" : q, "starttime" : starttime, "endtime" : endtime, "language" : language},
 				async : false,
 				success : function(data) {
@@ -127,11 +136,16 @@ function refresh(init) {
 						$("#header").html(getMessage("header") + " " + response["data"][0].location);
 					}
 					locality = response["data"][0].location;
-					$("#source").html(response["data"][0].source);
-				    gauge.refresh(parseFloat(index) * altitude + 0.5, true);
+					$("#source").html(response["data"][0].source);				
+					
+					var displayIndex = parseFloat(index) * altitude;
+					
+				    gauge.refresh(Math.round((displayIndex + 0.5) * 10) / 10, true);
 				    setTimeout(function () {
-				        gauge.refresh(parseFloat(index) * altitude, true);
+				        gauge.refresh(Math.round(displayIndex * 10) / 10, true);
 				    }, 1700);
+				    
+			        index = Math.round((parseFloat(index) * altitude) * 10) / 10;
 				    
 				    var change = "";
 				    var precentage = 100;

@@ -52,7 +52,9 @@ var messages = {
    	 	{"key" : "highestuvindex", "value" : "UV index"},
    	 	{"key" : "highestlocation", "value" : "Location"},
    	    {"key" : "highestobservationtime", "value" : "Observation time"},
-   	    {"key" : "uvindexinmyarea", "value" : "UV index in my area"}
+   	    {"key" : "uvindexinmyarea", "value" : "UV index in my area"},
+   	    {"key" : "altitude", "value" : "altitude"},
+   	    {"key" : "impact", "value" : "impact"}
 	],	
 	"fi-fi" : [
 	    {"key" : "loading", "value" : "haetaan havaintodataa"},	
@@ -106,7 +108,9 @@ var messages = {
 	 	{"key" : "highestuvindex", "value" : "UV-indeksi"},
 	 	{"key" : "highestlocation", "value" : "Sijainti"},
 	    {"key" : "highestobservationtime", "value" : "Havaintoaika"},
-   	    {"key" : "uvindexinmyarea", "value" : "UV-indeksi alueellani"}
+   	    {"key" : "uvindexinmyarea", "value" : "UV-indeksi alueellani"},
+   	    {"key" : "altitude", "value" : "korkeus"},
+   	    {"key" : "impact", "value" : "vaikutus"}  	    
 	],
 	"sv-se" : [
 	    {"key" : "loading", "value" : "hämtar observationsdata"},       
@@ -160,7 +164,9 @@ var messages = {
 	 	{"key" : "highestuvindex", "value" : "UV-index"},
 	 	{"key" : "highestlocation", "value" : "Läge"},
 	    {"key" : "highestobservationtime", "value" : "Observationstid"},
-   	    {"key" : "uvindexinmyarea", "value" : "UV-indexet i mitt område"}
+   	    {"key" : "uvindexinmyarea", "value" : "UV-indexet i mitt område"},
+   	    {"key" : "altitude", "value" : "höjd"},
+   	    {"key" : "impact", "value" : "påverkan"}    	    
   	], 
   	"es-es" : [
  	    {"key" : "loading", "value" : "obtener datos de observación"},
@@ -214,7 +220,9 @@ var messages = {
    	 	{"key" : "highestuvindex", "value" : "Índice UV"},
    	 	{"key" : "highestlocation", "value" : "Localización"},
    	    {"key" : "highestobservationtime", "value" : "Tiempo de observación"},
-	    {"key" : "uvindexinmyarea", "value" : "Índice UV en mi área"}
+	    {"key" : "uvindexinmyarea", "value" : "Índice UV en mi área"},
+   	    {"key" : "altitude", "value" : "altitud"},
+   	    {"key" : "impact", "value" : "impacto"}   	    
   	],
   	"de-de" : [
  	    {"key" : "loading", "value" : "Abrufen von Beobachtungsdaten"},
@@ -268,7 +276,9 @@ var messages = {
    	 	{"key" : "highestuvindex", "value" : "UV-Index"},
    	 	{"key" : "highestlocation", "value" : "Stelle"},
    	    {"key" : "highestobservationtime", "value" : "Beobachtungszeit"},
-	    {"key" : "uvindexinmyarea", "value" : "UV-Index in meinem Bereich"}
+	    {"key" : "uvindexinmyarea", "value" : "UV-Index in meinem Bereich"},
+   	    {"key" : "altitude", "value" : "höhe"},
+   	    {"key" : "impact", "value" : "auswirkung"} 	    
  	]  	
 };
 
