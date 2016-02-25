@@ -87,8 +87,16 @@ function onDeviceReady() {
 function refresh(init) {
 	$("#spinner").show();
 	gauge.refresh(0.0);
-	document.getElementById("altitude").style.visibility = "hidden";
-	document.getElementById("messagecontainer").style.top = "225px";
+	document.getElementById("altitude").style.visibility = "hidden";	
+	
+	if(isLargeDisplay()) {
+		document.getElementById("messagecontainer").style.top = "290px";
+	} else {
+		document.getElementById("messagecontainer").style.top = "225px";
+	}
+	
+	$("#header").html(getMessage("header-nolocation"));
+	$("#source").html("");
 	$("#exposureinfo").html("");
 	$("#protectioninfo").html(getMessage("loading") + "...");
 	$("#valuename").html("");
@@ -97,7 +105,7 @@ function refresh(init) {
     		
     		q = position.coords.latitude + "," + position.coords.longitude;
     		
-    		var altitude = Math.round(position.coords.altitude + 1020);
+    		var altitude = Math.round(position.coords.altitude);
     		var displayAltitude = altitude;
     		
     		if(position.coords.altitudeAccuracy == null || 
@@ -105,16 +113,28 @@ function refresh(init) {
 	    		if(altitude > 1000) {
 	    			altitude = 1 + (altitude / (1000 * 10));
 	    			document.getElementById("altitude").innerHTML = "altitude " + displayAltitude + " m impact +" + Math.round((altitude - 1) * 100) + " %";
-	    			document.getElementById("messagecontainer").style.top = "245px";
+	    			if(isLargeDisplay()) {
+	    				document.getElementById("messagecontainer").style.top = "315px";
+	    			} else {
+	    				document.getElementById("messagecontainer").style.top = "245px";
+	    			}
 	    			document.getElementById("altitude").style.visibility = "visible";
 	    		} else {
 	    			document.getElementById("altitude").style.visibility = "hidden";
-	    			document.getElementById("messagecontainer").style.top = "225px";
+	    			if(isLargeDisplay()) {
+	    				document.getElementById("messagecontainer").style.top = "290px";
+	    			} else {
+	    				document.getElementById("messagecontainer").style.top = "225px";
+	    			}
 	    			altitude = 1;
 	    		}
     		} else {
     			document.getElementById("altitude").style.visibility = "hidden";
-    			document.getElementById("messagecontainer").style.top = "225px";
+    			if(isLargeDisplay()) {
+    				document.getElementById("messagecontainer").style.top = "225px";
+    			} else {
+    				document.getElementById("messagecontainer").style.top = "290px";
+    			}
     			altitude = 1;
     		}
     		
@@ -125,7 +145,7 @@ function refresh(init) {
     		var endtime = getTimestamp(end);
     		
     		$.ajax({
-				url : "http://www.markuskarjalainen.com/rest/test/",
+				url : "http://www.markuskarjalainen.com/rest/uv/",
 				data : {"apikey" : "dXYtdHJhY2tlci1pZA==", "q" : q, "starttime" : starttime, "endtime" : endtime, "language" : language},
 				async : false,
 				success : function(data) {
@@ -378,4 +398,8 @@ function getDistance(lat1,lng1,lat2,lng2) {
 
 function deg2rad(deg) {
     return deg * (Math.PI/180);
+}
+
+function isLargeDisplay() {
+	return (window.innerWidth >= 600) ? true : false;
 }

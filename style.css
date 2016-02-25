@@ -177,6 +177,10 @@ i.large {
 		top: 270px;
 	}
 	
+	.altitude { 
+		top: 280px;	
+	}	
+	
 	.messagecontainer {
 		z-index:1;
 		color: rgb(0,0,0); 
