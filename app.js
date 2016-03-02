@@ -105,7 +105,7 @@ function refresh(init) {
     		
     		q = position.coords.latitude + "," + position.coords.longitude;
     		
-    		var altitude = Math.round(position.coords.altitude) + 1000;
+    		var altitude = Math.round(position.coords.altitude);
     		var displayAltitude = altitude;
     		
     		if(position.coords.altitudeAccuracy == null || 
@@ -145,7 +145,7 @@ function refresh(init) {
     		var endtime = getTimestamp(end);
     		
     		$.ajax({
-				url : "http://www.markuskarjalainen.com/rest/test/",
+				url : "http://www.markuskarjalainen.com/rest/uv/",
 				data : {"apikey" : "dXYtdHJhY2tlci1pZA==", "q" : q, "starttime" : starttime, "endtime" : endtime, "language" : language},
 				async : false,
 				success : function(data) {
