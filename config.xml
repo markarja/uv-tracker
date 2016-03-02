@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
     	xmlns:gap = "http://phonegap.com/ns/1.0"
     	xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.markuskarjalainen.uvtracker"
+        id        = "com.markuskarjalainen.uvradiationnow"
         version   = "5.0.0">
         
     <name>UV radiation now</name>
@@ -89,11 +89,6 @@
     <icon src="icon-windows.png"  gap:platform="winphone" />
 
     <!-- Define app splash screen for each platform. -->
-    <!-- <gap:splash src="res/screen/android/screen-ldpi-portrait.png"  gap:platform="android" gap:density="ldpi" />
-    <gap:splash src="res/screen/android/screen-mdpi-portrait.png"  gap:platform="android" gap:density="mdpi" />
-    <gap:splash src="res/screen/android/screen-hdpi-portrait.png"  gap:platform="android" gap:density="hdpi" />
-    <gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xhdpi" />
-    <gap:splash src="res/screen/blackberry/screen-225.png"         gap:platform="blackberry" />-->
     <gap:splash src="screen-iphone-portrait.png"    gap:platform="ios"     width="320" height="480" />
     <gap:splash src="iphone-568h.png"    gap:platform="ios"     width="320" height="568" />
     <gap:splash src="default_iphone5.png"    gap:platform="ios"     width="640" height="1136" />
