@@ -47,7 +47,7 @@
 	<plugin name="cordova-plugin-geolocation" spec="1.0.1" source="npm" />
 	<plugin name="org.apache.cordova.globalization" spec="0.3.4" source="npm" />
 	<plugin name="cordova-plugin-inappbrowser" source="npm" />	
-	<plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" />
+	<plugin name="com.indigoway.cordova.whitelist.whitelistplugin" source="npm" />
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
