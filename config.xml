@@ -42,10 +42,10 @@
 
 	<!-- Plugins -->
 	<plugin name="nl.x-services.plugins.socialsharing" source="npm" />
-	<plugin name="cordova-plugin-device" spec="0.3.0" source="npm" />
+	<plugin name="cordova-plugin-device" source="npm" />
 	<plugin name="org.apache.cordova.dialogs" source="npm" />
-	<plugin name="cordova-plugin-geolocation" spec="1.0.1" source="npm" />
-	<plugin name="org.apache.cordova.globalization" spec="0.3.4" source="npm" />
+	<plugin name="cordova-plugin-geolocation" source="npm" />
+	<plugin name="org.apache.cordova.globalization" source="npm" />
 	<plugin name="cordova-plugin-inappbrowser" source="npm" />	
 	<plugin name="com.indigoway.cordova.whitelist.whitelistplugin" source="npm" />
 
