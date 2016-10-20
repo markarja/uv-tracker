@@ -145,7 +145,7 @@ function refresh(init) {
     		var endtime = getTimestamp(end);
     		
     		$.ajax({
-				url : "http://www.markuskarjalainen.com/rest/uv/",
+				url : "https://www.markuskarjalainen.com/rest/uv/",
 				data : {"apikey" : "dXYtdHJhY2tlci1pZA==", "q" : q, "starttime" : starttime, "endtime" : endtime, "language" : language},
 				async : false,
 				success : function(data) {
