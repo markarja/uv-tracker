@@ -154,7 +154,7 @@ function refresh(init) {
     		
     		$.ajax({
 				url : "https://www.markuskarjalainen.com/rest/test/",
-				data : {"apikey" : "dXYtdHJhY2tlci1pZA==", "q" : q, "starttime" : starttime, "endtime" : endtime, "language" : language},
+				data : {"apikey" : "dXYtdHJhY2tlci1pZA==", "q" : q, "starttime" : starttime, "endtime" : endtime, "language" : language, "free" : true},
 				async : false,
 				success : function(data) {
 					var response = jQuery.parseJSON(data);

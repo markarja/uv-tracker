@@ -230,6 +230,14 @@ i.large {
 		font-size: 40px;	
 	}
 	
+	.buttons { 
+		bottom: 92px;	
+	}
+	
+	.swiper-pagination {
+		padding-bottom: 90px;	
+	}
+	
 	.button-border {
 		border: 1px solid rgb(230,230,230); 
 		border-radius: 40px;
