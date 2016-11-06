@@ -83,7 +83,12 @@ function portrait() {
 }
 
 function onDeviceReady() {
-	admob.createBannerView({publisherId: "ca-app-pub-1309397168819129/6817482896"});
+	admob.createBannerView({
+		publisherId: "ca-app-pub-1309397168819129/6817482896",
+		isTesting: true,
+		offsetStatusBar: true,
+		bannerAtTop: true
+	});
     refresh(true);
 }
 
