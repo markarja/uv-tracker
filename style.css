@@ -1,5 +1,10 @@
+html, body {
+	margin: 0; 
+	height: 100%; 
+	overflow: hidden
+}
+
 body {
-	margin: 0px;
 	font-family: 'Raleway', sans-serif;
 	-ms-touch-action: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -315,4 +320,8 @@ i.large {
 
 .index11 {
    color: #6b49c8;	
+}
+
+#admobadjustmentfooter {
+	height: 50px;
 }
