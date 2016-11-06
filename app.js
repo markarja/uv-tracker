@@ -51,6 +51,8 @@ function init() {
 	
 	$("#swiper-container").css("height", window.innerHeight);
 	$("#swiper-container").css("width", window.innerWidth);
+	
+	onDeviceReady();
 
 }
 
@@ -147,7 +149,7 @@ function refresh(init) {
     		var endtime = getTimestamp(end);
     		
     		$.ajax({
-				url : "https://www.markuskarjalainen.com/rest/uv/",
+				url : "https://www.markuskarjalainen.com/rest/test/",
 				data : {"apikey" : "dXYtdHJhY2tlci1pZA==", "q" : q, "starttime" : starttime, "endtime" : endtime, "language" : language},
 				async : false,
 				success : function(data) {
