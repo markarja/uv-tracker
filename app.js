@@ -51,8 +51,6 @@ function init() {
 	
 	$("#swiper-container").css("height", window.innerHeight);
 	$("#swiper-container").css("width", window.innerWidth);
-	
-	onDeviceReady();
 
 }
 
