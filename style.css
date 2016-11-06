@@ -94,7 +94,7 @@ body {
 
 .buttons {
 	position: fixed; 
-	bottom: 2px;
+	bottom: 52px;
  	width: 100%;
 	z-index: 2;	
 }
@@ -293,6 +293,10 @@ i.large {
 	border-radius: 10px;
 }
 
+.swiper-pagination {
+	padding-bottom: 50px;	
+}
+
 .swiper-pagination-bullet {
 	opacity: 1 !important;
 	background: rgb(230,230,230) !important;
@@ -320,8 +324,4 @@ i.large {
 
 .index11 {
    color: #6b49c8;	
-}
-
-#admobadjustmentfooter {
-	height: 50px;
 }
