@@ -78,7 +78,7 @@
 	<gap:splash src="res/ios/splashscreens/Default@2x.png" gap:platform="ios" width="640" height="960" />
 	<gap:splash src="res/ios/splashscreens/Default~ipad.png" gap:platform="ios" width="768" height="1024" />
 	<gap:splash src="res/ios/splashscreens/Default~ipad@2x.png" gap:platform="ios" width="1536" height="2048" />
-	<gap:splash src="res/ios/splashscreens/Default~ipad~landscape.png" gap:platform="ios" width="1024" height="748" />
+	<gap:splash src="res/ios/splashscreens/Default~ipad~landscape.png" gap:platform="ios" width="1024" height="768" />
 	<gap:splash src="res/ios/splashscreens/Default~ipad~landscape@2x.png" gap:platform="ios" width="2048" height="1536" />
 	<gap:splash src="res/ios/splashscreens/Default~ipad~landscape~nostatusbar.png" gap:platform="ios" width="768" height="1024" />
 	<gap:splash src="res/ios/splashscreens/Default~ipad~landscape~nostatusbar@2x.png" gap:platform="ios" width="320" height="480" />
@@ -87,6 +87,15 @@
 	<gap:splash src="res/ios/splashscreens/iPhone6-Plus-landscape@3x.png" gap:platform="ios" width="2208" height="1242" />
 	<gap:splash src="res/ios/splashscreens/iPhone6-Plus-portrait@3x.png" gap:platform="ios" width="1242" height="2208" />
 	<gap:splash src="res/ios/splashscreens/iPhone6-portrait@2x.png" gap:platform="ios" width="750" height="1334" />
+
+<!-- 	
+OK	/tmp/gimlet/2341105/project/UVradiationnowFREE/Images.xcassets:./LaunchImage.launchimage/[ipad][][2x][portrait][full-screen][7.0]: warning: LaunchImage.launchimage/Default-Portrait@2x~ipad.png is 1536x2008 but should be 1536x2048.
+OK /tmp/gimlet/2341105/project/UVradiationnowFREE/Images.xcassets:./LaunchImage.launchimage/[ipad][][1x][portrait][full-screen][]: warning: LaunchImage.launchimage/Default-Portrait~ipad.png is 768x1004 but should be 768x1024.
+OK /tmp/gimlet/2341105/project/UVradiationnowFREE/Images.xcassets:./LaunchImage.launchimage/[ipad][][2x][landscape][full-screen][7.0]: warning: LaunchImage.launchimage/Default-Landscape@2x~ipad.png is 2048x1496 but should be 2048x1536.
+/tmp/gimlet/2341105/project/UVradiationnowFREE/Images.xcassets:./LaunchImage.launchimage/[ipad][][2x][portrait][full-screen][]: warning: LaunchImage.launchimage/Default-Portrait@2x~ipad.png is 1536x2008 but should be 1536x2048.
+/tmp/gimlet/2341105/project/UVradiationnowFREE/Images.xcassets:./LaunchImage.launchimage/[ipad][][1x][portrait][full-screen][7.0]: warning: LaunchImage.launchimage/Default-Portrait~ipad.png is 768x1004 but should be 768x1024.
+x/tmp/gimlet/2341105/project/UVradiationnowFREE/Images.xcassets:./LaunchImage.launchimage/[ipad][][1x][landscape][full-screen][7.0]: warning: LaunchImage.launchimage/Default-Landscape~ipad.png is 1024x748 but should be 1024x768
+ -->
 	
 	<!-- 
 	<gap:splash src="res/ios/splashscreens/Default@2x~universal~anyany.png" gap:platform="ios" />
