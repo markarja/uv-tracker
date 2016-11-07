@@ -58,37 +58,36 @@
     <icon src="res/android/iconsicon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
     <icon src="res/android/iconsicon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
 
-	<platform name="ios">
-	    <icon src="res/ios/icons/icon.png" width="57" height="57" />
-	    <icon src="res/ios/icons/Icon-29.png" width="29" height="29" />
-		<icon src="res/ios/icons/Icon-29@2x.png" width="58" height="58" />
-		<icon src="res/ios/icons/Icon-40.png" width="40" height="40" />
-		<icon src="res/ios/icons/Icon-40@2x.png" width="80" height="80" />
-		<icon src="res/ios/icons/Icon-50.png" width="50" height="50" />
-		<icon src="res/ios/icons/Icon-50@2x.png" width="100" height="100" />
-		<icon src="res/ios/icons/Icon-60.png" width="60" height="60" />
-		<icon src="res/ios/icons/Icon-60@2x.png" width="120" height="120" />
-		<icon src="res/ios/icons/Icon-72.png" width="72" height="72" />
-		<icon src="res/ios/icons/Icon-72@2x.png" width="144" height="144" />
-		<icon src="res/ios/icons/Icon-76.png" width="76" height="76" />
-		<icon src="res/ios/icons/Icon-76@2x.png" width="152" height="152" />
-		<icon src="res/ios/icons/Icon@2x.png" width="114" height="114" />
-		
-		<splash src="res/ios/splashscreens/Default-568h@2x.png" width="640" height="1136" />
-		<splash src="res/ios/splashscreens/Default.png" width="320" height="480" />
-		<splash src="res/ios/splashscreens/Default@2x.png" width="640" height="960" />
-		<splash src="res/ios/splashscreens/Default~ipad.png" width="768" height="1004" />
-		<splash src="res/ios/splashscreens/Default~ipad@2x.png" width="1536" height="2008" />
-		<splash src="res/ios/splashscreens/Default~ipad~landscape.png" width="1024" height="748" />
-		<splash src="res/ios/splashscreens/Default~ipad~landscape@2x.png" width="2048" height="1496" />
-		<splash src="res/ios/splashscreens/Default~ipad~landscape~nostatusbar.png" width="768" height="1024" />
-		<splash src="res/ios/splashscreens/Default~ipad~landscape~nostatusbar@2x.png" width="320" height="480" />
-		<splash src="res/ios/splashscreens/Default~ipad~nostatusbar.png" width="320" height="480" />
-		<splash src="res/ios/splashscreens/Default~ipad~nostatusbar@2x.png" width="1536" height="2048" />
-		<splash src="res/ios/splashscreens/iPhone6-Plus-landscape@3x.png" width="2208" height="1242" />
-		<splash src="res/ios/splashscreens/iPhone6-Plus-portrait@3x.png" width="1242" height="2208" />
-		<splash src="res/ios/splashscreens/iPhone6-portrait@2x.png" width="750" height="1334" />
-	</platform>
+    <icon src="res/ios/icons/icon.png" gap:platform="ios" width="57" height="57" />
+    <icon src="res/ios/icons/Icon-29.png" gap:platform="ios" width="29" height="29" />
+	<icon src="res/ios/icons/Icon-29@2x.png" gap:platform="ios" width="58" height="58" />
+	<icon src="res/ios/icons/Icon-40.png" gap:platform="ios" width="40" height="40" />
+	<icon src="res/ios/icons/Icon-40@2x.png" gap:platform="ios" width="80" height="80" />
+	<icon src="res/ios/icons/Icon-50.png" gap:platform="ios" width="50" height="50" />
+	<icon src="res/ios/icons/Icon-50@2x.png" gap:platform="ios" width="100" height="100" />
+	<icon src="res/ios/icons/Icon-60.png" gap:platform="ios" width="60" height="60" />
+	<icon src="res/ios/icons/Icon-60@2x.png" gap:platform="ios" width="120" height="120" />
+	<icon src="res/ios/icons/Icon-72.png" gap:platform="ios" width="72" height="72" />
+	<icon src="res/ios/icons/Icon-72@2x.png" gap:platform="ios" width="144" height="144" />
+	<icon src="res/ios/icons/Icon-76.png" gap:platform="ios" width="76" height="76" />
+	<icon src="res/ios/icons/Icon-76@2x.png" gap:platform="ios" width="152" height="152" />
+	<icon src="res/ios/icons/Icon@2x.png" gap:platform="ios" width="114" height="114" />
+	
+	<gap:splash src="res/ios/splashscreens/Default-568h@2x.png" gap:platform="ios" width="640" height="1136" />
+	<gap:splash src="res/ios/splashscreens/Default.png" gap:platform="ios" width="320" height="480" />
+	<gap:splash src="res/ios/splashscreens/Default@2x.png" gap:platform="ios" width="640" height="960" />
+	<gap:splash src="res/ios/splashscreens/Default~ipad.png" gap:platform="ios" width="768" height="1004" />
+	<gap:splash src="res/ios/splashscreens/Default~ipad@2x.png" gap:platform="ios" width="1536" height="2008" />
+	<gap:splash src="res/ios/splashscreens/Default~ipad~landscape.png" gap:platform="ios" width="1024" height="748" />
+	<gap:splash src="res/ios/splashscreens/Default~ipad~landscape@2x.png" gap:platform="ios" width="2048" height="1496" />
+	<gap:splash src="res/ios/splashscreens/Default~ipad~landscape~nostatusbar.png" gap:platform="ios" width="768" height="1024" />
+	<gap:splash src="res/ios/splashscreens/Default~ipad~landscape~nostatusbar@2x.png" gap:platform="ios" width="320" height="480" />
+	<gap:splash src="res/ios/splashscreens/Default~ipad~nostatusbar.png" gap:platform="ios" width="320" height="480" />
+	<gap:splash src="res/ios/splashscreens/Default~ipad~nostatusbar@2x.png" gap:platform="ios" width="1536" height="2048" />
+	<gap:splash src="res/ios/splashscreens/iPhone6-Plus-landscape@3x.png" gap:platform="ios" width="2208" height="1242" />
+	<gap:splash src="res/ios/splashscreens/iPhone6-Plus-portrait@3x.png" gap:platform="ios" width="1242" height="2208" />
+	<gap:splash src="res/ios/splashscreens/iPhone6-portrait@2x.png" gap:platform="ios" width="750" height="1334" />
+	
 	<!-- 
 	<gap:splash src="res/ios/splashscreens/Default@2x~universal~anyany.png" gap:platform="ios" />
     <gap:splash src="res/ios/splashscreens/Default@2x~universal~comany.png" gap:platform="ios" />
@@ -101,15 +100,14 @@
     <icon src="res/windows/icons/icon-windows.png"  gap:platform="winphone" />
 
     <!-- Define app splash screen for each platform. -->
-    <!-- 
+    
     <gap:splash src="res/ios/splashscreens/screen-iphone-portrait.png"    gap:platform="ios"     width="320" height="480" />
     <gap:splash src="res/ios/splashscreens/iphone-568h.png"    gap:platform="ios"     width="320" height="568" />
     <gap:splash src="res/ios/splashscreens/default_iphone5.png"    gap:platform="ios"     width="640" height="1136" />
     <gap:splash src="res/ios/splashscreens/screen-iphone-portrait-2x.png" gap:platform="ios"     width="640" height="960" />
     <gap:splash src="res/ios/splashscreens/screen-ipad-portrait.png"      gap:platform="ios"     width="768" height="1024" />
     <gap:splash src="res/ios/splashscreens/screen-ipad-landscape.png"     gap:platform="ios"     width="1024" height="768" />
-     -->
-     
+    
     <gap:splash src="res/windows/splashscreen.jpg" gap:platform="winphone" />
     
     <gap:splash src="res/android/splashscreen.jpg" gap:platform="android" gap:density="ldpi" />
@@ -143,10 +141,8 @@
    	
     <!--
         Define access to external domains.
-
         <access />            - a blank access tag denies access to all external resources.
         <access origin="*" /> - a wildcard access tag allows access to all external resource.
-
         Otherwise, you can specify specific domains:
     -->
     <access origin="*"/> <!-- allow local pages -->
