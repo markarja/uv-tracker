@@ -34,6 +34,8 @@ function init() {
 		language = "de-de";
 	} else if(language.startsWith("nl")) {
 		language = "nl-nl";
+	} else if(language.startsWith("it")) {
+		language = "it-it";
 	}
 	
 	localize(language);
