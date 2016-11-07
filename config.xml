@@ -5,7 +5,7 @@
     	xmlns:gap = "http://phonegap.com/ns/1.0"
     	xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.markuskarjalainen.uvradiationnow"
-        version   = "6.0.0">
+        version   = "7.0.0">
         
     <name>UV radiation now</name>
 
@@ -97,11 +97,11 @@
     <gap:splash src="res/android/splashscreen.jpg" gap:platform="android" gap:density="xhdpi" />
     
     <gap:config-file platform="ios" parent="CFBundleVersion">
-		<string>6.0.0</string>
+		<string>7.0.0</string>
 	</gap:config-file>
     
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-		<string>6.0.0</string>
+		<string>7.0.0</string>
 	</gap:config-file>
 
     <feature name="http://api.phonegap.com/1.0/geolocation" />
