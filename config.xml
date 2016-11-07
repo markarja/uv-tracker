@@ -87,6 +87,13 @@
 	<gap:splash src="res/ios/splashscreens/iPhone6-Plus-landscape@3x.png" gap:platform="ios" width="2208" height="1242" />
 	<gap:splash src="res/ios/splashscreens/iPhone6-Plus-portrait@3x.png" gap:platform="ios" width="1242" height="2208" />
 	<gap:splash src="res/ios/splashscreens/iPhone6-portrait@2x.png" gap:platform="ios" width="750" height="1334" />
+	
+	<gap:splash src="res/screen/ios/Default@2x~universal~anyany.png" gap:platform="ios" />
+    <gap:splash src="res/screen/ios/Default@2x~universal~comany.png" gap:platform="ios" />
+    <gap:splash src="res/screen/ios/Default@2x~universal~comcom.png" gap:platform="ios" />
+    <gap:splash src="res/screen/ios/Default@3x~universal~anyany.png" gap:platform="ios" />
+    <gap:splash src="res/screen/ios/Default@3x~universal~anycom.png" gap:platform="ios" />
+    <gap:splash src="res/screen/ios/Default@3x~universal~comany.png" gap:platform="ios" />
     
     <icon src="res/windows/icons/icon-windows.png"  gap:platform="winphone" />
 
