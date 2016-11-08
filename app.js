@@ -34,6 +34,8 @@ function init() {
 		language = "de-de";
 	} else if(language.startsWith("nl")) {
 		language = "nl-nl";
+	} else if(language.startsWith("it")) {
+		language = "it-it";
 	}
 	
 	localize(language);
@@ -85,7 +87,7 @@ function portrait() {
 function onDeviceReady() {
 	admob.createBannerView({
 		publisherId: "ca-app-pub-1309397168819129/6817482896",
-		isTesting: true,
+		isTesting: false,
 		offsetStatusBar: true,
 		bannerAtTop: true
 	});
@@ -153,7 +155,7 @@ function refresh(init) {
     		var endtime = getTimestamp(end);
     		
     		$.ajax({
-				url : "https://www.markuskarjalainen.com/rest/test/",
+				url : "https://www.markuskarjalainen.com/rest/uv/",
 				data : {"apikey" : "dXYtdHJhY2tlci1pZA==", "q" : q, "starttime" : starttime, "endtime" : endtime, "language" : language, "free" : true},
 				async : false,
 				success : function(data) {
