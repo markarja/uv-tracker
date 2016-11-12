@@ -53,9 +53,9 @@
     <icon src="res/ios/icons/icon.png" />
     
     <icon src="res/android/icons/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
-    <icon src="res/android/iconsicon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
-    <icon src="res/android/iconsicon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
-    <icon src="res/android/iconsicon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
+    <icon src="res/android/icons/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
+    <icon src="res/android/icons/icon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
+    <icon src="res/android/icons/icon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
 
     <icon src="res/ios/icons/icon.png" gap:platform="ios" width="57" height="57" />
     <icon src="res/ios/icons/Icon-29.png" gap:platform="ios" width="29" height="29" />
