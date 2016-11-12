@@ -39,6 +39,7 @@
     <preference name="android-targetSdkVersion"   value="14" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
     <preference name="DisallowOverscroll" 		  value="true" />
+ 	<preference name="ShowSplashScreenSpinner" value="false"/>
 
 	<!-- Plugins -->
 	<plugin name="nl.x-services.plugins.socialsharing" source="npm" />
@@ -48,7 +49,9 @@
 	<plugin name="org.apache.cordova.globalization" source="npm" />
 	<plugin name="cordova-plugin-inappbrowser" source="npm" />	
 	<plugin name="cordova-plugin-whitelist" source="npm" />
+	<!--  Required for Android to display splashscreen -->
 	<plugin name="cordova-plugin-splashscreen" source="npm" />
+	
 
     <!-- Define app icon for each platform. -->
     <icon src="res/ios/icons/icon.png" />
