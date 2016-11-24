@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
     	xmlns:gap = "http://phonegap.com/ns/1.0"
     	xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.markuskarjalainen.uvradiationnowfree"
+        id        = "com.markuskarjalainen.uvtrackerfree"
         version   = "7.0.0">
         
     <name>UV radiation now FREE</name>
@@ -39,6 +39,7 @@
     <preference name="android-targetSdkVersion"   value="14" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
     <preference name="DisallowOverscroll" 		  value="true" />
+ 	<preference name="ShowSplashScreenSpinner" value="false"/>
 
 	<!-- Plugins -->
 	<plugin name="nl.x-services.plugins.socialsharing" source="npm" />
@@ -49,14 +50,17 @@
 	<plugin name="cordova-plugin-inappbrowser" source="npm" />	
 	<plugin name="cordova-plugin-whitelist" source="npm" />
 	<plugin name="phonegap-admob" source="npm"/>
+	<!--  Required for Android to display splashscreen -->
+	<plugin name="cordova-plugin-splashscreen" source="npm" />
+	
 
     <!-- Define app icon for each platform. -->
     <icon src="res/ios/icons/icon.png" />
     
     <icon src="res/android/icons/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
-    <icon src="res/android/iconsicon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
-    <icon src="res/android/iconsicon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
-    <icon src="res/android/iconsicon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
+    <icon src="res/android/icons/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
+    <icon src="res/android/icons/icon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
+    <icon src="res/android/icons/icon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
 
     <icon src="res/ios/icons/icon.png" gap:platform="ios" width="57" height="57" />
     <icon src="res/ios/icons/Icon-29.png" gap:platform="ios" width="29" height="29" />
@@ -123,8 +127,10 @@
    	
     <!--
         Define access to external domains.
+
         <access />            - a blank access tag denies access to all external resources.
         <access origin="*" /> - a wildcard access tag allows access to all external resource.
+
         Otherwise, you can specify specific domains:
     -->
     <access origin="*"/> <!-- allow local pages -->
