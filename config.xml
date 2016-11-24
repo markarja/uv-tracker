@@ -122,7 +122,7 @@
 	</gap:config-file>
 	
     <gap:config-file platform="android" parent="/manifest">
-		<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="24" />		
+		<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="24" />		
    	</gap:config-file>
    	
     <!--
