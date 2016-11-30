@@ -201,7 +201,7 @@ i.large {
 
 
 .swiper-pagination {
-	padding-bottom: 48px; /* iOS 70px */	
+	padding-bottom: 46px; /* iOS 70px */	
 }
 
 .swiper-pagination-bullet {

@@ -87,7 +87,7 @@ function portrait() {
 function onDeviceReady() {
 	admob.createBannerView({
 		publisherId: "ca-app-pub-1309397168819129/7136076894",
-		isTesting: true,
+		isTesting: false,
 		offsetStatusBar: true,
 		bannerAtTop: true
 	});
