@@ -1,7 +1,7 @@
 html, body {
 	margin: 0; 
 	height: 100%; 
-	overflow: hidden
+	overflow: hidden;
 }
 
 body {
@@ -94,7 +94,7 @@ body {
 
 .buttons {
 	position: fixed; 
-	bottom: 72px;
+	bottom: 2px; /* 72px iOS */
  	width: 100%;
 	z-index: 2;	
 }
@@ -199,9 +199,11 @@ i.large {
 	border-radius: 10px;
 }
 
+/* iOS
 .swiper-pagination {
 	padding-bottom: 70px;	
 }
+*/
 
 .swiper-pagination-bullet {
 	opacity: 1 !important;
@@ -302,13 +304,16 @@ i.large {
 		font-size: 40px;	
 	}
 	
+	/* iOS
 	.buttons { 
 		bottom: 112px;	
-	}
+	}*/
 	
+	/* iOS
 	.swiper-pagination {
 		padding-bottom: 110px;	
 	}
+	*/
 	
 	.button-border {
 		border: 1px solid rgb(230,230,230); 
