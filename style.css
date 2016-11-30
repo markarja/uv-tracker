@@ -199,11 +199,10 @@ i.large {
 	border-radius: 10px;
 }
 
-/* iOS
+
 .swiper-pagination {
-	padding-bottom: 70px;	
+	padding-bottom: 20px; /* iOS 70px */	
 }
-*/
 
 .swiper-pagination-bullet {
 	opacity: 1 !important;
