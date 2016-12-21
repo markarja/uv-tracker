@@ -87,7 +87,7 @@ var messages = {
    	    {"key" : "fmi", "value" : "Ilmatieteen laitoksen mittausdata"},
    	    {"key" : "arpansa", "value" : "Australian Radiation Protection and Nuclear Safety Agency:n mittausdata"},
    	    {"key" : "distance", "value" : "km nykyisestä sijainnistasi"},
-   	    {"key" : "tapheretorefresh", "value" : "päivitä täppäällä tästä"},
+   	    {"key" : "tapheretorefresh", "value" : "päivitä täppäämällä tästä"},
    	    {"key" : "header", "value" : "UV-säteily alueella"},
    	    {"key" : "header-nolocation", "value" : "UV-säteily alueellasi"},
    	    {"key" : "share", "value" : "Jaa"},
