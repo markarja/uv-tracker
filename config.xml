@@ -42,7 +42,7 @@
  	<preference name="ShowSplashScreenSpinner" value="false"/>
 
 	<!-- Plugins -->
-	<plugin name="nl.x-services.plugins.socialsharing" source="npm" />
+	<plugin name="cordova-plugin-socialsharing" source="npm" />
 	<plugin name="cordova-plugin-device" source="npm" />
 	<plugin name="org.apache.cordova.dialogs" source="npm" />
 	<plugin name="cordova-plugin-geolocation" source="npm" />
