@@ -364,19 +364,33 @@ function connectionErrorHandler(error) {
 	);
 }
 
-function rate() {
+function rate(buttonIndex) {
 	
-	var devicePlatform = device.platform;
+	if(buttonIndex == 1) {
 	
-	if (devicePlatform == "iOS") {
+		var devicePlatform = device.platform;
 		
-		cordova.InAppBrowser.open("itms-apps://itunes.apple.com/app/uv-radiation-now/id882320475?mt=8", "_system");
-		
-    } else if (devicePlatform == "Android") {
-    	
-    	cordova.InAppBrowser.open("market://details?id=com.markuskarjalainen.uvtracker", "_system");
-    }
+		if (devicePlatform == "iOS") {
+			
+			cordova.InAppBrowser.open("itms-apps://itunes.apple.com/app/uv-radiation-now/id1173659659?mt=8", "_system");
+			
+	    } else if (devicePlatform == "Android") {
+	    	
+	    	cordova.InAppBrowser.open("market://details?id=com.markuskarjalainen.uvradiationnowfree", "_system");
+	    }
 	
+	} else {
+		alert('Show feedback form.');
+	}
+}
+
+function feedback() {
+	navigator.notification.confirm(
+        'Do you enjoy using UV radiation now?', 
+        rate,              
+        'Give us feedback',           
+        'Yes,No'
+    );
 }
 
 function share() {
