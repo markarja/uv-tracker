@@ -44,7 +44,7 @@
 	<!-- Plugins -->
 	<plugin name="cordova-plugin-socialsharing" source="npm" />
 	<plugin name="cordova-plugin-device" source="npm" />
-	<plugin name="org.apache.cordova.dialogs" source="npm" />
+	<plugin name="cordova-plugin-dialogs" source="npm" />
 	<plugin name="cordova-plugin-geolocation" source="npm" />
 	<plugin name="org.apache.cordova.globalization" source="npm" />
 	<plugin name="cordova-plugin-inappbrowser" source="npm" />	
