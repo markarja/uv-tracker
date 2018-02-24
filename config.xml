@@ -109,10 +109,10 @@
 		<string>7.0.0</string>
 	</gap:config-file>
 	
-	<edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
-    	<string>We are using the location to retreive the UV index in your area.</string>
-	</edit-config>
-
+	<gap:config-file platform="ios" parent="NSLocationWhenInUseUsageDescription">
+    	<string>We are using the location to resolve the UV index in your area.</string>
+	</gap:config-file>
+	
     <feature name="http://api.phonegap.com/1.0/geolocation" />
     
     <gap:config-file platform="android" parent="/manifest">
