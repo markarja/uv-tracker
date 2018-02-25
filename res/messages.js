@@ -54,7 +54,11 @@ var messages = {
    	    {"key" : "highestobservationtime", "value" : "Observation time"},
    	    {"key" : "uvindexinmyarea", "value" : "UV index in my area"},
    	    {"key" : "altitude", "value" : "altitude"},
-   	    {"key" : "impact", "value" : "impact"}
+   	    {"key" : "impact", "value" : "impact"},
+   	    {"key" : "feedbacktitle", "value" : "Give us feedback"},
+   	    {"key" : "feedbackmessage", "value" : "Do you enjoy using UV radiation now?"},
+   	    {"key" : "buttonlabelyes", "value" : "Yes"},
+   	    {"key" : "buttonlabelno", "value" : "No"},
 	],	
 	"fi-fi" : [
 	    {"key" : "loading", "value" : "haetaan havaintodataa"},	

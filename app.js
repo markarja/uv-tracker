@@ -380,16 +380,18 @@ function rate(buttonIndex) {
 	    }
 	
 	} else {
-		alert('Show feedback form.');
+		
+		cordova.InAppBrowser.open("https://uvradiationnow.markuskarjalainen.com/feedback.php");
+		
 	}
 }
 
 function feedback() {
 	navigator.notification.confirm(
-        'Do you enjoy using UV radiation now?', 
+		getMessage("feedbackmessage"), 
         rate,              
-        'Give us feedback',           
-        'Yes,No'
+        getMessage("feedbacktitle"),           
+        getMessage("buttonlabelyes") + ',' + getMessage("buttonlabelno")
     );
 }
 
