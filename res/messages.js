@@ -56,9 +56,9 @@ var messages = {
    	    {"key" : "altitude", "value" : "altitude"},
    	    {"key" : "impact", "value" : "impact"},
    	    {"key" : "feedbacktitle", "value" : "Give us feedback"},
-   	    {"key" : "feedbackmessage", "value" : "Do you enjoy using UV radiation now?"},
+   	    {"key" : "feedbackmessage", "value" : "If you are enjoying UV radiation now, would you like to write a review of the app on the app store?"},
    	    {"key" : "buttonlabelyes", "value" : "Yes"},
-   	    {"key" : "buttonlabelno", "value" : "No"},
+   	    {"key" : "buttonlabelno", "value" : "No"}
 	],	
 	"fi-fi" : [
 	    {"key" : "loading", "value" : "haetaan havaintodataa"},	
@@ -114,7 +114,11 @@ var messages = {
 	    {"key" : "highestobservationtime", "value" : "Havaintoaika"},
    	    {"key" : "uvindexinmyarea", "value" : "UV-indeksi alueellani"},
    	    {"key" : "altitude", "value" : "korkeus"},
-   	    {"key" : "impact", "value" : "vaikutus"}  	    
+   	    {"key" : "impact", "value" : "vaikutus"},
+   	    {"key" : "feedbacktitle", "value" : "Anna palautetta"},
+   	    {"key" : "feedbackmessage", "value" : "Oletko tyytyväinen sovellukseen? Haluatko kirjoittaa arvostelun sovelluskaupassa?"},
+   	    {"key" : "buttonlabelyes", "value" : "Kyllä"},
+   	    {"key" : "buttonlabelno", "value" : "Ei"}   	    
 	],
 	"sv-se" : [
 	    {"key" : "loading", "value" : "hämtar observationsdata"},       
@@ -170,7 +174,11 @@ var messages = {
 	    {"key" : "highestobservationtime", "value" : "Observationstid"},
    	    {"key" : "uvindexinmyarea", "value" : "UV-indexet i mitt område"},
    	    {"key" : "altitude", "value" : "höjd"},
-   	    {"key" : "impact", "value" : "påverkan"}    	    
+   	    {"key" : "impact", "value" : "påverkan"}, 
+   	    {"key" : "feedbacktitle", "value" : "Ge feedback"},
+	    {"key" : "feedbackmessage", "value" : "Är du nöjd med UV radiation now? Vill du betygsätta appen på app store?"},
+	    {"key" : "buttonlabelyes", "value" : "Ja"},
+	    {"key" : "buttonlabelno", "value" : "Nej"}   	    
   	], 
   	"es-es" : [
  	    {"key" : "loading", "value" : "obtener datos de observación"},
@@ -226,7 +234,11 @@ var messages = {
    	    {"key" : "highestobservationtime", "value" : "Tiempo de observación"},
 	    {"key" : "uvindexinmyarea", "value" : "Índice UV en mi área"},
    	    {"key" : "altitude", "value" : "altitud"},
-   	    {"key" : "impact", "value" : "impacto"}   	    
+   	    {"key" : "impact", "value" : "impacto"},   	    
+   	    {"key" : "feedbacktitle", "value" : "Danos su opinión"},
+   	    {"key" : "feedbackmessage", "value" : "Si está disfrutando de la radiación UV ahora, ¿le gustaría escribir una reseña de la aplicación en la tienda de aplicaciones?"},
+   	    {"key" : "buttonlabelyes", "value" : "Sí"},
+   	    {"key" : "buttonlabelno", "value" : "No"}   	    
   	],
   	"de-de" : [
  	    {"key" : "loading", "value" : "Abrufen von Beobachtungsdaten"},
@@ -282,7 +294,11 @@ var messages = {
    	    {"key" : "highestobservationtime", "value" : "Beobachtungszeit"},
 	    {"key" : "uvindexinmyarea", "value" : "UV-Index in meinem Bereich"},
    	    {"key" : "altitude", "value" : "höhe"},
-   	    {"key" : "impact", "value" : "auswirkung"} 	    
+   	    {"key" : "impact", "value" : "auswirkung"},
+   	    {"key" : "feedbacktitle", "value" : "Geben Sie uns eine Rückmeldung"},
+   	    {"key" : "feedbackmessage", "value" : "Wenn Sie jetzt UV-Strahlung genießen, möchten Sie eine Bewertung der App im App Store schreiben?"},
+   	    {"key" : "buttonlabelyes", "value" : "Ja"},
+   	    {"key" : "buttonlabelno", "value" : "Nein"} 	    
  	],
   	"tr-tr" : [
   	    {"key" : "loading", "value" : "gözlem verilerini almak"},
@@ -338,7 +354,11 @@ var messages = {
 	    {"key" : "highestobservationtime", "value" : "gözlem süresi"},
  	    {"key" : "uvindexinmyarea", "value" : "bölgemdeki UV Endeksi"},
 	    {"key" : "altitude", "value" : "irtifa"},
-	    {"key" : "impact", "value" : "etki"} 	    
+	    {"key" : "impact", "value" : "etki"},
+   	    {"key" : "feedbacktitle", "value" : "Bize geribildirim ver"},
+   	    {"key" : "feedbackmessage", "value" : "UV radyasyonunun keyfini şimdi çıkarıyorsanız, uygulama mağazasında uygulamanın bir incelemesi yazmak ister misiniz?"},
+   	    {"key" : "buttonlabelyes", "value" : "Evet"},
+   	    {"key" : "buttonlabelno", "value" : "Yok hayır"} 	    
   	],
   	"nl-nl" : [
  	    {"key" : "loading", "value" : "het ophalen van observatiegegevens"},
@@ -394,7 +414,11 @@ var messages = {
 	    {"key" : "highestobservationtime", "value" : "Observatietijd"},
 	    {"key" : "uvindexinmyarea", "value" : "UV-index in mijn omgeving"},
 	    {"key" : "altitude", "value" : "hoogte"},
-	    {"key" : "impact", "value" : "effect"}
+	    {"key" : "impact", "value" : "effect"},
+	    {"key" : "feedbacktitle", "value" : "Geef ons feedback"},
+   	    {"key" : "feedbackmessage", "value" : "Als u nu van UV-straling geniet, zou u dan een recensie van de app in de app store willen schrijven?"},
+   	    {"key" : "buttonlabelyes", "value" : "Ja"},
+   	    {"key" : "buttonlabelno", "value" : "Nee"}
  	],
   	"it-it" : [
    	    {"key" : "loading", "value" : "il recupero dei dati di osservazione"},
@@ -450,7 +474,11 @@ var messages = {
   	    {"key" : "highestobservationtime", "value" : "Tempo di osservazione"},
   	    {"key" : "uvindexinmyarea", "value" : "Indice UV nella mia zona"},
   	    {"key" : "altitude", "value" : "altitudine"},
-  	    {"key" : "impact", "value" : "effetto"}
+  	    {"key" : "impact", "value" : "effetto"},
+   	    {"key" : "feedbacktitle", "value" : "Dacci un feedback"},
+   	    {"key" : "feedbackmessage", "value" : "Se ti piacciono le radiazioni UV adesso, ti piacerebbe scrivere una recensione dell'app nell'app store?"},
+   	    {"key" : "buttonlabelyes", "value" : "Sì"},
+   	    {"key" : "buttonlabelno", "value" : "No"}
    	]
 };
 
