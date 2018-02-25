@@ -387,12 +387,37 @@ function rate(buttonIndex) {
 	}
 }
 
+/*
+function confirmRateOrFeedback(buttonIndex) {
+	if(buttonIndex == 1) {
+		navigator.notification.confirm(
+			"", 
+			confirmRateOrFeedback,              
+		    "We'd like to hear your thoughts. Give us some feedback?",           
+		    "No,Yes"
+	    );
+	} else {
+		navigator.notification.confirm(
+			"", 
+			confirmRateOrFeedback,              
+		    "Enjoy using this app?",           
+		    "No,Yes"
+	    );	
+	}
+}*/
+
 function feedback() {
-	navigator.notification.confirm(
+	/*navigator.notification.confirm(
 		getMessage("feedbackmessage"), 
         rate,              
         getMessage("feedbacktitle"),           
         getMessage("buttonlabelyes") + ',' + getMessage("buttonlabelno")
+    );*/
+	navigator.notification.confirm(
+		"", 
+		rate,              
+	    "Enjoy using this app?",           
+	    "No,Yes"
     );
 }
 
