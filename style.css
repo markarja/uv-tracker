@@ -305,11 +305,11 @@ i.large {
 	
 	/* iOS only */
 	.buttons { 
-		bottom: 112px;	
+		bottom: 50px;	
 	}
 	
 	.swiper-pagination {
-		padding-bottom: 110px; /* iOS 110px, Android 90px */	
+		padding-bottom: 50px; /* iOS 110px, Android 90px */	
 	}
 	
 	.button-border {
