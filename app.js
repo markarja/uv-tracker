@@ -387,35 +387,50 @@ function rate(buttonIndex) {
 	}
 }
 
-/*
+function confirmFeedback(buttonIndex) {
+	if(buttonIndex == 2) {
+		cordova.InAppBrowser.open("https://uvradiationnow.markuskarjalainen.com/feedback.php?language=" + language, "_system", "location=no,toolbar=no");
+	} 
+}
+
+function confirmReview(buttonIndex) {
+	if(buttonIndex == 2) {
+		
+		var devicePlatform = device.platform;
+		
+		if (devicePlatform == "iOS") {
+			
+			cordova.InAppBrowser.open("itms-apps://itunes.apple.com/app/uv-radiation-now/id1173659659?mt=8", "_system");
+			
+	    } else if (devicePlatform == "Android") {
+	    	
+	    	cordova.InAppBrowser.open("market://details?id=com.markuskarjalainen.uvradiationnowfree", "_system");
+	    }
+	} 
+}
+
 function confirmRateOrFeedback(buttonIndex) {
 	if(buttonIndex == 1) {
 		navigator.notification.confirm(
 			"", 
-			confirmRateOrFeedback,              
+			confirmFeedback,              
 		    "We'd like to hear your thoughts. Give us some feedback?",           
 		    "No,Yes"
 	    );
 	} else {
 		navigator.notification.confirm(
 			"", 
-			confirmRateOrFeedback,              
-		    "Enjoy using this app?",           
+			confirmReview,              
+		    "Would you like to rate us or give us a review?",           
 		    "No,Yes"
 	    );	
 	}
-}*/
+}
 
 function feedback() {
-	/*navigator.notification.confirm(
-		getMessage("feedbackmessage"), 
-        rate,              
-        getMessage("feedbacktitle"),           
-        getMessage("buttonlabelyes") + ',' + getMessage("buttonlabelno")
-    );*/
 	navigator.notification.confirm(
 		"", 
-		rate,              
+		confirmRateOrFeedback,              
 	    "Enjoy using this app?",           
 	    "No,Yes"
     );
