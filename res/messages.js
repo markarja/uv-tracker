@@ -116,11 +116,11 @@ var messages = {
    	    {"key" : "uvindexinmyarea", "value" : "UV-indeksi alueellani"},
    	    {"key" : "altitude", "value" : "korkeus"},
    	    {"key" : "impact", "value" : "vaikutus"},
-   	    {"key" : "enjoytheappquestion", "value" : "Enjoy using this app?"},
-   	    {"key" : "feedbackquestion", "value" : "We'd like to hear your thoughts. Give us some feedback?"},
-   	    {"key" : "reviewquestion", "value" : "Would you like to rate us or give us a review?"},
-   	    {"key" : "buttonlabelyes", "value" : "Yes"},
-   	    {"key" : "buttonlabelno", "value" : "No"}  	    
+   	    {"key" : "enjoytheappquestion", "value" : "Tykkäätkö tästä sovelluksesta?"},
+   	    {"key" : "feedbackquestion", "value" : "Haluaisimme kuulla ajatuksiasi. Antaisitko meille palautetta?"},
+   	    {"key" : "reviewquestion", "value" : "Haluatko arvostella sovelluksen?"},
+   	    {"key" : "buttonlabelyes", "value" : "Kyllä"},
+   	    {"key" : "buttonlabelno", "value" : "Ei"}  	    
 	],
 	"sv-se" : [
 	    {"key" : "loading", "value" : "hämtar observationsdata"},       
@@ -177,11 +177,11 @@ var messages = {
    	    {"key" : "uvindexinmyarea", "value" : "UV-indexet i mitt område"},
    	    {"key" : "altitude", "value" : "höjd"},
    	    {"key" : "impact", "value" : "påverkan"}, 
-   	    {"key" : "enjoytheappquestion", "value" : "Enjoy using this app?"},
-   	    {"key" : "feedbackquestion", "value" : "We'd like to hear your thoughts. Give us some feedback?"},
-   	    {"key" : "reviewquestion", "value" : "Would you like to rate us or give us a review?"},
-   	    {"key" : "buttonlabelyes", "value" : "Yes"},
-   	    {"key" : "buttonlabelno", "value" : "No"}  	    
+   	    {"key" : "enjoytheappquestion", "value" : "Gillar du denna app?"},
+   	    {"key" : "feedbackquestion", "value" : "Vi vill höra dina åsikter. Vill du ge oss feedback?"},
+   	    {"key" : "reviewquestion", "value" : "Vill du betygsätta appen?"},
+   	    {"key" : "buttonlabelyes", "value" : "Ja"},
+   	    {"key" : "buttonlabelno", "value" : "Nej"}  	    
   	], 
   	"es-es" : [
  	    {"key" : "loading", "value" : "obtener datos de observación"},
@@ -238,10 +238,10 @@ var messages = {
 	    {"key" : "uvindexinmyarea", "value" : "Índice UV en mi área"},
    	    {"key" : "altitude", "value" : "altitud"},
    	    {"key" : "impact", "value" : "impacto"},   	    
-   	    {"key" : "enjoytheappquestion", "value" : "Enjoy using this app?"},
-   	    {"key" : "feedbackquestion", "value" : "We'd like to hear your thoughts. Give us some feedback?"},
-   	    {"key" : "reviewquestion", "value" : "Would you like to rate us or give us a review?"},
-   	    {"key" : "buttonlabelyes", "value" : "Yes"},
+   	    {"key" : "enjoytheappquestion", "value" : "¿Disfrutas esta aplicación?"},
+   	    {"key" : "feedbackquestion", "value" : "Nos gustaría escuchar tus pensamientos. ¿Quieres darnos tu opinión?"},
+   	    {"key" : "reviewquestion", "value" : "¿Le gustaría calificarnos o darnos una opinión?"},
+   	    {"key" : "buttonlabelyes", "value" : "Sí"},
    	    {"key" : "buttonlabelno", "value" : "No"}   	    
   	],
   	"de-de" : [
@@ -299,11 +299,11 @@ var messages = {
 	    {"key" : "uvindexinmyarea", "value" : "UV-Index in meinem Bereich"},
    	    {"key" : "altitude", "value" : "höhe"},
    	    {"key" : "impact", "value" : "auswirkung"},
-   	    {"key" : "enjoytheappquestion", "value" : "Enjoy using this app?"},
-   	    {"key" : "feedbackquestion", "value" : "We'd like to hear your thoughts. Give us some feedback?"},
-   	    {"key" : "reviewquestion", "value" : "Would you like to rate us or give us a review?"},
-   	    {"key" : "buttonlabelyes", "value" : "Yes"},
-   	    {"key" : "buttonlabelno", "value" : "No"} 	    
+   	    {"key" : "enjoytheappquestion", "value" : "Magst du diese App?"},
+   	    {"key" : "feedbackquestion", "value" : "Wir würden gerne Ihre Gedanken hören. Geben Sie uns ein Feedback?"},
+   	    {"key" : "reviewquestion", "value" : "Möchten Sie uns bewerten oder uns eine Bewertung geben?"},
+   	    {"key" : "buttonlabelyes", "value" : "Ja"},
+   	    {"key" : "buttonlabelno", "value" : "Nein"} 	    
  	],
   	"tr-tr" : [
   	    {"key" : "loading", "value" : "gözlem verilerini almak"},
@@ -360,11 +360,11 @@ var messages = {
  	    {"key" : "uvindexinmyarea", "value" : "bölgemdeki UV Endeksi"},
 	    {"key" : "altitude", "value" : "irtifa"},
 	    {"key" : "impact", "value" : "etki"},
-   	    {"key" : "enjoytheappquestion", "value" : "Enjoy using this app?"},
-   	    {"key" : "feedbackquestion", "value" : "We'd like to hear your thoughts. Give us some feedback?"},
-   	    {"key" : "reviewquestion", "value" : "Would you like to rate us or give us a review?"},
-   	    {"key" : "buttonlabelyes", "value" : "Yes"},
-   	    {"key" : "buttonlabelno", "value" : "No"} 	    
+   	    {"key" : "enjoytheappquestion", "value" : "Bu uygulamayı beğendin mi?"},
+   	    {"key" : "feedbackquestion", "value" : "Düşüncelerinizi duymak istiyoruz. Bize biraz geribildirim verin?"},
+   	    {"key" : "reviewquestion", "value" : "Bize oy vermek veya bize yorum yapmak ister misiniz?"},
+   	    {"key" : "buttonlabelyes", "value" : "Evet"},
+   	    {"key" : "buttonlabelno", "value" : "Yok hayır"} 	    
   	],
   	"nl-nl" : [
  	    {"key" : "loading", "value" : "het ophalen van observatiegegevens"},
@@ -421,11 +421,11 @@ var messages = {
 	    {"key" : "uvindexinmyarea", "value" : "UV-index in mijn omgeving"},
 	    {"key" : "altitude", "value" : "hoogte"},
 	    {"key" : "impact", "value" : "effect"},
-   	    {"key" : "enjoytheappquestion", "value" : "Enjoy using this app?"},
-   	    {"key" : "feedbackquestion", "value" : "We'd like to hear your thoughts. Give us some feedback?"},
-   	    {"key" : "reviewquestion", "value" : "Would you like to rate us or give us a review?"},
-   	    {"key" : "buttonlabelyes", "value" : "Yes"},
-   	    {"key" : "buttonlabelno", "value" : "No"}
+   	    {"key" : "enjoytheappquestion", "value" : "Vind je deze app leuk?"},
+   	    {"key" : "feedbackquestion", "value" : "We horen graag uw mening. Geef ons wat commentaar?"},
+   	    {"key" : "reviewquestion", "value" : "Wilt u ons een beoordeling geven?"},
+   	    {"key" : "buttonlabelyes", "value" : "Ja"},
+   	    {"key" : "buttonlabelno", "value" : "Nee"}
  	],
   	"it-it" : [
    	    {"key" : "loading", "value" : "il recupero dei dati di osservazione"},
@@ -482,10 +482,10 @@ var messages = {
   	    {"key" : "uvindexinmyarea", "value" : "Indice UV nella mia zona"},
   	    {"key" : "altitude", "value" : "altitudine"},
   	    {"key" : "impact", "value" : "effetto"},
-   	    {"key" : "enjoytheappquestion", "value" : "Enjoy using this app?"},
-   	    {"key" : "feedbackquestion", "value" : "We'd like to hear your thoughts. Give us some feedback?"},
-   	    {"key" : "reviewquestion", "value" : "Would you like to rate us or give us a review?"},
-   	    {"key" : "buttonlabelyes", "value" : "Yes"},
+   	    {"key" : "enjoytheappquestion", "value" : "Ti piace questa app?"},
+   	    {"key" : "feedbackquestion", "value" : "Vorremmo sentire i tuoi pensieri. Dacci un riscontro?"},
+   	    {"key" : "reviewquestion", "value" : "Vorresti valutarci o darci una recensione?"},
+   	    {"key" : "buttonlabelyes", "value" : "Sì"},
    	    {"key" : "buttonlabelno", "value" : "No"}
    	]
 };
