@@ -398,8 +398,8 @@ function confirmReview(buttonIndex) {
 		navigator.notification.confirm(
 			"", 
 			confirmFeedback,              
-		    "We'd like to hear your thoughts. Give us some feedback?",           
-		    "No,Yes"
+			getMessage("feedbackquestion"),           
+			getMessage("buttonlabelno") + "," + getMessage("buttonlabelyes")
 	    );
 	} else {	
 		var devicePlatform = device.platform;
@@ -420,15 +420,15 @@ function confirmRateOrFeedback(buttonIndex) {
 		navigator.notification.confirm(
 			"", 
 			confirmFeedback,              
-		    "We'd like to hear your thoughts. Give us some feedback?",           
-		    "No,Yes"
+		    getMessage("feedbackquestion"),           
+		    getMessage("buttonlabelno") + "," + getMessage("buttonlabelyes")
 	    );
 	} else {
 		navigator.notification.confirm(
 			"", 
 			confirmReview,              
-		    "Would you like to rate us or give us a review?",           
-		    "No,Yes"
+			getMessage("reviewquestion"),           
+		    getMessage("buttonlabelno") + "," + getMessage("buttonlabelyes")
 	    );	
 	}
 }
@@ -437,8 +437,8 @@ function feedback() {
 	navigator.notification.confirm(
 		"", 
 		confirmRateOrFeedback,              
-	    "Enjoy using this app?",           
-	    "No,Yes"
+		getMessage("enjoytheappquestion"),           
+		getMessage("buttonlabelno") + "," + getMessage("buttonlabelyes")
     );
 }
 
