@@ -394,8 +394,14 @@ function confirmFeedback(buttonIndex) {
 }
 
 function confirmReview(buttonIndex) {
-	if(buttonIndex == 2) {
-		
+	if(buttonIndex == 1) {
+		navigator.notification.confirm(
+			"", 
+			confirmFeedback,              
+		    "We'd like to hear your thoughts. Give us some feedback?",           
+		    "No,Yes"
+	    );
+	} else {	
 		var devicePlatform = device.platform;
 		
 		if (devicePlatform == "iOS") {
