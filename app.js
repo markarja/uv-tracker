@@ -382,7 +382,7 @@ function rate(buttonIndex) {
 	
 	} else {
 		
-		cordova.InAppBrowser.open("https://uvradiationnow.markuskarjalainen.com/feedback.php?language=" + language);
+		cordova.InAppBrowser.open("https://uvradiationnow.markuskarjalainen.com/feedback.php?language=" + language, "_system", "location=no,toolbar=no");
 		
 	}
 }
