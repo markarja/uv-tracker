@@ -94,7 +94,7 @@ body {
 
 .buttons {
 	position: fixed; 
-	bottom: 72px; /* 72px iOS, 2px Android */
+	bottom: 20px; /* 72px iOS, 2px Android */
  	width: 100%;
 	z-index: 2;	
 }
@@ -201,7 +201,7 @@ i.large {
 
 
 .swiper-pagination {
-	padding-bottom: 70px; /* iOS 70px, 46px Android */	
+	padding-bottom: 20px; /* iOS 70px, 46px Android */	
 }
 
 .swiper-pagination-bullet {
@@ -305,11 +305,11 @@ i.large {
 	
 	/* iOS only */
 	.buttons { 
-		bottom: 50px;	
+		bottom: 112px;	
 	}
 	
 	.swiper-pagination {
-		padding-bottom: 50px; /* iOS 110px, Android 90px */	
+		padding-bottom: 110px; /* iOS 110px, Android 90px */	
 	}
 	
 	.button-border {
