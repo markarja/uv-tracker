@@ -5,7 +5,7 @@
     	xmlns:gap = "http://phonegap.com/ns/1.0"
     	xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.markuskarjalainen.uvradiationnowfree"
-        version   = "7.0.0">
+        version   = "8.0.0">
         
     <name>UV radiation now FREE</name>
 
@@ -39,7 +39,8 @@
     <preference name="android-targetSdkVersion"   value="14" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
     <preference name="DisallowOverscroll" 		  value="true" />
- 	<preference name="ShowSplashScreenSpinner" value="false"/>
+ 	<preference name="ShowSplashScreenSpinner"    value="false"/>
+ 	<preference name="SplashScreenDelay" 		  value="1000" />
 
 	<!-- Plugins -->
 	<plugin name="cordova-plugin-x-socialsharing" source="npm" />
