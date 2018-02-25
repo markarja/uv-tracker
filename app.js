@@ -3,6 +3,7 @@ var q = "0,0";
 var index = 0;
 var indexName = "";
 var locality = "";
+var language = "";
 
 if (!String.prototype.startsWith) {
   String.prototype.startsWith = function(searchString, position) {
@@ -381,7 +382,7 @@ function rate(buttonIndex) {
 	
 	} else {
 		
-		cordova.InAppBrowser.open("https://uvradiationnow.markuskarjalainen.com/feedback.php");
+		cordova.InAppBrowser.open("https://uvradiationnow.markuskarjalainen.com/feedback.php?language=" + language);
 		
 	}
 }
