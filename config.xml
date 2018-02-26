@@ -7,7 +7,7 @@
         id        = "com.markuskarjalainen.uvradiationnowfree"
         version   = "8.0.0">
         
-    <name>UV radiation now FREE</name>
+    <name>UV now</name>
 
     <description>
         UV radiation now - A mobile app for tracking UV radiation.
