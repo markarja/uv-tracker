@@ -50,6 +50,7 @@
 	<plugin name="cordova-plugin-globalization" source="npm" />
 	<plugin name="cordova-plugin-inappbrowser" source="npm" />	
 	<plugin name="cordova-plugin-whitelist" source="npm" />
+	<plugin name="cordova-plugin-local-notification" source="npm" />
 	<plugin name="phonegap-admob" source="npm" />
 	<!--  Required for Android to display splashscreen -->
 	<plugin name="cordova-plugin-splashscreen" source="npm" />
