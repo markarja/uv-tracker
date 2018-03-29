@@ -199,7 +199,6 @@ i.large {
 	border-radius: 10px;
 }
 
-
 .swiper-pagination {
 	padding-bottom:50px; /* iOS 70px, 46px Android */	
 }
@@ -211,6 +210,20 @@ i.large {
 
 .swiper-pagination-bullet-active {
    background: rgb(120,120,120) !important;
+}
+
+.grid-container {
+   display: grid;
+   grid-template-columns: auto auto;
+   padding: 10px;
+}
+.grid-item-left {
+   text-align: left;
+   padding-left: 10px;
+}
+.grid-item-right {
+   text-align: right;
+   padding-right: 10px;
 }
 
 .index1-3 {

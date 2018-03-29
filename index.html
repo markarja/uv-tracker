@@ -8,7 +8,8 @@
 	   	<link rel="stylesheet" href="style.css" type="text/css">
 	 	<link rel="stylesheet" href="res/font-awesome-4.3.0/css/font-awesome.min.css">
 	 	<link rel="stylesheet" href="res/Swiper/3.2.7/css/swiper.min.css">	
-	 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>   
+	 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,100" type="text/css"> 
+	 	<link rel="stylesheet" href="res/switchery/switchery.css">  
 	    <script src="res/gaugeSVG.js"></script>
 		<script src="phonegap.js"></script>
 		<script src="res/messages.js"></script>
@@ -61,6 +62,16 @@
 					</div>
 				</div>
 				<div class="swiper-slide">
+					<p class="data-header" id="settings">
+						Settings
+					</p>
+					<div class="grid-container">
+					  <div class="grid-item-left">Exposure alert</div>
+					  <div class="grid-item-right"><input id="exposure-alert" type="checkbox" class="js-switch" /></div> 
+					</div>
+					
+				</div>	
+				<div class="swiper-slide">
 					<p class="data-header" id="detaileduvdata">
 					</p>
 					<table class="data">
@@ -108,11 +119,14 @@
 			</div>
 			<div class="swiper-pagination"></div>
 		</div>
-		<script src="res/Swiper/3.2.7/js/swiper.min.js"></script>	
+		<script src="res/Swiper/3.2.7/js/swiper.min.js"></script>
+		<script src="res/switchery/switchery.js"></script>	
 		<script>        
 			var swiper = new Swiper('.swiper-container', {
 		        pagination: '.swiper-pagination'
-		    });       
+		    });
+			var elem = document.querySelector('.js-switch');
+			var init = new Switchery(elem);       
 		</script>		
   </body>
 </html>
