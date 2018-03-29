@@ -88,7 +88,7 @@ function portrait() {
 function onDeviceReady() {
 	admob.createBannerView({
 		publisherId: "ca-app-pub-1309397168819129/6817482896",
-		isTesting: false,
+		isTesting: true,
 		offsetStatusBar: true,
 		bannerAtTop: true
 	});
@@ -479,19 +479,17 @@ function isLargeDisplay() {
 
 function notify() {
 	if(document.getElementById("exposure-alert").checked) {
-		if ("Notification" in window) {
-		  Notification.requestPermission(function (permission) {
-		    if (permission === "granted") {
-		      var notification = new Notification("Exposure Alert", {
-		           tag: "Exposure Alert", 
-		           body: "You have been exposed to UV radiation for 1 hour now." 
-		      }); 
-		      notification.onshow  = function() { console.log("show"); };
-		      notification.onclose = function() { console.log("close"); };
-		      notification.onclick = function() { console.log("click"); };
-		    }
-		  });
-		}
+	  Notification.requestPermission(function (permission) {
+	    if (permission === "granted") {
+	      var notification = new Notification("Exposure Alert", {
+	           tag: "Exposure Alert", 
+	           body: "You have been exposed to UV radiation for 1 hour now." 
+	      }); 
+	      notification.onshow  = function() { console.log("show"); };
+	      notification.onclose = function() { console.log("close"); };
+	      notification.onclick = function() { console.log("click"); };
+	    }
+	  });
 	} else {
 		
 	}
