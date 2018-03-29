@@ -67,9 +67,8 @@
 					</p>
 					<div class="grid-container">
 					  <div class="grid-item-left">Exposure alert</div>
-					  <div class="grid-item-right"><input id="exposure-alert" type="checkbox" class="js-switch" /></div> 
+					  <div class="grid-item-right"><input id="exposure-alert" type="checkbox" class="js-switch" onchange="notify();" /></div> 
 					</div>
-					
 				</div>	
 				<div class="swiper-slide">
 					<p class="data-header" id="detaileduvdata">
@@ -126,7 +125,7 @@
 		        pagination: '.swiper-pagination'
 		    });
 			var elem = document.querySelector('.js-switch');
-			var init = new Switchery(elem);       
+			var switcherySwitch = new Switchery(elem);       
 		</script>		
   </body>
 </html>

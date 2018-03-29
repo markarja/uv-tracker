@@ -476,3 +476,23 @@ function deg2rad(deg) {
 function isLargeDisplay() {
 	return (window.innerWidth >= 600) ? true : false;
 }
+
+function notify() {
+	if(document.getElementById("exposure-alert").checked) {
+		if ("Notification" in window) {
+		  Notification.requestPermission(function (permission) {
+		    if (permission === "granted") {
+		      var notification = new Notification("Exposure Alert", {
+		           tag: "Exposure Alert", 
+		           body: "You have been exposed to UV radiation for 1 hour now." 
+		      }); 
+		      notification.onshow  = function() { console.log("show"); };
+		      notification.onclose = function() { console.log("close"); };
+		      notification.onclick = function() { console.log("click"); };
+		    }
+		  });
+		}
+	} else {
+		
+	}
+}
