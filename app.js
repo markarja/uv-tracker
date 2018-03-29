@@ -478,11 +478,11 @@ function isLargeDisplay() {
 }
 
 function notify() {
-	if(document.getElementById("exposure-alert").checked) {
+	if(document.getElementById("exposure-alert").checked) {	
 	  Notification.requestPermission(function (permission) {
-	    if (permission === "granted") {
+	    if (permission === 'granted') {
 	      var notification = new Notification("Exposure Alert", {
-	           tag: "Exposure Alert", 
+	           tag: 'exposure_alert', 
 	           body: "You have been exposed to UV radiation for 1 hour now." 
 	      }); 
 	      notification.onshow  = function() { console.log("show"); };
