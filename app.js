@@ -479,16 +479,10 @@ function isLargeDisplay() {
 
 function notify() {
 	if(document.getElementById("exposure-alert").checked) {	
-	  Notification.requestPermission(function (permission) {
-	    if (permission === 'granted') {
-	      var notification = new Notification("Exposure Alert", {
-	           tag: 'exposure_alert', 
-	           body: "You have been exposed to UV radiation for 1 hour now." 
-	      }); 
-	      notification.onshow  = function() { console.log("show"); };
-	      notification.onclose = function() { console.log("close"); };
-	      notification.onclick = function() { console.log("click"); };
-	    }
+	  cordova.plugins.notification.local.schedule({
+		  title: 'Exposure Alert',
+		  text: 'You have been exposed to UV radiation for 1 hour now.',
+		  foreground: true
 	  });
 	} else {
 		
