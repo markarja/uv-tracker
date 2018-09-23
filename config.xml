@@ -42,11 +42,11 @@
  	<preference name="ShowSplashScreenSpinner" value="false"/>
 
 	<!-- Plugins -->
-	<plugin name="nl.x-services.plugins.socialsharing" source="npm" />
+	<plugin name="cordova-plugin-x-socialsharing" source="npm" />
 	<plugin name="cordova-plugin-device" source="npm" />
-	<plugin name="org.apache.cordova.dialogs" source="npm" />
+	<plugin name="cordova-plugin-dialogs" source="npm" />
 	<plugin name="cordova-plugin-geolocation" source="npm" />
-	<plugin name="org.apache.cordova.globalization" source="npm" />
+	<plugin name="cordova-plugin-globalization" source="npm" />
 	<plugin name="cordova-plugin-inappbrowser" source="npm" />	
 	<plugin name="cordova-plugin-whitelist" source="npm" />
 	<!--  Required for Android to display splashscreen -->
