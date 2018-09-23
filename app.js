@@ -87,8 +87,9 @@ function portrait() {
 
 function onDeviceReady() {
 	admob.createBannerView({
-		publisherId: "ca-app-pub-1309397168819129/6817482896",
-		isTesting: true,
+		//publisherId: "ca-app-pub-1309397168819129/6817482896",
+		publisherId: "ca-app-pub-1309397168819129/7136076894",
+		isTesting: false,
 		offsetStatusBar: true,
 		bannerAtTop: true
 	});
@@ -475,16 +476,4 @@ function deg2rad(deg) {
 
 function isLargeDisplay() {
 	return (window.innerWidth >= 600) ? true : false;
-}
-
-function notify() {
-	if(document.getElementById("exposure-alert").checked) {	
-	  cordova.plugins.notification.local.schedule({
-		  title: 'Exposure Alert',
-		  text: 'You have been exposed to UV radiation for 1 hour now.',
-		  foreground: true
-	  });
-	} else {
-		
-	}
 }
